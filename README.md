@@ -4,7 +4,8 @@
 
 - - - -
 
-#### Description: #### Coverage of view controllers, stack views, segues, programmatic segues, refactoring, buttons, IBActions and passing data between view controllers using either classes or structs.  
+#### Description: #### 
+Coverage of view controllers, stack views, segues, programmatic segues, refactoring, buttons, IBActions and passing data between view controllers using either classes or structs.  
 
 iPhone Screenshot 1	                           									                     		     | Screenshot 2 
 :-----------------------------------------------------------------------------------------------------------------------------------------------------------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------------:
@@ -17,7 +18,8 @@ iPhone Screenshot 1	                           									                     		 
 
 - - - -
 
-#### Description: #### Coverage of Auto Layout for iPhones and Auto Layout for iPads (size classes)
+#### Description: #### 
+Coverage of Auto Layout for iPhones and Auto Layout for iPads (size classes)
 
 iPhone	                           									                     		   	             | iPad 
 :-----------------------------------------------------------------------------------------------------------------------------------------------------------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------------:
