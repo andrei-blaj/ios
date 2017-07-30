@@ -29,7 +29,7 @@
                                     <constraint firstAttribute="height" constant="164" id="QDY-lR-JKi"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="devslopesProfileLogo" translatesAutoresizingMaskIntoConstraints="NO" id="Mbu-aQ-ixi">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="devslopesProfileLogo" translatesAutoresizingMaskIntoConstraints="NO" id="Mbu-aQ-ixi" customClass="borderRadius" customModule="dev_profile" customModuleProvider="target">
                                 <rect key="frame" x="16" y="140" width="95" height="95"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="95" id="PwF-oc-ndJ"/>
@@ -65,7 +65,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="bem-aS-6kf">
                                 <rect key="frame" x="24" y="332" width="327" height="153"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Data Image" translatesAutoresizingMaskIntoConstraints="NO" id="x9b-ne-dzU">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Data Image" translatesAutoresizingMaskIntoConstraints="NO" id="x9b-ne-dzU" customClass="borderRadius" customModule="dev_profile" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="153" height="153"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="x9b-ne-dzU" secondAttribute="height" multiplier="1:1" id="Cqf-jS-2GV"/>
@@ -78,7 +78,7 @@
                                             </mask>
                                         </variation>
                                     </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Images Image" translatesAutoresizingMaskIntoConstraints="NO" id="XRA-Tc-d1U">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Images Image" translatesAutoresizingMaskIntoConstraints="NO" id="XRA-Tc-d1U" customClass="borderRadius" customModule="dev_profile" customModuleProvider="target">
                                         <rect key="frame" x="174" y="0.0" width="153" height="153"/>
                                     </imageView>
                                 </subviews>
@@ -86,7 +86,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="t9I-u4-0An">
                                 <rect key="frame" x="24" y="506" width="327" height="153"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Videos Image" translatesAutoresizingMaskIntoConstraints="NO" id="7g9-4h-v9v">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Videos Image" translatesAutoresizingMaskIntoConstraints="NO" id="7g9-4h-v9v" customClass="borderRadius" customModule="dev_profile" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="153" height="153"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="lessThanOrEqual" constant="140" id="7Be-BL-xhn"/>
@@ -99,7 +99,7 @@
                                             </mask>
                                         </variation>
                                     </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Code" translatesAutoresizingMaskIntoConstraints="NO" id="sGL-VO-zJQ">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Code" translatesAutoresizingMaskIntoConstraints="NO" id="sGL-VO-zJQ" customClass="borderRadius" customModule="dev_profile" customModuleProvider="target">
                                         <rect key="frame" x="174" y="0.0" width="153" height="153"/>
                                     </imageView>
                                 </subviews>

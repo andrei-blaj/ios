@@ -23,5 +23,5 @@ Coverage of Auto Layout for iPhones and Auto Layout for iPads (size classes)
 
 iPhone	                           									                     		   	             | iPad 
 :-----------------------------------------------------------------------------------------------------------------------------------------------------------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------------:
-![picture alt](https://github.com/andrei-blaj/iOS/blob/master/dev-profile/Screenshots/iPhone.png?raw=true "First screen") | ![picture alt](https://github.com/andrei-blaj/iOS/blob/master/dev-profile/Screenshots/iPad.png?raw=true "Second screen")
+![picture alt](https://github.com/andrei-blaj/iOS/blob/master/dev-profile/Screenshots/1.png?raw=true "First screen") | ![picture alt](https://github.com/andrei-blaj/iOS/blob/master/dev-profile/Screenshots/2.png?raw=true "Second screen")
 
