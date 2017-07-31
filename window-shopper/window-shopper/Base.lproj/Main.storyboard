@@ -69,6 +69,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="priceTxt" destination="vnc-vt-Xvy" id="xAP-lc-HfK"/>
+                        <outlet property="wageTxt" destination="qmN-oY-uul" id="39L-fX-Ac2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
