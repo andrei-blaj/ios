@@ -7,7 +7,7 @@
 #### Description: #### 
 Coverage of view controllers, stack views, segues, programmatic segues, refactoring, buttons, IBActions and passing data between view controllers using either classes or structs.  
 
-iPhone Screenshot 1	                           									                     		     | Screenshot 2
+iPhone             	                           									                     		     | iPhone
 :-----------------------------------------------------------------------------------------------------------------------------------------------------------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------------:
 ![picture alt](https://github.com/andrei-blaj/iOS/blob/master/app-swoosh/Screenshots/1.png?raw=true "First screen") | ![picture alt](https://github.com/andrei-blaj/iOS/blob/master/app-swoosh/Screenshots/2.png?raw=true "Second screen")
 ![picture alt](https://github.com/andrei-blaj/iOS/blob/master/app-swoosh/Screenshots/3.png?raw=true "Third screen") |
@@ -35,10 +35,12 @@ iPhone	                           									                     		   	          
 An app that calculates the amout of work hours needed in order to purchase an item of a specified price
 Coverage of Unit Testing, Custom Text Fields, IBDesignable
 
-iPhone Screenshot 1                                                                                                     | Screenshot 2
+iPhone                                                                                                                  | iPhone
 :-----------------------------------------------------------------------------------------------------------------------------------------------------------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------------:
 ![picture alt](https://github.com/andrei-blaj/iOS/blob/master/window-shopper/Screenshots/1.png?raw=true "First screen") | ![picture alt](https://github.com/andrei-blaj/iOS/blob/master/window-shopper/Screenshots/2.png?raw=true "Second screen")
 ![picture alt](https://github.com/andrei-blaj/iOS/blob/master/window-shopper/Screenshots/3.png?raw=true "Third screen") | ![picture alt](https://github.com/andrei-blaj/iOS/blob/master/window-shopper/Screenshots/4.png?raw=true "Fourth screen")
+
+- - - -
 
 
 
