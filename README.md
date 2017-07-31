@@ -42,6 +42,15 @@ iPhone                                                                          
 
 - - - -
 
+### __4.__ _Coder-Swag_ ###
 
+- - - -
+
+#### Description: ####
+Coverage of TableView, Custom Table View Cells, IBOutlets, UITableviewDataSource, UITableviewDelegate
+
+iPhone                                                                                                                  | iPhone
+:-----------------------------------------------------------------------------------------------------------------------------------------------------------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------------:
+![picture alt](https://github.com/andrei-blaj/iOS/blob/master/coder-swag/Screenshots/1.png?raw=true "First screen") | ![picture alt](https://github.com/andrei-blaj/iOS/blob/master/coder-swag/Screenshots/1.png?raw=true "Second screen")
 
 
