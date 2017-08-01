@@ -47,10 +47,11 @@ iPhone                                                                          
 - - - -
 
 #### Description: ####
-Coverage of TableView, Custom Table View Cells, IBOutlets, UITableviewDataSource, UITableviewDelegate
+Coverage of TableView, Custom Table View Cells, IBOutlets, UITableviewDataSource, UITableviewDelegate, CollectionViews
 
 iPhone                                                                                                                  | iPhone
 :-----------------------------------------------------------------------------------------------------------------------------------------------------------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------------:
-![picture alt](https://github.com/andrei-blaj/iOS/blob/master/coder-swag/Screenshots/1.png?raw=true "First screen") | ![picture alt](https://github.com/andrei-blaj/iOS/blob/master/coder-swag/Screenshots/1.png?raw=true "Second screen")
+![picture alt](https://github.com/andrei-blaj/iOS/blob/master/coder-swag/Screenshots/1.png?raw=true "First screen") | ![picture alt](https://github.com/andrei-blaj/iOS/blob/master/coder-swag/Screenshots/2.png?raw=true "Second screen")
+![picture alt](https://github.com/andrei-blaj/iOS/blob/master/coder-swag/Screenshots/3.png?raw=true "Third screen") | ![picture alt](https://github.com/andrei-blaj/iOS/blob/master/coder-swag/Screenshots/4.png?raw=true "Fourth screen")
 
-
+- - - -
