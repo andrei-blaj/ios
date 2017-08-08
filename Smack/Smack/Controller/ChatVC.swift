@@ -18,6 +18,10 @@ class ChatVC: UIViewController {
 
         menuBtn.addTarget(self.revealViewController(), action: #selector(SWRevealViewController.revealToggle(_:)), for: .touchUpInside)
         
+        // Adding gesture recognizers for swipping to reveal of hide the menu and tapping to hide the menu
+        self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+        self.view.addGestureRecognizer(self.revealViewController().tapGestureRecognizer())
+        
     }
 
 }
