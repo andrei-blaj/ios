@@ -16,6 +16,7 @@ class ChatVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        // On menuBtn pressed the view slides to the side revealing the rear view
         menuBtn.addTarget(self.revealViewController(), action: #selector(SWRevealViewController.revealToggle(_:)), for: .touchUpInside)
         
         // Adding gesture recognizers for swipping to reveal of hide the menu and tapping to hide the menu
