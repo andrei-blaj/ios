@@ -300,6 +300,9 @@
                                 <state key="normal" title="Create Account">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="createAccntPressed:" destination="y64-cJ-hql" eventType="touchUpInside" id="D8e-Sm-Piq"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Ts-re-fqZ">
                                 <rect key="frame" x="137" y="348" width="100" height="130"/>
@@ -310,6 +313,9 @@
                                 <state key="normal" title="Choose avatar">
                                     <color key="titleColor" red="0.35686274509999999" green="0.62352941179999999" blue="0.79607843140000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="pickAvatarPressed:" destination="y64-cJ-hql" eventType="touchUpInside" id="hJM-ru-r1N"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="oAx-wN-oYm">
                                 <rect key="frame" x="63" y="160" width="250" height="148"/>
@@ -383,6 +389,9 @@
                                 <state key="normal" title="Generate background color">
                                     <color key="titleColor" red="0.35686274509999999" green="0.62352941179999999" blue="0.79607843140000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="pickBGColorPressed:" destination="y64-cJ-hql" eventType="touchUpInside" id="FGf-cN-Z3P"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -406,6 +415,10 @@
                         <viewLayoutGuide key="safeArea" id="vPP-fP-jJF"/>
                     </view>
                     <connections>
+                        <outlet property="emailTxt" destination="bfn-In-wse" id="gZt-Xf-32h"/>
+                        <outlet property="passwordTxt" destination="a0f-78-Bbp" id="mI9-FV-HKj"/>
+                        <outlet property="userImg" destination="kk0-T1-2IV" id="Txh-h3-KXK"/>
+                        <outlet property="usernameTxt" destination="JL8-zP-b6K" id="rqI-4m-sYx"/>
                         <segue destination="G2J-GP-ab9" kind="unwind" identifier="unwindToChannel" unwindAction="prepeareForUnwindWithSegue:" id="kvr-IU-Uhk"/>
                     </connections>
                 </viewController>
