@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		4AE4BB5A1EAD4B19843EC84A /* Pods_Smack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CA9A387D0B63F1AB3916F92 /* Pods_Smack.framework */; };
+		E40C0C0A1F427FF500D11187 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40C0C081F427FF500D11187 /* ProfileVC.swift */; };
+		E40C0C0B1F427FF500D11187 /* ProfileVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = E40C0C091F427FF500D11187 /* ProfileVC.xib */; };
 		E4330CF41F3B56F800B021BE /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4330CF31F3B56F800B021BE /* Constants.swift */; };
 		E4330CF61F3B5C9000B021BE /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4330CF51F3B5C9000B021BE /* LoginVC.swift */; };
 		E436CD201F3F892C008F2541 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E436CD1F1F3F892C008F2541 /* AuthService.swift */; };
@@ -31,6 +33,8 @@
 		0CA9A387D0B63F1AB3916F92 /* Pods_Smack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Smack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7778A37BF78B79B61A7A7904 /* Pods-Smack.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Smack.release.xcconfig"; path = "Pods/Target Support Files/Pods-Smack/Pods-Smack.release.xcconfig"; sourceTree = "<group>"; };
 		AF720E8BB0C3C58BE65A6D5B /* Pods-Smack.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Smack.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Smack/Pods-Smack.debug.xcconfig"; sourceTree = "<group>"; };
+		E40C0C081F427FF500D11187 /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
+		E40C0C091F427FF500D11187 /* ProfileVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileVC.xib; sourceTree = "<group>"; };
 		E4330CF31F3B56F800B021BE /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		E4330CF51F3B5C9000B021BE /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		E436CD1F1F3F892C008F2541 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
@@ -83,6 +87,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		E40C0C0C1F42802600D11187 /* XIBs */ = {
+			isa = PBXGroup;
+			children = (
+				E40C0C091F427FF500D11187 /* ProfileVC.xib */,
+			);
+			path = XIBs;
+			sourceTree = "<group>";
+		};
 		E4330CF21F3B56DC00B021BE /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
@@ -121,6 +133,7 @@
 		E482020A1F3A597700E32509 /* Smack */ = {
 			isa = PBXGroup;
 			children = (
+				E40C0C0C1F42802600D11187 /* XIBs */,
 				E436CD1E1F3F890F008F2541 /* Services */,
 				E4330CF21F3B56DC00B021BE /* Utilities */,
 				E48202231F3A5B2600E32509 /* Model */,
@@ -154,6 +167,7 @@
 				E4330CF51F3B5C9000B021BE /* LoginVC.swift */,
 				E4D3076D1F3BDF340058205D /* CreateAccountVC.swift */,
 				E4EE0CA01F40F11F007A9A4E /* AvatarPickerVC.swift */,
+				E40C0C081F427FF500D11187 /* ProfileVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -238,6 +252,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E40C0C0B1F427FF500D11187 /* ProfileVC.xib in Resources */,
 				E48202161F3A597700E32509 /* LaunchScreen.storyboard in Resources */,
 				E48202131F3A597700E32509 /* Assets.xcassets in Resources */,
 				E48202111F3A597700E32509 /* Main.storyboard in Resources */,
@@ -299,6 +314,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E40C0C0A1F427FF500D11187 /* ProfileVC.swift in Sources */,
 				E48202251F3A5B3600E32509 /* ChatVC.swift in Sources */,
 				E4EE0CA11F40F11F007A9A4E /* AvatarPickerVC.swift in Sources */,
 				E436CD221F3FD83F008F2541 /* RoundedButton.swift in Sources */,
