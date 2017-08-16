@@ -53,7 +53,7 @@ class LoginVC: UIViewController {
                 self.spinner.isHidden = true
                 self.spinner.stopAnimating()
                 
-                self.errorLabel.text = "Inexistent Account!"
+                self.errorLabel.text = "Incorrect Data!"
                 self.errorLabel.isHidden = false
             }
         }
