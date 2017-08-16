@@ -15,12 +15,16 @@ class LoginVC: UIViewController {
     @IBOutlet weak var passwordTxt: UITextField!
     @IBOutlet weak var spinner: UIActivityIndicatorView!
     
+    @IBOutlet weak var errorLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
     }
     
     @IBAction func loginPressed(_ sender: Any) {
+        
+        self.errorLabel.isHidden = true
         
         spinner.isHidden = false
         spinner.startAnimating()
@@ -36,13 +40,21 @@ class LoginVC: UIViewController {
                         
                         NotificationCenter.default.post(name: NOTIF_USER_DATA_DID_CHANGE, object: nil)
                         
-                        self.spinner.isHidden = false
+                        self.spinner.isHidden = true
                         self.spinner.stopAnimating()
                     
                         self.dismiss(animated: true, completion: nil)
                         
                     }
                 })
+            
+            } else {
+                // In case the user infomation is not valid
+                self.spinner.isHidden = true
+                self.spinner.stopAnimating()
+                
+                self.errorLabel.text = "Inexistent Account!"
+                self.errorLabel.isHidden = false
             }
         }
     
@@ -59,10 +71,18 @@ class LoginVC: UIViewController {
     func setupView() {
         
         spinner.isHidden = true
+        errorLabel.isHidden = true
         
         usernameTxt.attributedPlaceholder = NSAttributedString(string: "email", attributes: [NSAttributedStringKey.foregroundColor: smackPurplePlaceholder])
         passwordTxt.attributedPlaceholder = NSAttributedString(string: "password", attributes: [NSAttributedStringKey.foregroundColor: smackPurplePlaceholder])
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(LoginVC.handleTap))
+        view.addGestureRecognizer(tap)
     
+    }
+    
+    @objc func handleTap() {
+        view.endEditing(true)
     }
     
 }

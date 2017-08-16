@@ -251,10 +251,20 @@
                                 <rect key="frame" x="168.5" y="257" width="37" height="37"/>
                                 <color key="color" red="0.25882352939999997" green="0.3294117647" blue="0.72549019609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </activityIndicatorView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e4d-CN-P2T">
+                                <rect key="frame" x="16" y="262" width="343" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="uFe-b2-rJn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="16"/>
+                                <color key="textColor" red="0.84826725719999996" green="0.27511361239999998" blue="0.1174162403" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="4fH-8g-HGg" firstAttribute="centerX" secondItem="izl-dp-1de" secondAttribute="centerX" id="9OF-gM-Ux7"/>
+                            <constraint firstItem="e4d-CN-P2T" firstAttribute="top" secondItem="HDd-wP-3p1" secondAttribute="bottom" constant="8" id="DAG-85-T46"/>
                             <constraint firstItem="HDd-wP-3p1" firstAttribute="top" secondItem="dpC-gn-KjJ" secondAttribute="bottom" constant="40" id="KKp-jt-4Lf"/>
                             <constraint firstItem="mxN-id-mlC" firstAttribute="centerY" secondItem="izl-dp-1de" secondAttribute="centerY" constant="-58" id="Mwi-5X-4mD"/>
                             <constraint firstItem="K1a-4U-6gf" firstAttribute="top" secondItem="HDd-wP-3p1" secondAttribute="bottom" constant="40" id="W7e-Ky-mFJ"/>
@@ -263,6 +273,9 @@
                             <constraint firstItem="h7j-hX-wzx" firstAttribute="top" secondItem="ka5-cH-sVJ" secondAttribute="top" id="cMD-Xx-ksv"/>
                             <constraint firstItem="4fH-8g-HGg" firstAttribute="top" secondItem="K1a-4U-6gf" secondAttribute="bottom" id="cma-Vg-FPh"/>
                             <constraint firstItem="ka5-cH-sVJ" firstAttribute="trailing" secondItem="h7j-hX-wzx" secondAttribute="trailing" constant="16" id="cod-gG-Zfu"/>
+                            <constraint firstItem="e4d-CN-P2T" firstAttribute="leading" secondItem="ka5-cH-sVJ" secondAttribute="leading" constant="16" id="cr0-Lo-tTW"/>
+                            <constraint firstItem="ka5-cH-sVJ" firstAttribute="trailing" secondItem="e4d-CN-P2T" secondAttribute="trailing" constant="16" id="d6X-cC-Tui"/>
+                            <constraint firstItem="K1a-4U-6gf" firstAttribute="top" secondItem="e4d-CN-P2T" secondAttribute="bottom" constant="8" id="fIs-I5-SMt"/>
                             <constraint firstItem="dpC-gn-KjJ" firstAttribute="centerX" secondItem="izl-dp-1de" secondAttribute="centerX" id="gUn-YW-Ueu"/>
                             <constraint firstItem="dpC-gn-KjJ" firstAttribute="top" secondItem="ka5-cH-sVJ" secondAttribute="top" constant="60" id="gXo-Qc-PtH"/>
                             <constraint firstItem="HDd-wP-3p1" firstAttribute="centerX" secondItem="izl-dp-1de" secondAttribute="centerX" id="wqM-xL-Tnb"/>
@@ -270,6 +283,7 @@
                         <viewLayoutGuide key="safeArea" id="ka5-cH-sVJ"/>
                     </view>
                     <connections>
+                        <outlet property="errorLabel" destination="e4d-CN-P2T" id="edi-a8-Wuw"/>
                         <outlet property="passwordTxt" destination="IbL-f0-fkT" id="efy-11-L1L"/>
                         <outlet property="spinner" destination="mxN-id-mlC" id="YR3-yT-ROf"/>
                         <outlet property="usernameTxt" destination="4nc-8C-nBM" id="haD-aY-ZdD"/>
