@@ -49,8 +49,8 @@ class MessageService {
                 }
                 
             } else {
-                completion(false)
                 debugPrint(response.result.error as Any)
+                completion(false)
             }
         }
     }
@@ -91,8 +91,6 @@ class MessageService {
             }
         }
         
-        
-        
     }
     
     func clearMessages() {
@@ -102,18 +100,5 @@ class MessageService {
     func clearChannels() {
         channels.removeAll()
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     
 }

@@ -19,6 +19,7 @@
 		E4330CF61F3B5C9000B021BE /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4330CF51F3B5C9000B021BE /* LoginVC.swift */; };
 		E436CD201F3F892C008F2541 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E436CD1F1F3F892C008F2541 /* AuthService.swift */; };
 		E436CD221F3FD83F008F2541 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E436CD211F3FD83F008F2541 /* RoundedButton.swift */; };
+		E4586BE71F45F25600621F7B /* KeyboardBoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4586BE61F45F25500621F7B /* KeyboardBoundView.swift */; };
 		E46E1F601F4124CA000D3535 /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46E1F5F1F4124CA000D3535 /* CircleImage.swift */; };
 		E47693971F44D3DB004ECADA /* SocketService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E47693961F44D3DB004ECADA /* SocketService.swift */; };
 		E482020C1F3A597700E32509 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E482020B1F3A597700E32509 /* AppDelegate.swift */; };
@@ -51,6 +52,7 @@
 		E4330CF51F3B5C9000B021BE /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		E436CD1F1F3F892C008F2541 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		E436CD211F3FD83F008F2541 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
+		E4586BE61F45F25500621F7B /* KeyboardBoundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardBoundView.swift; sourceTree = "<group>"; };
 		E46E1F5F1F4124CA000D3535 /* CircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
 		E47693961F44D3DB004ECADA /* SocketService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketService.swift; sourceTree = "<group>"; };
 		E48202081F3A597700E32509 /* Smack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Smack.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -198,6 +200,7 @@
 				E4EE0CA21F40F2A5007A9A4E /* AvatarCell.swift */,
 				E46E1F5F1F4124CA000D3535 /* CircleImage.swift */,
 				E40CB8DE1F4468DF002E6C6A /* ChannelCell.swift */,
+				E4586BE61F45F25500621F7B /* KeyboardBoundView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -336,6 +339,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4586BE71F45F25600621F7B /* KeyboardBoundView.swift in Sources */,
 				E47693971F44D3DB004ECADA /* SocketService.swift in Sources */,
 				E40C0C0A1F427FF500D11187 /* ProfileVC.swift in Sources */,
 				E40CB8DF1F4468E0002E6C6A /* ChannelCell.swift in Sources */,
@@ -495,6 +499,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = 964K8Z5G2P;
 				INFOPLIST_FILE = Smack/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Andrei-Sorin-Blaj.Smack";
@@ -512,6 +517,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = 964K8Z5G2P;
 				INFOPLIST_FILE = Smack/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Andrei-Sorin-Blaj.Smack";
