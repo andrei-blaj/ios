@@ -682,6 +682,12 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ztA-jc-WHo">
+                                <rect key="frame" x="8" y="623" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="16"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -693,10 +699,12 @@
                             <constraint firstItem="Lqh-6R-hel" firstAttribute="leading" secondItem="fX5-RT-GN3" secondAttribute="leading" id="YLD-AV-NfZ"/>
                             <constraint firstItem="Lqh-6R-hel" firstAttribute="trailing" secondItem="fX5-RT-GN3" secondAttribute="trailing" id="ZVo-2r-Gug"/>
                             <constraint firstItem="gOf-wl-ZXq" firstAttribute="leading" secondItem="fX5-RT-GN3" secondAttribute="leading" id="dJn-np-zJq"/>
+                            <constraint firstItem="ztA-jc-WHo" firstAttribute="leading" secondItem="fX5-RT-GN3" secondAttribute="leading" constant="8" id="ehX-T0-bbB"/>
                             <constraint firstItem="kEG-a1-8t8" firstAttribute="centerY" secondItem="Lqh-6R-hel" secondAttribute="centerY" id="f4P-AK-BQq"/>
                             <constraint firstItem="Ow5-l6-gS5" firstAttribute="top" secondItem="gOf-wl-ZXq" secondAttribute="bottom" id="i0k-J1-st1"/>
                             <constraint firstItem="Ow5-l6-gS5" firstAttribute="trailing" secondItem="fX5-RT-GN3" secondAttribute="trailing" id="vav-oL-Lty"/>
                             <constraint firstItem="gOf-wl-ZXq" firstAttribute="top" secondItem="bco-Z5-Hmh" secondAttribute="top" id="yGz-pY-y3D"/>
+                            <constraint firstItem="Lqh-6R-hel" firstAttribute="top" secondItem="ztA-jc-WHo" secondAttribute="bottom" constant="4" id="zj8-X7-P9q"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="fX5-RT-GN3"/>
                     </view>
@@ -706,6 +714,7 @@
                         <outlet property="messageTxtBox" destination="Lqh-6R-hel" id="jM6-n5-G0Y"/>
                         <outlet property="sendBtn" destination="kEG-a1-8t8" id="P4b-J7-H6q"/>
                         <outlet property="tableView" destination="Ow5-l6-gS5" id="oo1-35-qFn"/>
+                        <outlet property="userTypingLbl" destination="ztA-jc-WHo" id="BZl-5I-AYJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oBy-SC-wzH" userLabel="First Responder" sceneMemberID="firstResponder"/>
