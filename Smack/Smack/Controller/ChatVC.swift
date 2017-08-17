@@ -8,17 +8,25 @@
 
 import UIKit
 
-class ChatVC: UIViewController {
+class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     // Outlets
     @IBOutlet weak var menuBtn: UIButton!
     @IBOutlet weak var channelNameLbl: UILabel!
     @IBOutlet weak var messageTxtBox: UITextField!
     
+    @IBOutlet weak var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         view.bindToKeyboard()
+        
+        tableView.delegate = self
+        tableView.dataSource = self
+        
+        tableView.estimatedRowHeight = 80
+        tableView.rowHeight = UITableViewAutomaticDimension
         
         let tap = UITapGestureRecognizer(target: self, action: #selector(ChatVC.handleTap))
         view.addGestureRecognizer(tap)
@@ -69,15 +77,17 @@ class ChatVC: UIViewController {
     
     @IBAction func sendMessagePressed(_ sender: Any) {
         if AuthService.instance.isLoggedIn {
+            
             guard let channelId = MessageService.instance.selectedChannel?.id else { return }
             guard let message = messageTxtBox.text else { return }
             
-            SocketService.instance.addMessage(messageBody: messageTxtBox, userId: UserDataService.instance.id, channelId: channelId, completion: { (success) in
+            SocketService.instance.addMessage(messageBody: message, userId: UserDataService.instance.id, channelId: channelId, completion: { (success) in
                 if success {
                     self.messageTxtBox.text = "" // reset the textBox text
                     self.messageTxtBox.resignFirstResponder() // Hide the keyboard
                 }
             })
+            
         }
     }
     
@@ -100,9 +110,28 @@ class ChatVC: UIViewController {
         
         MessageService.instance.findAllMessagesForChannel(channelId: channelId) { (success) in
             if success {
-                
+                self.tableView.reloadData()
             }
         }
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "messageCell", for: indexPath) as? MessageCell {
+            
+            let message = MessageService.instance.messages[indexPath.row]
+            cell.configureCell(message: message)
+            
+            return cell
+        }
+        return UITableViewCell()
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return MessageService.instance.messages.count
     }
     
 }

@@ -20,6 +20,7 @@
 		E436CD201F3F892C008F2541 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E436CD1F1F3F892C008F2541 /* AuthService.swift */; };
 		E436CD221F3FD83F008F2541 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E436CD211F3FD83F008F2541 /* RoundedButton.swift */; };
 		E4586BE71F45F25600621F7B /* KeyboardBoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4586BE61F45F25500621F7B /* KeyboardBoundView.swift */; };
+		E4586BE91F45F50400621F7B /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4586BE81F45F50400621F7B /* MessageCell.swift */; };
 		E46E1F601F4124CA000D3535 /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46E1F5F1F4124CA000D3535 /* CircleImage.swift */; };
 		E47693971F44D3DB004ECADA /* SocketService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E47693961F44D3DB004ECADA /* SocketService.swift */; };
 		E482020C1F3A597700E32509 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E482020B1F3A597700E32509 /* AppDelegate.swift */; };
@@ -53,6 +54,7 @@
 		E436CD1F1F3F892C008F2541 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		E436CD211F3FD83F008F2541 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		E4586BE61F45F25500621F7B /* KeyboardBoundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardBoundView.swift; sourceTree = "<group>"; };
+		E4586BE81F45F50400621F7B /* MessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
 		E46E1F5F1F4124CA000D3535 /* CircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
 		E47693961F44D3DB004ECADA /* SocketService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketService.swift; sourceTree = "<group>"; };
 		E48202081F3A597700E32509 /* Smack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Smack.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -201,6 +203,7 @@
 				E46E1F5F1F4124CA000D3535 /* CircleImage.swift */,
 				E40CB8DE1F4468DF002E6C6A /* ChannelCell.swift */,
 				E4586BE61F45F25500621F7B /* KeyboardBoundView.swift */,
+				E4586BE81F45F50400621F7B /* MessageCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -345,6 +348,7 @@
 				E40CB8DF1F4468E0002E6C6A /* ChannelCell.swift in Sources */,
 				E48202251F3A5B3600E32509 /* ChatVC.swift in Sources */,
 				E4EE0CA11F40F11F007A9A4E /* AvatarPickerVC.swift in Sources */,
+				E4586BE91F45F50400621F7B /* MessageCell.swift in Sources */,
 				E436CD221F3FD83F008F2541 /* RoundedButton.swift in Sources */,
 				E49781401F45794A0052FD7A /* Message.swift in Sources */,
 				E40CB8DD1F4462E3002E6C6A /* Channel.swift in Sources */,
