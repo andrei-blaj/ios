@@ -63,7 +63,7 @@ iPhone                                                                          
 #### Description: ####
 A brief clone of the Slack app
 Used the [mac-chat-api](https://github.com/devslopes/mac-chat-api) provided by Devslopes. Also covered Alamofire requests (.post, .get) in order to send and retrieve data from the mLab database.
-Used sockets for real time changes in the app, to inform a user when another user or other users are typing, update the chat view controller every time a message is sent, enlarge the font size and thickness of the channel names if there are unread messages in that particular channel. 
+Used sockets for real time changes in the app, to inform a user when another user or other users are typing, update the chat view controller every time a message is sent, enlarge the font size and thickness of the channel names if there are unread messages in those particular channel. 
 
 iPhone                                                                                                                  | iPhone
 :-----------------------------------------------------------------------------------------------------------------------------------------------------------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------------:
