@@ -41,13 +41,33 @@ class MessageCell: UITableViewCell {
         userImage.image = UIImage(named: message.userAvatar)
         userImage.backgroundColor = UserDataService.instance.returnUIColor(components: message.userAvatarColor)
     
-        guard let timeStamp = message.timeStamp else { return }
-        let timeStampText = convertTimeStampToTemplate(string: timeStamp)
-      
-        timeStampLbl.text = timeStampText
+        // 2017-08-17T21:52:29.367Z
+        guard var isoDate = message.timeStamp else { return }
+        let end = isoDate.index(isoDate.endIndex, offsetBy: -5)
         
+        // 2017-08-17T21:52:29
+        isoDate = isoDate.substring(to: end)
+        
+        let isoFormatter = ISO8601DateFormatter()
+        // 2017-08-17T21:52:29Z
+        let chatDate = isoFormatter.date(from: isoDate.appending("Z"))
+        
+        let newFormatter = DateFormatter()
+        newFormatter.dateFormat = "MMM d, h:mm a"
+        
+        if let finalDate = chatDate {
+            let finalDate = newFormatter.string(from: finalDate)
+            timeStampLbl.text = finalDate
+        }
+        
+//        let timeStampText = convertTimeStampToTemplate(string: isoDate)
+//        timeStampLbl.text = timeStampText
+
     }
     
+    // Function that I've written for converting the API timestamp to readable date
+    // Takes in an ISODate provied by the api and returns a different format
+    // Example: "2017-08-17T21:52:29.367Z" -> "Aug 17, 9:52 PM"
     func convertTimeStampToTemplate(string: String) -> String {
         
         // "2017-08-17T21:52:29.367Z" -> "Aug 17, 9:52 PM"
