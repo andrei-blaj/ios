@@ -88,6 +88,8 @@ class MessageCell: UITableViewCell {
         
         guard let m = months[month] else { return "" }
         
+        if hour == "00" { hour = "12" }
+        
         let result = m + " " + day + ", " + hour + ":" + minute + " " + period
         
         return result
