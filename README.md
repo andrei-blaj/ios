@@ -55,3 +55,27 @@ iPhone                                                                          
 ![picture alt](https://github.com/andrei-blaj/iOS/blob/master/coder-swag/Screenshots/3.png?raw=true "Third screen") | ![picture alt](https://github.com/andrei-blaj/iOS/blob/master/coder-swag/Screenshots/4.png?raw=true "Fourth screen")
 
 - - - -
+
+### __5.__ _Smack_ ###
+
+- - - -
+
+#### Description: ####
+A brief clone of the Slack app
+Used the [mac-chat-api](https://github.com/devslopes/mac-chat-api) provided by Devslopes. Also covered Alamofire requests (.post, .get) in order to send and retrieve data from the mLab database.
+Used sockets for real time changes in the app, to inform a user when another user or other users are typing, update the chat view controller every time a message is sent, enlarge the font size and thickness of the channel names if there are unread messages in that particular channel. 
+
+iPhone                                                                                                                  | iPhone
+:-----------------------------------------------------------------------------------------------------------------------------------------------------------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------------:
+![picture alt](https://github.com/andrei-blaj/iOS/blob/master/Smack/Screenshots/1.png?raw=true "First screen") | ![picture alt](https://github.com/andrei-blaj/iOS/blob/master/Smack/Screenshots/2.png?raw=true "Second screen")
+![picture alt](https://github.com/andrei-blaj/iOS/blob/master/Smack/Screenshots/3.png?raw=true "First screen") | ![picture alt](https://github.com/andrei-blaj/iOS/blob/master/Smack/Screenshots/4.png?raw=true "Second screen")
+![picture alt](https://github.com/andrei-blaj/iOS/blob/master/Smack/Screenshots/5.png?raw=true "First screen") | ![picture alt](https://github.com/andrei-blaj/iOS/blob/master/Smack/Screenshots/6.png?raw=true "Second screen")
+![picture alt](https://github.com/andrei-blaj/iOS/blob/master/Smack/Screenshots/7.png?raw=true "First screen") | ![picture alt](https://github.com/andrei-blaj/iOS/blob/master/Smack/Screenshots/8.png?raw=true "Second screen")
+![picture alt](https://github.com/andrei-blaj/iOS/blob/master/Smack/Screenshots/9.png?raw=true "First screen") | ![picture alt](https://github.com/andrei-blaj/iOS/blob/master/Smack/Screenshots/10.png?raw=true "Second screen")
+![picture alt](https://github.com/andrei-blaj/iOS/blob/master/Smack/Screenshots/11.png?raw=true "First screen") | ![picture alt](https://github.com/andrei-blaj/iOS/blob/master/Smack/Screenshots/12.png?raw=true "Second screen")
+
+- - - -
+
+
+
+
