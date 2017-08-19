@@ -34,7 +34,7 @@ class LoginVC: UIViewController {
         
         AuthService.instance.loginUser(email: email, password: password) { (success) in
             if success {
-                
+                debugPrint("STOP")
                 AuthService.instance.findUserByEmail(completion: { (success) in
                     if success {
                         

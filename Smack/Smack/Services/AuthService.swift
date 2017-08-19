@@ -75,20 +75,21 @@ class AuthService {
         ]
         
         // Alamofire post request for logging in a user, with a JSON Encoding, returning a json response containing the user email and auth token
+        
         Alamofire.request(URL_LOGIN, method: .post, parameters: body, encoding: JSONEncoding.default, headers: HEADER).responseJSON { (response) in
             
             if response.result.error == nil {
                 // Old fashioned way of working with JSON
-//                if let json = response.result.value as? Dictionary<String, Any> {
-//
-//                    if let email = json["user"] as? String {
-//                        self.userEmail = email
-//                    }
-//                    if let token = json["token"] as? String {
-//                        self.authToken = token
-//                    }
-//
-//                }
+                //                if let json = response.result.value as? Dictionary<String, Any> {
+                //
+                //                    if let email = json["user"] as? String {
+                //                        self.userEmail = email
+                //                    }
+                //                    if let token = json["token"] as? String {
+                //                        self.authToken = token
+                //                    }
+                //
+                //                }
                 
                 // SwiftyJSON
                 guard let data = response.data else { return }
@@ -105,7 +106,6 @@ class AuthService {
                 debugPrint(response.result.error as Any)
                 completion(false)
             }
-            
         }
         
     }
