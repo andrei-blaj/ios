@@ -13,7 +13,9 @@ import CoreLocation
 class MapVC: UIViewController, UIGestureRecognizerDelegate {
     
     // Outlets
+    @IBOutlet weak var pullUpView: UIView!
     @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet weak var mapViewBottomConstraint: NSLayoutConstraint!
     
     // Variables
     var locationManager = CLLocationManager()
@@ -43,6 +45,13 @@ class MapVC: UIViewController, UIGestureRecognizerDelegate {
         mapView.addGestureRecognizer(doubleTap)
     }
 
+    func animateViewUp() {
+        mapViewBottomConstraint.constant = 300
+        UIView.animate(withDuration: 0.3) {
+            self.view.layoutIfNeeded() // 'Refreshes' the view showing the result after applying the new constraints
+        }
+    }
+    
     @IBAction func centerMapBtnPressed(_ sender: Any) {
         
         // Recenters to the user's location
@@ -55,6 +64,20 @@ class MapVC: UIViewController, UIGestureRecognizerDelegate {
 }
 
 extension MapVC: MKMapViewDelegate {
+    
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+    
+        if annotation is MKUserLocation {
+            return nil
+        }
+        
+        let pinAnnotation = MKPinAnnotationView(annotation: annotation, reuseIdentifier: "droppablePin")
+        
+        pinAnnotation.pinTintColor = #colorLiteral(red: 0.9771530032, green: 0.7062081099, blue: 0.1748393774, alpha: 1)
+        pinAnnotation.animatesDrop = true
+        
+        return pinAnnotation
+    }
     
     func centerMapOnUserLocation() {
         

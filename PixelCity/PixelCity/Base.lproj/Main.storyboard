@@ -71,13 +71,13 @@
                             <constraint firstItem="iMq-SG-hkM" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="IBj-Sx-yuW"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lG8-B2-O3f" secondAttribute="trailing" constant="16" id="Ihw-UC-shp"/>
                             <constraint firstItem="xWN-e1-Ira" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="X6g-fq-W7y"/>
+                            <constraint firstAttribute="bottom" secondItem="M1B-LK-gCV" secondAttribute="bottom" id="YeM-4y-C5G"/>
                             <constraint firstItem="xWN-e1-Ira" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="b0Q-Fu-c4Y"/>
                             <constraint firstItem="xWN-e1-Ira" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="cdL-VN-SMd"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xWN-e1-Ira" secondAttribute="trailing" id="jaj-RA-AI0"/>
                             <constraint firstItem="iMq-SG-hkM" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="lJw-Wp-H3D"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="lG8-B2-O3f" secondAttribute="bottom" constant="20" id="may-lo-fGt"/>
+                            <constraint firstItem="M1B-LK-gCV" firstAttribute="top" secondItem="lG8-B2-O3f" secondAttribute="bottom" constant="20" id="orN-v0-vkN"/>
                             <constraint firstItem="iMq-SG-hkM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="rCM-jV-P2f"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="M1B-LK-gCV" secondAttribute="bottom" id="tYY-bY-ZrG"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="top" secondItem="xWN-e1-Ira" secondAttribute="top" constant="20" id="w0F-Tm-3NA"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="xWN-e1-Ira" secondAttribute="bottom" id="w3Z-6f-kiP"/>
                             <constraint firstItem="xWN-e1-Ira" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="yUd-3v-VZm"/>
@@ -86,6 +86,8 @@
                     </view>
                     <connections>
                         <outlet property="mapView" destination="xWN-e1-Ira" id="zkT-Me-Xmn"/>
+                        <outlet property="mapViewBottomConstraint" destination="5Ml-1Q-BHM" id="AMG-2g-cdX"/>
+                        <outlet property="pullUpView" destination="M1B-LK-gCV" id="e4d-GY-qZr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
