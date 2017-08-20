@@ -15,7 +15,7 @@ class MapVC: UIViewController, UIGestureRecognizerDelegate {
     // Outlets
     @IBOutlet weak var pullUpView: UIView!
     @IBOutlet weak var mapView: MKMapView!
-    @IBOutlet weak var mapViewBottomConstraint: NSLayoutConstraint!
+    @IBOutlet weak var pullUpViewHeightConstraint: NSLayoutConstraint!
     
     // Variables
     var locationManager = CLLocationManager()
@@ -46,7 +46,7 @@ class MapVC: UIViewController, UIGestureRecognizerDelegate {
     }
 
     func animateViewUp() {
-        mapViewBottomConstraint.constant = 300
+        pullUpViewHeightConstraint.constant = 300
         UIView.animate(withDuration: 0.3) {
             self.view.layoutIfNeeded() // 'Refreshes' the view showing the result after applying the new constraints
         }
@@ -90,6 +90,7 @@ extension MapVC: MKMapViewDelegate {
     
     @objc func dropPin(sender: UITapGestureRecognizer) {
         removePin()
+        animateViewUp()
         
         // drop the pin on the map
         let touchPoint = sender.location(in: mapView)
