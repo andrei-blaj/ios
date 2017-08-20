@@ -44,11 +44,26 @@ class MapVC: UIViewController, UIGestureRecognizerDelegate {
     
         mapView.addGestureRecognizer(doubleTap)
     }
+    
+    func addSwipe() {
+        let swipe = UISwipeGestureRecognizer(target: self, action: #selector(animateViewDown))
+        swipe.direction = .down
+        
+        pullUpView.addGestureRecognizer(swipe)
+        
+    }
 
     func animateViewUp() {
         pullUpViewHeightConstraint.constant = 300
         UIView.animate(withDuration: 0.3) {
             self.view.layoutIfNeeded() // 'Refreshes' the view showing the result after applying the new constraints
+        }
+    }
+    
+    @objc func animateViewDown() {
+        pullUpViewHeightConstraint.constant = 0
+        UIView.animate(withDuration: 0.3) {
+            self.view.layoutIfNeeded()
         }
     }
     
@@ -91,6 +106,7 @@ extension MapVC: MKMapViewDelegate {
     @objc func dropPin(sender: UITapGestureRecognizer) {
         removePin()
         animateViewUp()
+        addSwipe()
         
         // drop the pin on the map
         let touchPoint = sender.location(in: mapView)
