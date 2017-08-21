@@ -4,7 +4,7 @@
 
 - - - -
 
-#### Description: #### 
+#### Description: ####
 Coverage of view controllers, stack views, segues, programmatic segues, refactoring, buttons, IBActions and passing data between view controllers using either classes or structs.  
 
 iPhone             	                           									                     		     | iPhone
@@ -12,16 +12,16 @@ iPhone             	                           									                     		 
 ![picture alt](https://github.com/andrei-blaj/iOS/blob/master/app-swoosh/Screenshots/1.png?raw=true "First screen") | ![picture alt](https://github.com/andrei-blaj/iOS/blob/master/app-swoosh/Screenshots/2.png?raw=true "Second screen")
 ![picture alt](https://github.com/andrei-blaj/iOS/blob/master/app-swoosh/Screenshots/3.png?raw=true "Third screen") |
 
-- - - - 
+- - - -
 
 ### __2.__ _Dev-Profile_ ###
 
 - - - -
 
-#### Description: #### 
+#### Description: ####
 Coverage of Auto Layout for iPhones and Auto Layout for iPads (size classes)
 
-iPhone	                           									                     		   	             | iPad 
+iPhone	                           									                     		   	             | iPad
 :-----------------------------------------------------------------------------------------------------------------------------------------------------------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------------:
 ![picture alt](https://github.com/andrei-blaj/iOS/blob/master/dev-profile/Screenshots/1.png?raw=true "First screen") | ![picture alt](https://github.com/andrei-blaj/iOS/blob/master/dev-profile/Screenshots/2.png?raw=true "Second screen")
 
@@ -61,9 +61,9 @@ iPhone                                                                          
 - - - -
 
 #### Description: ####
-A brief clone of the Slack app
-Used the [mac-chat-api](https://github.com/devslopes/mac-chat-api) provided by Devslopes. Also covered Alamofire requests (.post, .get) in order to send and retrieve data from the mLab database.
-Used sockets for real time changes in the app, to inform a user when another user or other users are typing, update the chat view controller every time a message is sent, enlarge the font size and thickness of the channel names if there are unread messages in those particular channel. 
+A brief clone of the Slack app <br />
+Used the [mac-chat-api](https://github.com/devslopes/mac-chat-api) provided by Devslopes. Also covered Alamofire requests (.post, .get) in order to send and retrieve data from the mLab database. <br />
+Used sockets for real time changes in the app, to inform a user when another user or other users are typing, update the chat view controller every time a message is sent, enlarge the font size and thickness of the channel names if there are unread messages in those particular channel. <br />
 
 iPhone                                                                                                                  | iPhone
 :-----------------------------------------------------------------------------------------------------------------------------------------------------------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------------:
@@ -75,7 +75,3 @@ iPhone                                                                          
 ![picture alt](https://github.com/andrei-blaj/iOS/blob/master/Smack/Screenshots/11.png?raw=true "First screen") | ![picture alt](https://github.com/andrei-blaj/iOS/blob/master/Smack/Screenshots/12.png?raw=true "Second screen")
 
 - - - -
-
-
-
-
