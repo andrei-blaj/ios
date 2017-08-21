@@ -20,6 +20,11 @@ class MapVC: UIViewController, UIGestureRecognizerDelegate {
     // Variables
     var locationManager = CLLocationManager()
     
+    var screenSize = UIScreen.main.bounds
+    
+    var spinner: UIActivityIndicatorView?
+    var progressLabel: UILabel?
+    
     // Constants
     let authorizationStatus = CLLocationManager.authorizationStatus()
     let regionRadius: Double = 1000
@@ -67,6 +72,18 @@ class MapVC: UIViewController, UIGestureRecognizerDelegate {
         }
     }
     
+    func addSpinner() {
+        
+        spinner = UIActivityIndicatorView()
+        spinner?.center = CGPoint(x: screenSize.width / 2, y: 150)
+        spinner?.activityIndicatorViewStyle = .whiteLarge
+        spinner?.color = #colorLiteral(red: 0.3333333433, green: 0.3333333433, blue: 0.3333333433, alpha: 1)
+        spinner?.startAnimating()
+        
+        pullUpView.addSubview(spinner!)
+        
+    }
+    
     @IBAction func centerMapBtnPressed(_ sender: Any) {
         
         // Recenters to the user's location
@@ -107,6 +124,7 @@ extension MapVC: MKMapViewDelegate {
         removePin()
         animateViewUp()
         addSwipe()
+        addSpinner()
         
         // drop the pin on the map
         let touchPoint = sender.location(in: mapView)
