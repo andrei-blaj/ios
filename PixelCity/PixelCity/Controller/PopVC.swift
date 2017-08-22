@@ -23,20 +23,31 @@ class PopVC: UIViewController, UIGestureRecognizerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         popImageView.image = passedImage
-        addDoubleTap()
+        addSwipeDown()
     }
 
-    func addDoubleTap() {
-        let doubleTap = UITapGestureRecognizer(target: self, action: #selector(screenWasDoubleTapped))
+    func addSwipeDown() {
+        let swipe = UISwipeGestureRecognizer(target: self, action: #selector(screenWasSwipedDown))
+        swipe.direction = .down
         
-        doubleTap.numberOfTapsRequired = 2
-        doubleTap.delegate = self
-        
-        view.addGestureRecognizer(doubleTap)
+        view.addGestureRecognizer(swipe)
     }
-    
-    @objc func screenWasDoubleTapped() {
+
+    @objc func screenWasSwipedDown() {
         dismiss(animated: true, completion: nil)
     }
+    
+//    func addDoubleTap() {
+//        let doubleTap = UITapGestureRecognizer(target: self, action: #selector(screenWasDoubleTapped))
+//
+//        doubleTap.numberOfTapsRequired = 2
+//        doubleTap.delegate = self
+//
+//        view.addGestureRecognizer(doubleTap)
+//    }
+//
+//    @objc func screenWasDoubleTapped() {
+//        dismiss(animated: true, completion: nil)
+//    }
     
 }

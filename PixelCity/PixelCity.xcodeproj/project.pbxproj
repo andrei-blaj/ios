@@ -16,6 +16,7 @@
 		E48294A61F472D9E008D4B47 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E48294A41F472D9E008D4B47 /* Main.storyboard */; };
 		E48294A81F472D9E008D4B47 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E48294A71F472D9E008D4B47 /* Assets.xcassets */; };
 		E48294AB1F472D9E008D4B47 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E48294A91F472D9E008D4B47 /* LaunchScreen.storyboard */; };
+		E4ABDC321F4CB74C0010965C /* RoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4ABDC311F4CB74C0010965C /* RoundedView.swift */; };
 		F3D7335E2FBE6CBE6A5CB431 /* Pods_PixelCity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 897BA82AEADE6263F6AC9D18 /* Pods_PixelCity.framework */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +34,7 @@
 		E48294A71F472D9E008D4B47 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E48294AA1F472D9E008D4B47 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E48294AC1F472D9E008D4B47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E4ABDC311F4CB74C0010965C /* RoundedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedView.swift; sourceTree = "<group>"; };
 		F1B7876AF4A48BAD0B3C62A4 /* Pods-PixelCity.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PixelCity.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PixelCity/Pods-PixelCity.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -129,6 +131,7 @@
 			children = (
 				E427AECF1F47B7D300314B1C /* DroppablePin.swift */,
 				E45336D91F4B35B400C8AA65 /* PhotoCell.swift */,
+				E4ABDC311F4CB74C0010965C /* RoundedView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -264,6 +267,7 @@
 			files = (
 				E4676E501F4B956200C439EC /* PopVC.swift in Sources */,
 				E45336DE1F4B452600C8AA65 /* Constants.swift in Sources */,
+				E4ABDC321F4CB74C0010965C /* RoundedView.swift in Sources */,
 				E45336DA1F4B35B400C8AA65 /* PhotoCell.swift in Sources */,
 				E48294A31F472D9D008D4B47 /* MapVC.swift in Sources */,
 				E427AED01F47B7D300314B1C /* DroppablePin.swift in Sources */,
