@@ -1,5 +1,16 @@
 ## iOS Development ##
 
+- - - -
+
+📌 [App-Swoosh](https://github.com/andrei-blaj/iOS#1-app-swoosh)
+📌 [Dev-Profile](https://github.com/andrei-blaj/iOS#2-dev-profile)
+📌 [Window-Shopper](https://github.com/andrei-blaj/iOS#3-window-shopper)
+📌 [Coder-Swag](https://github.com/andrei-blaj/iOS#4-coder-swag)
+📌 [Smack](https://github.com/andrei-blaj/iOS#5-smack)
+📌 [PixelCity](https://github.com/andrei-blaj/iOS#6-pixelcity)
+
+- - - -
+
 ### __1.__ _App-Swoosh_ ###
 
 - - - -
@@ -73,5 +84,9 @@ iPhone                                                                          
 ![picture alt](https://github.com/andrei-blaj/iOS/blob/master/Smack/Screenshots/7.png?raw=true "First screen") | ![picture alt](https://github.com/andrei-blaj/iOS/blob/master/Smack/Screenshots/8.png?raw=true "Second screen")
 ![picture alt](https://github.com/andrei-blaj/iOS/blob/master/Smack/Screenshots/9.png?raw=true "First screen") | ![picture alt](https://github.com/andrei-blaj/iOS/blob/master/Smack/Screenshots/10.png?raw=true "Second screen")
 ![picture alt](https://github.com/andrei-blaj/iOS/blob/master/Smack/Screenshots/11.png?raw=true "First screen") | ![picture alt](https://github.com/andrei-blaj/iOS/blob/master/Smack/Screenshots/12.png?raw=true "Second screen")
+
+- - - -
+
+### __6.__ _PixelCity_ ###
 
 - - - -
