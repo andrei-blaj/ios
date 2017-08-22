@@ -62,7 +62,7 @@ class MapVC: UIViewController, UIGestureRecognizerDelegate {
     func addDoubleTap() {
         let doubleTap = UITapGestureRecognizer(target: self, action: #selector(dropPin(sender: )))
         
-        doubleTap.numberOfTapsRequired = 2
+        doubleTap.numberOfTapsRequired = 1
         doubleTap.delegate = self
     
         mapView.addGestureRecognizer(doubleTap)
@@ -112,7 +112,6 @@ class MapVC: UIViewController, UIGestureRecognizerDelegate {
         progressLabel?.font = UIFont(name: "Avenir Next", size: 14)
         progressLabel?.textColor = #colorLiteral(red: 0.3333333433, green: 0.3333333433, blue: 0.3333333433, alpha: 1)
         progressLabel?.textAlignment = .center
-//        progressLabel?.text = "12/40 PHOTOS LOADED"
         
         collectionView?.addSubview(progressLabel!)
         
@@ -191,7 +190,7 @@ extension MapVC: MKMapViewDelegate {
         
         mapView.addAnnotation(annotation)
         
-        print(flickrUrl(forApiKey: API_KEY, withAnnotation: annotation, andNumberOfPhotos: 40))
+        print(flickrUrl(forApiKey: API_KEY, withAnnotation: annotation, andNumberOfPhotos: NUMBER_OF_PHOTOS))
         
         let coordinateRegion = MKCoordinateRegionMakeWithDistance(touchCoordinate, regionRadius * 2.0, regionRadius * 2.0)
         
@@ -223,7 +222,7 @@ extension MapVC: MKMapViewDelegate {
         
         imageUrlArray = []
         
-        Alamofire.request(flickrUrl(forApiKey: API_KEY, withAnnotation: annotation, andNumberOfPhotos: 40)).responseJSON { (response) in
+        Alamofire.request(flickrUrl(forApiKey: API_KEY, withAnnotation: annotation, andNumberOfPhotos: NUMBER_OF_PHOTOS)).responseJSON { (response) in
             
             if response.result.error == nil {
                 
@@ -251,6 +250,10 @@ extension MapVC: MKMapViewDelegate {
     func retrieveImages(handler: @escaping (_ status: Bool) -> ()) {
         imageArray = []
         
+        // in case that there is an error retrieving an image, the for loop will not end
+        // contor 'eliminates' the corupt images from the imageUrlArray
+        var contor = self.imageUrlArray.count
+        
         for url in imageUrlArray {
             
             Alamofire.request(url).responseImage(completionHandler: { (response) in
@@ -260,13 +263,14 @@ extension MapVC: MKMapViewDelegate {
                     guard let image = response.result.value else { return }
                     
                     self.imageArray.append(image)
-                    self.progressLabel?.text = "\(self.imageArray.count)/40 IMAGES DOWNLOADED"
+                    self.progressLabel?.text = "\(self.imageArray.count * 100 / NUMBER_OF_PHOTOS)%"
                     
-                    if self.imageArray.count == self.imageUrlArray.count {
+                    if self.imageArray.count == contor {
                         handler(true)
                     }
                     
                 } else {
+                    contor -= 1
                     debugPrint(response.result.error as Any)
                     handler(false)
                 }
@@ -300,7 +304,7 @@ extension MapVC: CLLocationManagerDelegate {
     
 }
 
-extension MapVC: UICollectionViewDelegate, UICollectionViewDataSource {
+extension MapVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
@@ -328,6 +332,10 @@ extension MapVC: UICollectionViewDelegate, UICollectionViewDataSource {
     
         popVC.initData(forImage: imageArray[indexPath.row])
         present(popVC, animated: true, completion: nil)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: CELL_WIDTH, height: CELL_HEIGHT)
     }
     
 }
