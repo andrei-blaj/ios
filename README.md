@@ -2,12 +2,12 @@
 
 - - - -
 
-📌 [App-Swoosh](https://github.com/andrei-blaj/iOS#1-app-swoosh)
-📌 [Dev-Profile](https://github.com/andrei-blaj/iOS#2-dev-profile)
-📌 [Window-Shopper](https://github.com/andrei-blaj/iOS#3-window-shopper)
-📌 [Coder-Swag](https://github.com/andrei-blaj/iOS#4-coder-swag)
-📌 [Smack](https://github.com/andrei-blaj/iOS#5-smack)
-📌 [PixelCity](https://github.com/andrei-blaj/iOS#6-pixelcity)
+📌 [App-Swoosh](https://github.com/andrei-blaj/iOS#1-app-swoosh) <br />
+📌 [Dev-Profile](https://github.com/andrei-blaj/iOS#2-dev-profile) <br />
+📌 [Window-Shopper](https://github.com/andrei-blaj/iOS#3-window-shopper) <br />
+📌 [Coder-Swag](https://github.com/andrei-blaj/iOS#4-coder-swag) <br />
+📌 [Smack](https://github.com/andrei-blaj/iOS#5-smack) <br />
+📌 [PixelCity](https://github.com/andrei-blaj/iOS#6-pixelcity) <br />
 
 - - - -
 
