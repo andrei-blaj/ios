@@ -103,8 +103,8 @@ To exit the collection view the user must swipe down on the view. <br />
 
 iPhone                                                                                                                  | iPhone
 :-----------------------------------------------------------------------------------------------------------------------------------------------------------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------------:
-![picture alt](https://github.com/andrei-blaj/iOS/blob/master/PixelCity/Screenshots/1.png?raw=true "First screen") | ![picture alt](https://github.com/andrei-blaj/iOS/blob/master/PixelCity/Screenshots/2.png?raw=true "Second screen")
-![picture alt](https://github.com/andrei-blaj/iOS/blob/master/PixelCity/Screenshots/3.png?raw=true "First screen") | ![picture alt](https://github.com/andrei-blaj/iOS/blob/master/PixelCity/Screenshots/4.png?raw=true "Second screen")
-![picture alt](https://github.com/andrei-blaj/iOS/blob/master/PixelCity/Screenshots/5.png?raw=true "First screen") | ![picture alt](https://github.com/andrei-blaj/iOS/blob/master/PixelCity/Screenshots/6.png?raw=true "Second screen")
+![picture alt](https://github.com/andrei-blaj/iOS/blob/master/PixelCity/Screenshots/1.PNG?raw=true "First screen") | ![picture alt](https://github.com/andrei-blaj/iOS/blob/master/PixelCity/Screenshots/2.PNG?raw=true "Second screen")
+![picture alt](https://github.com/andrei-blaj/iOS/blob/master/PixelCity/Screenshots/3.PNG?raw=true "First screen") | ![picture alt](https://github.com/andrei-blaj/iOS/blob/master/PixelCity/Screenshots/4.PNG?raw=true "Second screen")
+![picture alt](https://github.com/andrei-blaj/iOS/blob/master/PixelCity/Screenshots/5.PNG?raw=true "First screen") | ![picture alt](https://github.com/andrei-blaj/iOS/blob/master/PixelCity/Screenshots/6.PNG?raw=true "Second screen")
 
 - - - -
