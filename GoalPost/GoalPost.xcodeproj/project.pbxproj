@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E49271611F52EEBB000DE1DB /* GoalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49271601F52EEBB000DE1DB /* GoalCell.swift */; };
+		E49271631F530038000DE1DB /* GoalType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49271621F530038000DE1DB /* GoalType.swift */; };
 		E4ABDC401F4DBF3E0010965C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4ABDC3F1F4DBF3E0010965C /* AppDelegate.swift */; };
 		E4ABDC421F4DBF3E0010965C /* GoalsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4ABDC411F4DBF3E0010965C /* GoalsVC.swift */; };
 		E4ABDC451F4DBF3E0010965C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4ABDC431F4DBF3E0010965C /* Main.storyboard */; };
@@ -18,6 +19,7 @@
 
 /* Begin PBXFileReference section */
 		E49271601F52EEBB000DE1DB /* GoalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalCell.swift; sourceTree = "<group>"; };
+		E49271621F530038000DE1DB /* GoalType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalType.swift; sourceTree = "<group>"; };
 		E4ABDC3C1F4DBF3E0010965C /* GoalPost.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoalPost.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4ABDC3F1F4DBF3E0010965C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E4ABDC411F4DBF3E0010965C /* GoalsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsVC.swift; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 		E4ABDC561F4DBF880010965C /* Enums */ = {
 			isa = PBXGroup;
 			children = (
+				E49271621F530038000DE1DB /* GoalType.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -174,6 +177,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E49271611F52EEBB000DE1DB /* GoalCell.swift in Sources */,
+				E49271631F530038000DE1DB /* GoalType.swift in Sources */,
 				E4ABDC421F4DBF3E0010965C /* GoalsVC.swift in Sources */,
 				E4ABDC401F4DBF3E0010965C /* AppDelegate.swift in Sources */,
 				E4ABDC481F4DBF3E0010965C /* GoalPost.xcdatamodeld in Sources */,
