@@ -21,7 +21,7 @@
         <!--GoalsVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="GoalsVC" customModule="GoalPost" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GoalsVC" id="BYZ-38-t0r" customClass="GoalsVC" customModule="GoalPost" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -200,7 +200,7 @@
         <!--Create GoalVC-->
         <scene sceneID="AcQ-yK-3Qy">
             <objects>
-                <viewController id="eZ4-1R-WWp" customClass="CreateGoalVC" customModule="GoalPost" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CreateGoalVC" id="eZ4-1R-WWp" customClass="CreateGoalVC" customModule="GoalPost" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nLo-rd-JYa">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -242,7 +242,7 @@
                                     <constraint firstItem="6K9-uR-cxM" firstAttribute="centerX" secondItem="mVJ-65-k22" secondAttribute="centerX" id="77l-qW-yXo"/>
                                     <constraint firstAttribute="bottom" secondItem="6K9-uR-cxM" secondAttribute="bottom" constant="10" id="Qmy-aX-ScL"/>
                                     <constraint firstAttribute="height" constant="70" id="ReW-Df-szM"/>
-                                    <constraint firstItem="p1A-8l-ah7" firstAttribute="leading" secondItem="mVJ-65-k22" secondAttribute="leading" constant="8" id="uXq-sh-XVf"/>
+                                    <constraint firstItem="p1A-8l-ah7" firstAttribute="leading" secondItem="mVJ-65-k22" secondAttribute="leading" constant="16" id="uXq-sh-XVf"/>
                                     <constraint firstItem="p1A-8l-ah7" firstAttribute="centerY" secondItem="6K9-uR-cxM" secondAttribute="centerY" id="yIl-tD-5ha"/>
                                 </constraints>
                             </view>
