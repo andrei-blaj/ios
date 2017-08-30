@@ -94,7 +94,7 @@ iPhone                                                                          
 - - - -
 
 #### Description: ####
-PixelCity allows the user to see 36 to 40 photos in a 1 mile radius from his location OR a location of his choice by tapping the MapView provided on the screen. <br />
+PixelCity allows the user to see 36 to 40 photos in a 1 mile radius from their location OR a location of their choice by tapping the MapView provided on the screen. <br />
 Upon tap, the user is presented with a view that slides up from the bottom of the screen. At first the View contains an activity indicator and a label displaying the percentage of the loaded photos. The moment the download is finished, the photos are displayed in the collection view. <br />
 If you wish to see the photo you just have to tap on it. This action takes you to a new View Controller in which the photo is enlarged. <br />
 In order to go back to the collection view all the user has to do is swipe down on the screen. <br />
