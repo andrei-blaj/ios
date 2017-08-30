@@ -5,6 +5,8 @@
 
 📌 [Smack](https://github.com/andrei-blaj/iOS#5-smack) <br />
 📌 [PixelCity](https://github.com/andrei-blaj/iOS#6-pixelcity) <br />
+📌 [GoalPost](https://github.com/andrei-blaj/iOS#7-goalpost) <br />
+
 
 📌 [App-Swoosh](https://github.com/andrei-blaj/iOS#1-app-swoosh) <br />
 📌 [Dev-Profile](https://github.com/andrei-blaj/iOS#2-dev-profile) <br />
@@ -106,5 +108,20 @@ iPhone                                                                          
 ![picture alt](https://github.com/andrei-blaj/iOS/blob/master/PixelCity/Screenshots/1.PNG?raw=true "First screen") | ![picture alt](https://github.com/andrei-blaj/iOS/blob/master/PixelCity/Screenshots/2.PNG?raw=true "Second screen")
 ![picture alt](https://github.com/andrei-blaj/iOS/blob/master/PixelCity/Screenshots/3.PNG?raw=true "First screen") | ![picture alt](https://github.com/andrei-blaj/iOS/blob/master/PixelCity/Screenshots/4.PNG?raw=true "Second screen")
 ![picture alt](https://github.com/andrei-blaj/iOS/blob/master/PixelCity/Screenshots/5.PNG?raw=true "First screen") | ![picture alt](https://github.com/andrei-blaj/iOS/blob/master/PixelCity/Screenshots/6.PNG?raw=true "Second screen")
+
+- - - -
+
+### __7.__ _GoalPost_ ###
+
+- - - -
+
+#### Description: ####
+Simple Goal app built with the help of Core Data, with fetching and deleting capabilities. <br />
+
+iPhone                                                                                                                  | iPhone
+:-----------------------------------------------------------------------------------------------------------------------------------------------------------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------------:
+![picture alt](https://github.com/andrei-blaj/iOS/blob/master/GoalPost/Screenshots/1.PNG?raw=true "First screen") | ![picture alt](https://github.com/andrei-blaj/iOS/blob/master/GoalPost/Screenshots/2.PNG?raw=true "Second screen")
+![picture alt](https://github.com/andrei-blaj/iOS/blob/master/GoalPost/Screenshots/3.PNG?raw=true "First screen") | ![picture alt](https://github.com/andrei-blaj/iOS/blob/master/GoalPost/Screenshots/4.PNG?raw=true "Second screen")
+![picture alt](https://github.com/andrei-blaj/iOS/blob/master/GoalPost/Screenshots/5.PNG?raw=true "First screen") | ![picture alt](https://github.com/andrei-blaj/iOS/blob/master/GoalPost/Screenshots/6.PNG?raw=true "Second screen")
 
 - - - -
