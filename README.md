@@ -116,12 +116,14 @@ iPhone                                                                          
 - - - -
 
 #### Description: ####
-Simple Goal app built with the help of Core Data, with fetching and deleting capabilities. <br />
+Simple Goal app built with the help of Core Data with fetching and deleting capabilities. <br />
+* Added an UNDO feature in case the user accidentally removes a goal  
 
 iPhone                                                                                                                  | iPhone
 :-----------------------------------------------------------------------------------------------------------------------------------------------------------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------------:
 ![picture alt](https://github.com/andrei-blaj/iOS/blob/master/GoalPost/Screenshots/1.PNG?raw=true "First screen") | ![picture alt](https://github.com/andrei-blaj/iOS/blob/master/GoalPost/Screenshots/2.PNG?raw=true "Second screen")
 ![picture alt](https://github.com/andrei-blaj/iOS/blob/master/GoalPost/Screenshots/3.PNG?raw=true "First screen") | ![picture alt](https://github.com/andrei-blaj/iOS/blob/master/GoalPost/Screenshots/4.PNG?raw=true "Second screen")
 ![picture alt](https://github.com/andrei-blaj/iOS/blob/master/GoalPost/Screenshots/5.PNG?raw=true "First screen") | ![picture alt](https://github.com/andrei-blaj/iOS/blob/master/GoalPost/Screenshots/6.PNG?raw=true "Second screen")
+![picture alt](https://github.com/andrei-blaj/iOS/blob/master/GoalPost/Screenshots/7.PNG?raw=true "First screen") | ![picture alt](https://github.com/andrei-blaj/iOS/blob/master/GoalPost/Screenshots/8.PNG?raw=true "Second screen")
 
 - - - -
