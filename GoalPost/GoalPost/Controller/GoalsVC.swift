@@ -15,9 +15,18 @@ class GoalsVC: UIViewController {
 
     // Outlets
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var undoView: UIView!
+    @IBOutlet weak var undoViewDistanceFromBottom: NSLayoutConstraint!
     
     // Variables
     var goals: [Goal] = []
+    
+    var goalType: String!
+    var goalDesc: String!
+    var goalComp: Int32!
+    var goalProg: Int32!
+    
+    var deletedGoal: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,11 +53,41 @@ class GoalsVC: UIViewController {
             }
         }
     }
+    
+    func animateUndoUp() {
+        undoViewDistanceFromBottom.constant = 0
+        UIView.animate(withDuration: 0.5) {
+            self.view.layoutIfNeeded() // 'Refreshes' the view showing the result after applying the new constraints
+        }
+    }
+    
+    func animateUndoDown() {
+        undoViewDistanceFromBottom.constant = undoView.frame.height
+        UIView.animate(withDuration: 0.5) {
+            self.view.layoutIfNeeded()
+        }
+    }
 
     @IBAction func addGoalBtnPressed(_ sender: Any) {
         
         guard let createGoalVC = storyboard?.instantiateViewController(withIdentifier: "CreateGoalVC") else { return }
         presentDetail(createGoalVC)
+        
+    }
+    
+    @IBAction func undoBtnPressed(_ sender: Any) {
+    
+        if deletedGoal == true {
+            undoLastGoal { (success) in
+                if success {
+                    fetchCoreDataObjects()
+                    tableView.reloadData()
+                    deletedGoal = false
+                }
+            }
+        }
+        
+        animateUndoDown()
         
     }
     
@@ -87,12 +126,19 @@ extension GoalsVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
         
         let deleteAction = UITableViewRowAction(style: .destructive, title: "DELETE") { (rowAction, indexPath) in
+            
+            self.prepareForRemoval(atIndexPath: indexPath)
             self.removeGoal(atIndexPath: indexPath)
             self.fetchCoreDataObjects()
+            
             tableView.deleteRows(at: [indexPath], with: .automatic)
+            
+            self.animateUndoUp()
+            
         }
         
         let addAction = UITableViewRowAction(style: .normal, title: "ADD 1") { (rowAction, indexPath) in
+            
             self.setProgress(atIndexPath: indexPath)
             tableView.reloadRows(at: [indexPath], with: .automatic)
         }
@@ -145,11 +191,19 @@ extension GoalsVC {
         
     }
     
+    func prepareForRemoval(atIndexPath indexPath: IndexPath) {
+        goalDesc = goals[indexPath.row].goalDescription
+        goalComp = goals[indexPath.row].goalCompletionValue
+        goalProg = goals[indexPath.row].goalProgress
+        goalType = goals[indexPath.row].goalType
+    }
+    
     func removeGoal(atIndexPath indexPath: IndexPath) {
         
         guard let managedContext = appDelegate?.persistentContainer.viewContext else { return }
         
         managedContext.delete(goals[indexPath.row])
+        deletedGoal = true
         
         do {
             try managedContext.save()
@@ -157,6 +211,26 @@ extension GoalsVC {
             debugPrint("Could not remove: \(error.localizedDescription)")
         }
         
+    }
+    
+    func undoLastGoal(completion: (_ finished: Bool) -> ()) {
+        
+        guard let managedContext = appDelegate?.persistentContainer.viewContext else { return }
+        
+        let goal = Goal(context: managedContext)
+        
+        goal.goalType = goalType
+        goal.goalDescription = goalDesc
+        goal.goalCompletionValue = goalComp
+        goal.goalProgress = goalProg
+        
+        do {
+            try managedContext.save()
+            completion(true)
+        } catch {
+            debugPrint("Could not undo: \(error.localizedDescription)")
+            completion(false)
+        }
         
     }
     
