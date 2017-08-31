@@ -20,11 +20,7 @@ class GoalsVC: UIViewController {
     
     // Variables
     var goals: [Goal] = []
-    
-    var goalType: String!
-    var goalDesc: String!
-    var goalComp: Int32!
-    var goalProg: Int32!
+    var delGoal: DeletedGoal!
     
     var deletedGoal: Bool = false
     
@@ -192,10 +188,7 @@ extension GoalsVC {
     }
     
     func prepareForRemoval(atIndexPath indexPath: IndexPath) {
-        goalDesc = goals[indexPath.row].goalDescription
-        goalComp = goals[indexPath.row].goalCompletionValue
-        goalProg = goals[indexPath.row].goalProgress
-        goalType = goals[indexPath.row].goalType
+        delGoal = DeletedGoal(goal: goals[indexPath.row])
     }
     
     func removeGoal(atIndexPath indexPath: IndexPath) {
@@ -219,10 +212,10 @@ extension GoalsVC {
         
         let goal = Goal(context: managedContext)
         
-        goal.goalType = goalType
-        goal.goalDescription = goalDesc
-        goal.goalCompletionValue = goalComp
-        goal.goalProgress = goalProg
+        goal.goalType = delGoal.goalType
+        goal.goalDescription = delGoal.goalDescription
+        goal.goalCompletionValue = delGoal.goalCompletionValue
+        goal.goalProgress = delGoal.goalProgress
         
         do {
             try managedContext.save()

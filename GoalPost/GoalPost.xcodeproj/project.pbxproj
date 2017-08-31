@@ -20,6 +20,7 @@
 		E4ABDC481F4DBF3E0010965C /* GoalPost.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E4ABDC461F4DBF3E0010965C /* GoalPost.xcdatamodeld */; };
 		E4ABDC4A1F4DBF3E0010965C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4ABDC491F4DBF3E0010965C /* Assets.xcassets */; };
 		E4ABDC4D1F4DBF3E0010965C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4ABDC4B1F4DBF3E0010965C /* LaunchScreen.storyboard */; };
+		E4CC2E071F57FED60058167F /* DeletedGoal.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CC2E061F57FED60058167F /* DeletedGoal.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		E4ABDC491F4DBF3E0010965C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E4ABDC4C1F4DBF3E0010965C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E4ABDC4E1F4DBF3E0010965C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E4CC2E061F57FED60058167F /* DeletedGoal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeletedGoal.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 			children = (
 				E4ABDC571F4DBF8D0010965C /* Extensions */,
 				E4ABDC561F4DBF880010965C /* Enums */,
+				E4CC2E051F57FEBD0058167F /* Model */,
 				E4ABDC551F4DBF720010965C /* View */,
 				E4ABDC541F4DBF6D0010965C /* Controller */,
 				E4ABDC3F1F4DBF3E0010965C /* AppDelegate.swift */,
@@ -118,6 +121,14 @@
 				E49007261F56AE370030A53C /* UIButtonExt.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		E4CC2E051F57FEBD0058167F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E4CC2E061F57FED60058167F /* DeletedGoal.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -191,6 +202,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4CC2E071F57FED60058167F /* DeletedGoal.swift in Sources */,
 				E49271611F52EEBB000DE1DB /* GoalCell.swift in Sources */,
 				E431BF271F55F5B4001FA01E /* CreateGoalVC.swift in Sources */,
 				E49271631F530038000DE1DB /* GoalType.swift in Sources */,
