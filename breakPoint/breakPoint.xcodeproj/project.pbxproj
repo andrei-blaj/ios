@@ -15,6 +15,11 @@
 		E4CC2E1E1F58018A0058167F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4CC2E1D1F58018A0058167F /* Assets.xcassets */; };
 		E4CC2E211F58018A0058167F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4CC2E1F1F58018A0058167F /* LaunchScreen.storyboard */; };
 		E4CC2E2F1F583B9E0058167F /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CC2E2E1F583B9E0058167F /* DataService.swift */; };
+		E4CC2E311F5853380058167F /* AuthVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CC2E301F5853380058167F /* AuthVC.swift */; };
+		E4CC2E331F5853740058167F /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CC2E321F5853740058167F /* LoginVC.swift */; };
+		E4CC2E351F5853F60058167F /* InsetTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CC2E341F5853F60058167F /* InsetTextField.swift */; };
+		E4CC2E371F58570A0058167F /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CC2E361F58570A0058167F /* ShadowView.swift */; };
+		E4CC2E3A1F585BB30058167F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E4CC2E2D1F58042B0058167F /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +36,10 @@
 		E4CC2E221F58018A0058167F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E4CC2E2D1F58042B0058167F /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E4CC2E2E1F583B9E0058167F /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		E4CC2E301F5853380058167F /* AuthVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthVC.swift; sourceTree = "<group>"; };
+		E4CC2E321F5853740058167F /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		E4CC2E341F5853F60058167F /* InsetTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsetTextField.swift; sourceTree = "<group>"; };
+		E4CC2E361F58570A0058167F /* ShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +112,8 @@
 			children = (
 				E4CC2E161F58018A0058167F /* FirstViewController.swift */,
 				E4CC2E181F58018A0058167F /* SecondViewController.swift */,
+				E4CC2E301F5853380058167F /* AuthVC.swift */,
+				E4CC2E321F5853740058167F /* LoginVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -110,6 +121,8 @@
 		E4CC2E291F5802180058167F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E4CC2E341F5853F60058167F /* InsetTextField.swift */,
+				E4CC2E361F58570A0058167F /* ShadowView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -198,6 +211,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E4CC2E211F58018A0058167F /* LaunchScreen.storyboard in Resources */,
+				E4CC2E3A1F585BB30058167F /* GoogleService-Info.plist in Resources */,
 				E4CC2E1E1F58018A0058167F /* Assets.xcassets in Resources */,
 				E4CC2E1C1F58018A0058167F /* Main.storyboard in Resources */,
 			);
@@ -258,9 +272,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4CC2E311F5853380058167F /* AuthVC.swift in Sources */,
 				E4CC2E191F58018A0058167F /* SecondViewController.swift in Sources */,
+				E4CC2E331F5853740058167F /* LoginVC.swift in Sources */,
 				E4CC2E151F58018A0058167F /* AppDelegate.swift in Sources */,
+				E4CC2E371F58570A0058167F /* ShadowView.swift in Sources */,
 				E4CC2E171F58018A0058167F /* FirstViewController.swift in Sources */,
+				E4CC2E351F5853F60058167F /* InsetTextField.swift in Sources */,
 				E4CC2E2F1F583B9E0058167F /* DataService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
