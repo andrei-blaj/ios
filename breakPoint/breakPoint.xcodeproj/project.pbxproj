@@ -22,6 +22,7 @@
 		E4CC2E371F58570A0058167F /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CC2E361F58570A0058167F /* ShadowView.swift */; };
 		E4CC2E3A1F585BB30058167F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E4CC2E2D1F58042B0058167F /* GoogleService-Info.plist */; };
 		E4CC2E3C1F5861030058167F /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CC2E3B1F5861030058167F /* AuthService.swift */; };
+		E4F70AA41F59F7E300D4960C /* CreatePostVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F70AA31F59F7E300D4960C /* CreatePostVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		E4CC2E341F5853F60058167F /* InsetTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsetTextField.swift; sourceTree = "<group>"; };
 		E4CC2E361F58570A0058167F /* ShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
 		E4CC2E3B1F5861030058167F /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		E4F70AA31F59F7E300D4960C /* CreatePostVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +121,7 @@
 				E4CC2E301F5853380058167F /* AuthVC.swift */,
 				E4CC2E321F5853740058167F /* LoginVC.swift */,
 				E4C76BE71F599281009256F3 /* MeVC.swift */,
+				E4F70AA31F59F7E300D4960C /* CreatePostVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -285,6 +288,7 @@
 				E4CC2E3C1F5861030058167F /* AuthService.swift in Sources */,
 				E4CC2E151F58018A0058167F /* AppDelegate.swift in Sources */,
 				E4CC2E371F58570A0058167F /* ShadowView.swift in Sources */,
+				E4F70AA41F59F7E300D4960C /* CreatePostVC.swift in Sources */,
 				E4CC2E171F58018A0058167F /* FeedVC.swift in Sources */,
 				E4CC2E351F5853F60058167F /* InsetTextField.swift in Sources */,
 				E4CC2E2F1F583B9E0058167F /* DataService.swift in Sources */,
