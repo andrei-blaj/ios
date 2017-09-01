@@ -23,6 +23,7 @@
 		E4CC2E3A1F585BB30058167F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E4CC2E2D1F58042B0058167F /* GoogleService-Info.plist */; };
 		E4CC2E3C1F5861030058167F /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CC2E3B1F5861030058167F /* AuthService.swift */; };
 		E4F70AA41F59F7E300D4960C /* CreatePostVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F70AA31F59F7E300D4960C /* CreatePostVC.swift */; };
+		E4F70AA61F5A011400D4960C /* UIViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F70AA51F5A011400D4960C /* UIViewExt.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		E4CC2E361F58570A0058167F /* ShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
 		E4CC2E3B1F5861030058167F /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		E4F70AA31F59F7E300D4960C /* CreatePostVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostVC.swift; sourceTree = "<group>"; };
+		E4F70AA51F5A011400D4960C /* UIViewExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExt.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +147,7 @@
 		E4CC2E2B1F5802410058167F /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				E4F70AA51F5A011400D4960C /* UIViewExt.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -281,6 +284,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4F70AA61F5A011400D4960C /* UIViewExt.swift in Sources */,
 				E4C76BE81F599281009256F3 /* MeVC.swift in Sources */,
 				E4CC2E311F5853380058167F /* AuthVC.swift in Sources */,
 				E4CC2E191F58018A0058167F /* GroupsVC.swift in Sources */,

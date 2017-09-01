@@ -21,12 +21,13 @@ class CreatePostVC: UIViewController {
         super.viewDidLoad()
         
         textView.delegate = self
+        sendBtn.bindToKeyboard()
         
     }
 
     @IBAction func sendBtnPressed(_ sender: Any) {
         
-        if textView.text != nil && textView.text != "Insert text here..." {
+        if textView.text != nil && textView.text != "Insert text here..." && textView.text != "" {
             sendBtn.isEnabled = false
             
             DataService.instance.uploadPost(withMessage: textView.text, forUID: (Auth.auth().currentUser?.uid)!, withGroupKey: nil, sendComplete: { (isComplete) in
@@ -53,6 +54,5 @@ extension CreatePostVC: UITextViewDelegate {
     func textViewDidBeginEditing(_ textView: UITextView) {
         textView.text = ""
     }
-    
     
 }
