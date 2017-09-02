@@ -106,7 +106,7 @@
                                                 <constraint firstItem="kYf-O1-Q1i" firstAttribute="leading" secondItem="cgT-XY-JcJ" secondAttribute="leadingMargin" id="nfO-fy-kph"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.14346569776535034" green="0.14833301305770874" blue="0.18665099143981934" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.16291359066963196" green="0.16767778992652893" blue="0.20991218090057373" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
                                             <outlet property="contentLbl" destination="1Q8-dp-0P3" id="Gfb-Jv-Mw4"/>
                                             <outlet property="emailLbl" destination="DzM-Bo-YYA" id="mre-iF-gDx"/>
