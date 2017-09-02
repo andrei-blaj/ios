@@ -5,6 +5,7 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13156.2"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -60,13 +61,57 @@
                                 <rect key="frame" x="0.0" y="70" width="375" height="548"/>
                                 <color key="backgroundColor" red="0.27280813455581665" green="0.27288126945495605" blue="0.3118099570274353" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="100" id="WUH-CW-w1i">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="feedCell" rowHeight="100" id="WUH-CW-w1i" customClass="FeedCell" customModule="breakPoint" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="WUH-CW-w1i" id="cgT-XY-JcJ">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultProfileImage" translatesAutoresizingMaskIntoConstraints="NO" id="kYf-O1-Q1i">
+                                                    <rect key="frame" x="8" y="8" width="50" height="50"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="50" id="ci0-Es-o9K"/>
+                                                        <constraint firstAttribute="height" constant="50" id="ntO-gb-lpb"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="gmE-4W-m8I">
+                                                    <rect key="frame" x="68" y="18" width="289" height="63.5"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="user@breakpoint.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DzM-Bo-YYA">
+                                                            <rect key="frame" x="0.0" y="0.0" width="289" height="20"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="20" id="N3P-bH-D2y"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="15"/>
+                                                            <color key="textColor" red="0.015686274510000001" green="0.6705882353" blue="0.7725490196" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Message content" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="1Q8-dp-0P3">
+                                                            <rect key="frame" x="0.0" y="35" width="289" height="28.5"/>
+                                                            <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="12"/>
+                                                            <color key="textColor" red="0.015686274510000001" green="0.6705882353" blue="0.7725490196" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="gmE-4W-m8I" secondAttribute="trailing" constant="10" id="D7L-Ty-eeI"/>
+                                                <constraint firstItem="gmE-4W-m8I" firstAttribute="leading" secondItem="kYf-O1-Q1i" secondAttribute="trailing" constant="10" id="HSQ-aG-iJo"/>
+                                                <constraint firstItem="kYf-O1-Q1i" firstAttribute="top" secondItem="cgT-XY-JcJ" secondAttribute="topMargin" id="Jxo-r8-DLx"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="gmE-4W-m8I" secondAttribute="bottom" constant="10" id="LEf-da-MBu"/>
+                                                <constraint firstItem="gmE-4W-m8I" firstAttribute="top" secondItem="cgT-XY-JcJ" secondAttribute="topMargin" constant="10" id="QHN-aj-1CL"/>
+                                                <constraint firstItem="kYf-O1-Q1i" firstAttribute="leading" secondItem="cgT-XY-JcJ" secondAttribute="leadingMargin" id="nfO-fy-kph"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.14346569776535034" green="0.14833301305770874" blue="0.18665099143981934" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <outlet property="contentLbl" destination="1Q8-dp-0P3" id="Gfb-Jv-Mw4"/>
+                                            <outlet property="emailLbl" destination="DzM-Bo-YYA" id="mre-iF-gDx"/>
+                                            <outlet property="profileImage" destination="kYf-O1-Q1i" id="3ss-s8-Td6"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -86,10 +131,13 @@
                     <tabBarItem key="tabBarItem" title="Feed" image="feed-tabIcon" selectedImage="feed-tabIcon" id="acW-dT-cKf">
                         <color key="badgeColor" red="0.56078431370000004" green="0.81176470590000005" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
                     </tabBarItem>
+                    <connections>
+                        <outlet property="tableView" destination="0rx-dD-ojx" id="nGO-Az-kcg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="950" y="-730"/>
+            <point key="canvasLocation" x="949.60000000000002" y="-730.88455772113946"/>
         </scene>
         <!--Create PostVC-->
         <scene sceneID="cjf-vc-r36">
