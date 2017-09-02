@@ -28,7 +28,7 @@ class MeVC: UIViewController {
     @IBAction func signOutBtnPressed(_ sender: Any) {
         // Sign out code
         let logoutPopup = UIAlertController(title: "Logout?", message: "Are you sure you want to logout?", preferredStyle: .actionSheet)
-        let logoutAction = UIAlertAction(title: "LOGOUT", style: .destructive) { (buttonTapped) in
+        let logoutAction = UIAlertAction(title: "Logout", style: .destructive) { (buttonTapped) in
             do {
                 try Auth.auth().signOut()
                 let authVC = self.storyboard?.instantiateViewController(withIdentifier: "AuthVC") as? AuthVC
