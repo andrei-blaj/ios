@@ -24,6 +24,12 @@ class CreatePostVC: UIViewController {
         sendBtn.bindToKeyboard()
         
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        self.userEmailLbl.text = Auth.auth().currentUser?.email
+    }
 
     @IBAction func sendBtnPressed(_ sender: Any) {
         
