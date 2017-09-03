@@ -57,8 +57,9 @@ class CreateGroupsVC: UIViewController {
         
         if titleField.text != "" && descriptionField.text != "" {
             chosenUsersArray.append((Auth.auth().currentUser?.email)!)
+            
             DataService.instance.getIds(forUsernames: chosenUsersArray, handler: { (returnedIdsArray) in
-                DataService.instance.createGroup(withTitle: self.titleField.text!, andDescription: self.descriptionField.text!, forUserIds: self.chosenUsersArray, handler: { (groupCreated) in
+                DataService.instance.createGroup(withTitle: self.titleField.text!, andDescription: self.descriptionField.text!, forUserIds: returnedIdsArray, handler: { (groupCreated) in
                     if groupCreated {
                         self.dismiss(animated: true, completion: nil)
                     } else {
