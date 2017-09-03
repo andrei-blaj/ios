@@ -21,15 +21,17 @@ class CreateGroupsVC: UIViewController {
     
     // Variables
     var emailArray = [String]()
+    var chosenUsersArray = [String]()
     
     override func viewDidLoad() {
-        super.viewDidLoad()
         
         tableView.delegate = self
         tableView.dataSource = self
         
         emailSearchField.delegate = self
         emailSearchField.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
+        
+        super.viewDidLoad()
         
     }
     
@@ -43,7 +45,6 @@ class CreateGroupsVC: UIViewController {
                 self.tableView.reloadData()
             })
         }
-    
     }
 
     @IBAction func doneBtnPressed(_ sender: Any) {
@@ -75,10 +76,12 @@ extension CreateGroupsVC: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+    }
+    
 }
 
 extension CreateGroupsVC: UITextFieldDelegate {
-    
-    
     
 }
