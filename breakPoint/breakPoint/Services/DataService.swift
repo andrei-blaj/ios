@@ -43,6 +43,8 @@ class DataService {
         
         if groupKey != nil {
             // send to REF_GROUPS
+            REF_GROUPS.child(groupKey!).child("messages").childByAutoId().updateChildValues(["content": message, "senderId": uid])
+            sendComplete(true)
         } else {
             REF_FEED.childByAutoId().updateChildValues(["content": message, "senderId": uid])
             sendComplete(true)
@@ -78,6 +80,23 @@ class DataService {
         
     }
     
+    func getEmails(forGroup group: Group, handler: @escaping (_ emailArray: [String]) -> ()) {
+        var emailArray = [String]()
+        REF_USERS.observeSingleEvent(of: .value) { (userSnapshot) in
+            guard let userSnapshot = userSnapshot.children.allObjects as? [DataSnapshot] else { return }
+            
+            for user in userSnapshot {
+                if group.members.contains(user.key) {
+                    let email = user.childSnapshot(forPath: "email").value as! String
+                    emailArray.append(email)
+                }
+            }
+            
+            handler(emailArray)
+        }
+        
+    }
+    
     func getAllFeedMessages(handler: @escaping (_ messages: [Message]) -> ()) {
         
         var messageArray = [Message]()
@@ -97,6 +116,28 @@ class DataService {
             
             handler(messageArray)
         
+        }
+        
+    }
+    
+    func getAllMessagesFor(desiredGroup group: Group, handler: @escaping (_ messagesArray: [Message]) -> ()) {
+        
+        var groupMessageArray = [Message]()
+        
+        REF_GROUPS.child(group.key).child("messages").observeSingleEvent(of: .value) { (groupMessageSnapshot) in
+            guard let groupMessageSnapshot = groupMessageSnapshot.children.allObjects as? [DataSnapshot] else { return }
+            
+            for groupMessage in groupMessageSnapshot {
+                let content = groupMessage.childSnapshot(forPath: "content").value as! String
+                let senderId = groupMessage.childSnapshot(forPath: "senderId").value as! String
+                
+                let message = Message(content: content, senderId: senderId)
+                groupMessageArray.append(message)
+                
+            }
+            
+            handler(groupMessageArray)
+            
         }
         
     }

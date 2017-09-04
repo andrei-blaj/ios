@@ -10,6 +10,8 @@
 		1B97C654C361A458B34E7A77 /* Pods_breakPoint.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94BB9C132BDC89C154AAE978 /* Pods_breakPoint.framework */; };
 		E407DFEC1F5C943F001F5F45 /* GroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E407DFEB1F5C943F001F5F45 /* GroupCell.swift */; };
 		E407DFEE1F5CA514001F5F45 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = E407DFED1F5CA514001F5F45 /* Group.swift */; };
+		E4897A481F5D5ACB00774892 /* GroupFeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4897A471F5D5ACB00774892 /* GroupFeedCell.swift */; };
+		E4897A4A1F5D5B4000774892 /* GroupFeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4897A491F5D5B4000774892 /* GroupFeedVC.swift */; };
 		E4C291281F5B3FC200E79FE8 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C291271F5B3FC200E79FE8 /* UserCell.swift */; };
 		E4C76BE81F599281009256F3 /* MeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C76BE71F599281009256F3 /* MeVC.swift */; };
 		E4CC2E151F58018A0058167F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CC2E141F58018A0058167F /* AppDelegate.swift */; };
@@ -38,6 +40,8 @@
 		94BB9C132BDC89C154AAE978 /* Pods_breakPoint.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_breakPoint.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E407DFEB1F5C943F001F5F45 /* GroupCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupCell.swift; sourceTree = "<group>"; };
 		E407DFED1F5CA514001F5F45 /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
+		E4897A471F5D5ACB00774892 /* GroupFeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupFeedCell.swift; sourceTree = "<group>"; };
+		E4897A491F5D5B4000774892 /* GroupFeedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupFeedVC.swift; sourceTree = "<group>"; };
 		E4C291271F5B3FC200E79FE8 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		E4C76BE71F599281009256F3 /* MeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeVC.swift; sourceTree = "<group>"; };
 		E4CC2E111F58018A0058167F /* breakPoint.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = breakPoint.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -137,6 +141,7 @@
 				E4C76BE71F599281009256F3 /* MeVC.swift */,
 				E4F70AA31F59F7E300D4960C /* CreatePostVC.swift */,
 				E4F70AAB1F5B378D00D4960C /* CreateGroupsVC.swift */,
+				E4897A491F5D5B4000774892 /* GroupFeedVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -149,6 +154,7 @@
 				E4F70AA91F5AAC5000D4960C /* FeedCell.swift */,
 				E4C291271F5B3FC200E79FE8 /* UserCell.swift */,
 				E407DFEB1F5C943F001F5F45 /* GroupCell.swift */,
+				E4897A471F5D5ACB00774892 /* GroupFeedCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -308,6 +314,8 @@
 				E407DFEC1F5C943F001F5F45 /* GroupCell.swift in Sources */,
 				E4CC2E191F58018A0058167F /* GroupsVC.swift in Sources */,
 				E4CC2E331F5853740058167F /* LoginVC.swift in Sources */,
+				E4897A4A1F5D5B4000774892 /* GroupFeedVC.swift in Sources */,
+				E4897A481F5D5ACB00774892 /* GroupFeedCell.swift in Sources */,
 				E4CC2E3C1F5861030058167F /* AuthService.swift in Sources */,
 				E4CC2E151F58018A0058167F /* AppDelegate.swift in Sources */,
 				E4F70AAC1F5B378D00D4960C /* CreateGroupsVC.swift in Sources */,

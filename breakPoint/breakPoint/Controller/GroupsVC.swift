@@ -14,6 +14,7 @@ class GroupsVC: UIViewController {
     // Outlets
     @IBOutlet weak var tableView: UITableView!
     
+    // Variables
     var groupsArray = [Group]()
     
     override func viewDidLoad() {
@@ -59,6 +60,9 @@ extension GroupsVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let groupFeedVC = storyboard?.instantiateViewController(withIdentifier: "GroupFeedVC") as? GroupFeedVC else { return }
+        groupFeedVC.initData(forGroup: groupsArray[indexPath.row])
+        present(groupFeedVC, animated: true, completion: nil)
         
     }
     
