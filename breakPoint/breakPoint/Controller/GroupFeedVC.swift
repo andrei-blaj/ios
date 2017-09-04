@@ -61,7 +61,7 @@ class GroupFeedVC: UIViewController {
     }
 
     @IBAction func closeBtnPressed(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
+        dismissDetail()
     }
     
     @IBAction func sendBtnPressed(_ sender: Any) {
