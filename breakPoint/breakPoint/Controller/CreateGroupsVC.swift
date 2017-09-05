@@ -27,8 +27,7 @@ class CreateGroupsVC: UIViewController {
         
         tableView.delegate = self
         tableView.dataSource = self
-        
-        emailSearchField.delegate = self
+    
         emailSearchField.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
         
         super.viewDidLoad()
@@ -115,9 +114,5 @@ extension CreateGroupsVC: UITableViewDelegate, UITableViewDataSource {
         }
         
     }
-    
-}
-
-extension CreateGroupsVC: UITextFieldDelegate {
     
 }

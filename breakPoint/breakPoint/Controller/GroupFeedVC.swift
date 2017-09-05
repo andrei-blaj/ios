@@ -19,12 +19,49 @@ class GroupFeedVC: UIViewController {
     @IBOutlet weak var sendMessageView: UIView!
     @IBOutlet weak var sendBtn: UIButton!
     
+    // Constraints
+    @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
+    
     // Variables
     var groupMessagesArray = [Message]()
     var group: Group?
     
     func initData(forGroup group: Group) {
         self.group = group
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        tableView.delegate = self
+        tableView.dataSource = self
+    
+        NotificationCenter.default.addObserver(self, selector: #selector(handleKeyboardNotification), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(handleKeyboardNotification), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+    
+    }
+    
+    @objc func handleKeyboardNotification(notification: NSNotification) {
+        
+        if let userInfo = notification.userInfo {
+            
+            let keyboardFrame = (userInfo[UIKeyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
+            
+            let isKeyboardShowing = notification.name == NSNotification.Name.UIKeyboardWillShow
+            
+            UIView.animate(withDuration: 0, delay: 0, options: UIViewAnimationOptions.curveEaseOut, animations: {
+                self.view.layoutIfNeeded()
+            }, completion: { (completed) in
+                
+                let indexPath = NSIndexPath(item: self.groupMessagesArray.count - 1, section: 0)
+                self.tableView.scrollToRow(at: indexPath as IndexPath, at: .bottom, animated: true)
+                
+            })
+            
+            bottomConstraint.constant = isKeyboardShowing ? -keyboardFrame.height : 0
+            
+        }
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -48,16 +85,6 @@ class GroupFeedVC: UIViewController {
             })
         }
         
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        sendMessageView.bindToKeyboard()
-        
-        tableView.delegate = self
-        tableView.dataSource = self
-
     }
 
     @IBAction func closeBtnPressed(_ sender: Any) {
