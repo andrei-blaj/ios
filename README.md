@@ -2,10 +2,10 @@
 
 - - - -
 
-📌 [BreakPoint](https://github.com/andrei-blaj/iOS#8-breakpoint) <br /> (Using Firebase)
-📌 [Smack](https://github.com/andrei-blaj/iOS#5-smack) <br /> (Using Heroku and JSON)
-📌 [PixelCity](https://github.com/andrei-blaj/iOS#6-pixelcity) <br /> (Using Flickr API and MapKit)
-📌 [GoalPost](https://github.com/andrei-blaj/iOS#7-goalpost) <br /> (Using Core Data)
+📌 [BreakPoint](https://github.com/andrei-blaj/iOS#8-breakpoint) (Using Firebase) <br />
+📌 [Smack](https://github.com/andrei-blaj/iOS#5-smack) (Using Heroku and JSON) <br />
+📌 [PixelCity](https://github.com/andrei-blaj/iOS#6-pixelcity) (Using Flickr API and MapKit) <br />
+📌 [GoalPost](https://github.com/andrei-blaj/iOS#7-goalpost) (Using Core Data) <br />
 
 
 📌 [App-Swoosh](https://github.com/andrei-blaj/iOS#1-app-swoosh) <br />
