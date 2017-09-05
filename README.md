@@ -49,10 +49,9 @@ iPhone	                           									                     		   	          
 An app that calculates the amout of work hours needed in order to purchase an item of a specified price
 Coverage of Unit Testing, Custom Text Fields, IBDesignable
 
-iPhone                                                                                                                  | iPhone
-:-----------------------------------------------------------------------------------------------------------------------------------------------------------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------------:
-![picture alt](https://github.com/andrei-blaj/iOS/blob/master/window-shopper/Screenshots/1.png?raw=true "First screen") | ![picture alt](https://github.com/andrei-blaj/iOS/blob/master/window-shopper/Screenshots/2.png?raw=true "Second screen")
-![picture alt](https://github.com/andrei-blaj/iOS/blob/master/window-shopper/Screenshots/3.png?raw=true "Third screen") | ![picture alt](https://github.com/andrei-blaj/iOS/blob/master/window-shopper/Screenshots/4.png?raw=true "Fourth screen")
+iPhone                                                                                                                  | iPhone                                                                                                                  | iPhone                                                                                                                  | iPhone
+:-----------------------------------------------------------------------------------------------------------------------------------------------------------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------------:|:-----------------------------------------------------------------------------------------------------------------------------------------------------------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------------:
+![picture alt](https://github.com/andrei-blaj/iOS/blob/master/window-shopper/Screenshots/1.png?raw=true "First screen") | ![picture alt](https://github.com/andrei-blaj/iOS/blob/master/window-shopper/Screenshots/2.png?raw=true "Second screen") | ![picture alt](https://github.com/andrei-blaj/iOS/blob/master/window-shopper/Screenshots/3.png?raw=true "Third screen") | ![picture alt](https://github.com/andrei-blaj/iOS/blob/master/window-shopper/Screenshots/4.png?raw=true "Fourth screen")
 
 - - - -
 
@@ -63,10 +62,9 @@ iPhone                                                                          
 #### Description: ####
 Coverage of TableView, Custom Table View Cells, IBOutlets, UITableviewDataSource, UITableviewDelegate, CollectionViews
 
-iPhone                                                                                                                  | iPhone
-:-----------------------------------------------------------------------------------------------------------------------------------------------------------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------------:
-![picture alt](https://github.com/andrei-blaj/iOS/blob/master/coder-swag/Screenshots/1.png?raw=true "First screen") | ![picture alt](https://github.com/andrei-blaj/iOS/blob/master/coder-swag/Screenshots/2.png?raw=true "Second screen")
-![picture alt](https://github.com/andrei-blaj/iOS/blob/master/coder-swag/Screenshots/3.png?raw=true "Third screen") | ![picture alt](https://github.com/andrei-blaj/iOS/blob/master/coder-swag/Screenshots/4.png?raw=true "Fourth screen")
+iPhone                                                                                                                  | iPhone                                                                                                                  | iPhone                                                                                                                  | iPhone
+:-----------------------------------------------------------------------------------------------------------------------------------------------------------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------------:|:-----------------------------------------------------------------------------------------------------------------------------------------------------------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------------:
+![picture alt](https://github.com/andrei-blaj/iOS/blob/master/coder-swag/Screenshots/1.png?raw=true "First screen") | ![picture alt](https://github.com/andrei-blaj/iOS/blob/master/coder-swag/Screenshots/2.png?raw=true "Second screen") | ![picture alt](https://github.com/andrei-blaj/iOS/blob/master/coder-swag/Screenshots/3.png?raw=true "Third screen") | ![picture alt](https://github.com/andrei-blaj/iOS/blob/master/coder-swag/Screenshots/4.png?raw=true "Fourth screen")
 
 - - - -
 
@@ -79,14 +77,11 @@ A brief clone of the Slack app <br />
 Used the [mac-chat-api](https://github.com/devslopes/mac-chat-api) provided by Devslopes. Also covered Alamofire requests (.post, .get) in order to send and retrieve data from the mLab database. <br />
 Used sockets for real time changes in the app, to inform a user when another user or other users are typing, update the chat view controller every time a message is sent, enlarge the font size and thickness of the channel names if there are unread messages in those particular channel. <br />
 
-iPhone                                                                                                                  | iPhone
-:-----------------------------------------------------------------------------------------------------------------------------------------------------------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------------:
-![picture alt](https://github.com/andrei-blaj/iOS/blob/master/Smack/Screenshots/1.png?raw=true "First screen") | ![picture alt](https://github.com/andrei-blaj/iOS/blob/master/Smack/Screenshots/2.png?raw=true "Second screen")
-![picture alt](https://github.com/andrei-blaj/iOS/blob/master/Smack/Screenshots/3.png?raw=true "First screen") | ![picture alt](https://github.com/andrei-blaj/iOS/blob/master/Smack/Screenshots/4.png?raw=true "Second screen")
-![picture alt](https://github.com/andrei-blaj/iOS/blob/master/Smack/Screenshots/5.png?raw=true "First screen") | ![picture alt](https://github.com/andrei-blaj/iOS/blob/master/Smack/Screenshots/6.png?raw=true "Second screen")
-![picture alt](https://github.com/andrei-blaj/iOS/blob/master/Smack/Screenshots/7.png?raw=true "First screen") | ![picture alt](https://github.com/andrei-blaj/iOS/blob/master/Smack/Screenshots/8.png?raw=true "Second screen")
-![picture alt](https://github.com/andrei-blaj/iOS/blob/master/Smack/Screenshots/9.png?raw=true "First screen") | ![picture alt](https://github.com/andrei-blaj/iOS/blob/master/Smack/Screenshots/10.png?raw=true "Second screen")
-![picture alt](https://github.com/andrei-blaj/iOS/blob/master/Smack/Screenshots/11.png?raw=true "First screen") | ![picture alt](https://github.com/andrei-blaj/iOS/blob/master/Smack/Screenshots/12.png?raw=true "Second screen")
+iPhone                                                                                                                  | iPhone                                                                                                                  | iPhone                                                                                                                  | iPhone
+:-----------------------------------------------------------------------------------------------------------------------------------------------------------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------------:|:-----------------------------------------------------------------------------------------------------------------------------------------------------------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------------:
+![picture alt](https://github.com/andrei-blaj/iOS/blob/master/Smack/Screenshots/1.png?raw=true "First screen") | ![picture alt](https://github.com/andrei-blaj/iOS/blob/master/Smack/Screenshots/2.png?raw=true "Second screen") | ![picture alt](https://github.com/andrei-blaj/iOS/blob/master/Smack/Screenshots/3.png?raw=true "First screen") | ![picture alt](https://github.com/andrei-blaj/iOS/blob/master/Smack/Screenshots/4.png?raw=true "Second screen")
+![picture alt](https://github.com/andrei-blaj/iOS/blob/master/Smack/Screenshots/5.png?raw=true "First screen") | ![picture alt](https://github.com/andrei-blaj/iOS/blob/master/Smack/Screenshots/6.png?raw=true "Second screen") | ![picture alt](https://github.com/andrei-blaj/iOS/blob/master/Smack/Screenshots/7.png?raw=true "First screen") | ![picture alt](https://github.com/andrei-blaj/iOS/blob/master/Smack/Screenshots/8.png?raw=true "Second screen")
+![picture alt](https://github.com/andrei-blaj/iOS/blob/master/Smack/Screenshots/9.png?raw=true "First screen") | ![picture alt](https://github.com/andrei-blaj/iOS/blob/master/Smack/Screenshots/10.png?raw=true "Second screen") | ![picture alt](https://github.com/andrei-blaj/iOS/blob/master/Smack/Screenshots/11.png?raw=true "First screen") | ![picture alt](https://github.com/andrei-blaj/iOS/blob/master/Smack/Screenshots/12.png?raw=true "Second screen")
 
 - - - -
 
@@ -102,11 +97,10 @@ In order to go back to the collection view all the user has to do is swipe down 
 To exit the collection view the user must swipe down on the view. <br />
 * The user can also 3D touch on a photo in the collection view to preview the full photo.
 
-iPhone                                                                                                                  | iPhone
-:-----------------------------------------------------------------------------------------------------------------------------------------------------------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------------:
-![picture alt](https://github.com/andrei-blaj/iOS/blob/master/PixelCity/Screenshots/1.PNG?raw=true "First screen") | ![picture alt](https://github.com/andrei-blaj/iOS/blob/master/PixelCity/Screenshots/2.PNG?raw=true "Second screen")
-![picture alt](https://github.com/andrei-blaj/iOS/blob/master/PixelCity/Screenshots/3.PNG?raw=true "First screen") | ![picture alt](https://github.com/andrei-blaj/iOS/blob/master/PixelCity/Screenshots/4.PNG?raw=true "Second screen")
-![picture alt](https://github.com/andrei-blaj/iOS/blob/master/PixelCity/Screenshots/5.PNG?raw=true "First screen") | ![picture alt](https://github.com/andrei-blaj/iOS/blob/master/PixelCity/Screenshots/6.PNG?raw=true "Second screen")
+iPhone                                                                                                                  | iPhone                                                                                                                  | iPhone
+:-----------------------------------------------------------------------------------------------------------------------------------------------------------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------------:
+![picture alt](https://github.com/andrei-blaj/iOS/blob/master/PixelCity/Screenshots/1.PNG?raw=true "First screen") | ![picture alt](https://github.com/andrei-blaj/iOS/blob/master/PixelCity/Screenshots/2.PNG?raw=true "Second screen") | ![picture alt](https://github.com/andrei-blaj/iOS/blob/master/PixelCity/Screenshots/3.PNG?raw=true "First screen")
+![picture alt](https://github.com/andrei-blaj/iOS/blob/master/PixelCity/Screenshots/4.PNG?raw=true "Second screen") | ![picture alt](https://github.com/andrei-blaj/iOS/blob/master/PixelCity/Screenshots/5.PNG?raw=true "First screen") | ![picture alt](https://github.com/andrei-blaj/iOS/blob/master/PixelCity/Screenshots/6.PNG?raw=true "Second screen")
 
 - - - -
 
@@ -118,12 +112,10 @@ iPhone                                                                          
 Simple Goal app built with the help of Core Data with fetching and deleting capabilities. <br />
 * Added an UNDO feature in case the user accidentally removes a goal  
 
-iPhone                                                                                                                  | iPhone
-:-----------------------------------------------------------------------------------------------------------------------------------------------------------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------------:
-![picture alt](https://github.com/andrei-blaj/iOS/blob/master/GoalPost/Screenshots/1.PNG?raw=true "First screen") | ![picture alt](https://github.com/andrei-blaj/iOS/blob/master/GoalPost/Screenshots/2.PNG?raw=true "Second screen")
-![picture alt](https://github.com/andrei-blaj/iOS/blob/master/GoalPost/Screenshots/3.PNG?raw=true "First screen") | ![picture alt](https://github.com/andrei-blaj/iOS/blob/master/GoalPost/Screenshots/4.PNG?raw=true "Second screen")
-![picture alt](https://github.com/andrei-blaj/iOS/blob/master/GoalPost/Screenshots/5.PNG?raw=true "First screen") | ![picture alt](https://github.com/andrei-blaj/iOS/blob/master/GoalPost/Screenshots/6.PNG?raw=true "Second screen")
-![picture alt](https://github.com/andrei-blaj/iOS/blob/master/GoalPost/Screenshots/7.PNG?raw=true "First screen") | ![picture alt](https://github.com/andrei-blaj/iOS/blob/master/GoalPost/Screenshots/8.PNG?raw=true "Second screen")
+iPhone                                                                                                                  | iPhone                                                                                                                  | iPhone                                                                                                                  | iPhone
+:-----------------------------------------------------------------------------------------------------------------------------------------------------------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------------:|:-----------------------------------------------------------------------------------------------------------------------------------------------------------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------------:
+![picture alt](https://github.com/andrei-blaj/iOS/blob/master/GoalPost/Screenshots/1.PNG?raw=true "First screen") | ![picture alt](https://github.com/andrei-blaj/iOS/blob/master/GoalPost/Screenshots/2.PNG?raw=true "Second screen") | ![picture alt](https://github.com/andrei-blaj/iOS/blob/master/GoalPost/Screenshots/3.PNG?raw=true "First screen") | ![picture alt](https://github.com/andrei-blaj/iOS/blob/master/GoalPost/Screenshots/4.PNG?raw=true "Second screen")
+![picture alt](https://github.com/andrei-blaj/iOS/blob/master/GoalPost/Screenshots/5.PNG?raw=true "First screen") | ![picture alt](https://github.com/andrei-blaj/iOS/blob/master/GoalPost/Screenshots/6.PNG?raw=true "Second screen") | ![picture alt](https://github.com/andrei-blaj/iOS/blob/master/GoalPost/Screenshots/7.PNG?raw=true "First screen") | ![picture alt](https://github.com/andrei-blaj/iOS/blob/master/GoalPost/Screenshots/8.PNG?raw=true "Second screen")
 
 - - - -
 
@@ -132,19 +124,20 @@ iPhone                                                                          
 - - - -
 
 #### Description: ####
-Social networking app; has a feed; The user can create groups, add anyone with an account <br />
-Used FIREBASE as a database <br />
+Social networking app <br />
+The user is presented with a Tab Bar Controller with 3 available options: Feed, Groups and Me <br />
+The Feed View Controller contains every post created by any user using the button in the top right corner of the screen. <br />
+The Groups View Controller contains a list of every group that the user is a part of. When tapping a group cell the user is presented with another view containing the conversation for that particular group. The user may create a group by tapping the button in the top right corner of the Groups View Controller.<br />
+The Me View Controller contains information about the user and a Log Out button in the top right corner of the screen. <br />
+Used FIREBASE as the back end <br />
 * Need to add Facebook Login, Google Login
 * Uploading a profile picture
 * Improve ProfileVC
 
-iPhone                                                                                                                  | iPhone
-:-----------------------------------------------------------------------------------------------------------------------------------------------------------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------------:
-![picture alt](https://github.com/andrei-blaj/iOS/blob/master/breakPoint/Screenshots/1.PNG?raw=true "First screen") | ![picture alt](https://github.com/andrei-blaj/iOS/blob/master/breakPoint/Screenshots/2.PNG?raw=true "Second screen")
-![picture alt](https://github.com/andrei-blaj/iOS/blob/master/breakPoint/Screenshots/3.PNG?raw=true "First screen") | ![picture alt](https://github.com/andrei-blaj/iOS/blob/master/breakPoint/Screenshots/4.PNG?raw=true "Second screen")
-![picture alt](https://github.com/andrei-blaj/iOS/blob/master/breakPoint/Screenshots/5.PNG?raw=true "First screen") | ![picture alt](https://github.com/andrei-blaj/iOS/blob/master/breakPoint/Screenshots/6.PNG?raw=true "Second screen")
-![picture alt](https://github.com/andrei-blaj/iOS/blob/master/breakPoint/Screenshots/7.PNG?raw=true "First screen") | ![picture alt](https://github.com/andrei-blaj/iOS/blob/master/breakPoint/Screenshots/8.PNG?raw=true "Second screen")
-![picture alt](https://github.com/andrei-blaj/iOS/blob/master/breakPoint/Screenshots/9.PNG?raw=true "First screen") | ![picture alt](https://github.com/andrei-blaj/iOS/blob/master/breakPoint/Screenshots/10.PNG?raw=true "Second screen")
-![picture alt](https://github.com/andrei-blaj/iOS/blob/master/breakPoint/Screenshots/11.PNG?raw=true "First screen") | ![picture alt](https://github.com/andrei-blaj/iOS/blob/master/breakPoint/Screenshots/12.PNG?raw=true "Second screen")
+iPhone                                                                                                                  | iPhone                                                                                                                  | iPhone                                                                                                                  | iPhone
+:-----------------------------------------------------------------------------------------------------------------------------------------------------------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------------:|:-----------------------------------------------------------------------------------------------------------------------------------------------------------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------------:
+![picture alt](https://github.com/andrei-blaj/iOS/blob/master/breakPoint/Screenshots/1.PNG?raw=true "First screen") | ![picture alt](https://github.com/andrei-blaj/iOS/blob/master/breakPoint/Screenshots/2.PNG?raw=true "Second screen") | ![picture alt](https://github.com/andrei-blaj/iOS/blob/master/breakPoint/Screenshots/3.PNG?raw=true "First screen") | ![picture alt](https://github.com/andrei-blaj/iOS/blob/master/breakPoint/Screenshots/4.PNG?raw=true "Second screen")
+![picture alt](https://github.com/andrei-blaj/iOS/blob/master/breakPoint/Screenshots/5.PNG?raw=true "First screen") | ![picture alt](https://github.com/andrei-blaj/iOS/blob/master/breakPoint/Screenshots/6.PNG?raw=true "Second screen") | ![picture alt](https://github.com/andrei-blaj/iOS/blob/master/breakPoint/Screenshots/7.PNG?raw=true "First screen") | ![picture alt](https://github.com/andrei-blaj/iOS/blob/master/breakPoint/Screenshots/8.PNG?raw=true "Second screen")
+![picture alt](https://github.com/andrei-blaj/iOS/blob/master/breakPoint/Screenshots/9.PNG?raw=true "First screen") | ![picture alt](https://github.com/andrei-blaj/iOS/blob/master/breakPoint/Screenshots/10.PNG?raw=true "Second screen") | ![picture alt](https://github.com/andrei-blaj/iOS/blob/master/breakPoint/Screenshots/11.PNG?raw=true "First screen") | ![picture alt](https://github.com/andrei-blaj/iOS/blob/master/breakPoint/Screenshots/12.PNG?raw=true "Second screen")
 
 - - - -
