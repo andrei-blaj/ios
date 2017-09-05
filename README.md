@@ -2,10 +2,10 @@
 
 - - - -
 
-
-📌 [Smack](https://github.com/andrei-blaj/iOS#5-smack) <br />
-📌 [PixelCity](https://github.com/andrei-blaj/iOS#6-pixelcity) <br />
-📌 [GoalPost](https://github.com/andrei-blaj/iOS#7-goalpost) <br />
+📌 [BreakPoint](https://github.com/andrei-blaj/iOS#8-firebase) <br /> (Using Firebase)
+📌 [Smack](https://github.com/andrei-blaj/iOS#5-smack) <br /> (Using Heroku and JSON)
+📌 [PixelCity](https://github.com/andrei-blaj/iOS#6-pixelcity) <br /> (Using Flickr API and MapKit)
+📌 [GoalPost](https://github.com/andrei-blaj/iOS#7-goalpost) <br /> (Using Core Data)
 
 
 📌 [App-Swoosh](https://github.com/andrei-blaj/iOS#1-app-swoosh) <br />
@@ -125,5 +125,27 @@ iPhone                                                                          
 ![picture alt](https://github.com/andrei-blaj/iOS/blob/master/GoalPost/Screenshots/3.PNG?raw=true "First screen") | ![picture alt](https://github.com/andrei-blaj/iOS/blob/master/GoalPost/Screenshots/4.PNG?raw=true "Second screen")
 ![picture alt](https://github.com/andrei-blaj/iOS/blob/master/GoalPost/Screenshots/5.PNG?raw=true "First screen") | ![picture alt](https://github.com/andrei-blaj/iOS/blob/master/GoalPost/Screenshots/6.PNG?raw=true "Second screen")
 ![picture alt](https://github.com/andrei-blaj/iOS/blob/master/GoalPost/Screenshots/7.PNG?raw=true "First screen") | ![picture alt](https://github.com/andrei-blaj/iOS/blob/master/GoalPost/Screenshots/8.PNG?raw=true "Second screen")
+
+- - - -
+
+### __8.__ _breakPoint_ ###
+
+- - - -
+
+#### Description: ####
+Social networking app; has a feed; The user can create groups, add anyone with an account <br />
+Used FIREBASE as a database <br />
+* Need to add Facebook Login, Google Login
+* Uploading a profile picture
+* Improve ProfileVC
+
+iPhone                                                                                                                  | iPhone
+:-----------------------------------------------------------------------------------------------------------------------------------------------------------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------------:
+![picture alt](https://github.com/andrei-blaj/iOS/blob/master/fireBase/Screenshots/1.PNG?raw=true "First screen") | ![picture alt](https://github.com/andrei-blaj/iOS/blob/master/fireBase/Screenshots/2.PNG?raw=true "Second screen")
+![picture alt](https://github.com/andrei-blaj/iOS/blob/master/fireBase/Screenshots/3.PNG?raw=true "First screen") | ![picture alt](https://github.com/andrei-blaj/iOS/blob/master/fireBase/Screenshots/4.PNG?raw=true "Second screen")
+![picture alt](https://github.com/andrei-blaj/iOS/blob/master/fireBase/Screenshots/5.PNG?raw=true "First screen") | ![picture alt](https://github.com/andrei-blaj/iOS/blob/master/fireBase/Screenshots/6.PNG?raw=true "Second screen")
+![picture alt](https://github.com/andrei-blaj/iOS/blob/master/fireBase/Screenshots/7.PNG?raw=true "First screen") | ![picture alt](https://github.com/andrei-blaj/iOS/blob/master/fireBase/Screenshots/8.PNG?raw=true "Second screen")
+![picture alt](https://github.com/andrei-blaj/iOS/blob/master/fireBase/Screenshots/9.PNG?raw=true "First screen") | ![picture alt](https://github.com/andrei-blaj/iOS/blob/master/fireBase/Screenshots/10.PNG?raw=true "Second screen")
+![picture alt](https://github.com/andrei-blaj/iOS/blob/master/fireBase/Screenshots/11.PNG?raw=true "First screen") | ![picture alt](https://github.com/andrei-blaj/iOS/blob/master/fireBase/Screenshots/12.PNG?raw=true "Second screen")
 
 - - - -
