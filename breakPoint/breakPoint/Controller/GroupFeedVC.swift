@@ -53,9 +53,10 @@ class GroupFeedVC: UIViewController {
                 self.view.layoutIfNeeded()
             }, completion: { (completed) in
                 
-                let indexPath = NSIndexPath(item: self.groupMessagesArray.count - 1, section: 0)
-                self.tableView.scrollToRow(at: indexPath as IndexPath, at: .bottom, animated: true)
-                
+                if isKeyboardShowing {
+                    let indexPath = NSIndexPath(item: self.groupMessagesArray.count - 1, section: 0)
+                    self.tableView.scrollToRow(at: indexPath as IndexPath, at: .bottom, animated: true)
+                }
             })
             
             bottomConstraint.constant = isKeyboardShowing ? -keyboardFrame.height : 0
