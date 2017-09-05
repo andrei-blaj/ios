@@ -2,7 +2,7 @@
 
 - - - -
 
-📌 [BreakPoint](https://github.com/andrei-blaj/iOS#8-firebase) <br /> (Using Firebase)
+📌 [BreakPoint](https://github.com/andrei-blaj/iOS#8-breakpoint) <br /> (Using Firebase)
 📌 [Smack](https://github.com/andrei-blaj/iOS#5-smack) <br /> (Using Heroku and JSON)
 📌 [PixelCity](https://github.com/andrei-blaj/iOS#6-pixelcity) <br /> (Using Flickr API and MapKit)
 📌 [GoalPost](https://github.com/andrei-blaj/iOS#7-goalpost) <br /> (Using Core Data)
@@ -141,11 +141,11 @@ Used FIREBASE as a database <br />
 
 iPhone                                                                                                                  | iPhone
 :-----------------------------------------------------------------------------------------------------------------------------------------------------------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------------:
-![picture alt](https://github.com/andrei-blaj/iOS/blob/master/fireBase/Screenshots/1.PNG?raw=true "First screen") | ![picture alt](https://github.com/andrei-blaj/iOS/blob/master/fireBase/Screenshots/2.PNG?raw=true "Second screen")
-![picture alt](https://github.com/andrei-blaj/iOS/blob/master/fireBase/Screenshots/3.PNG?raw=true "First screen") | ![picture alt](https://github.com/andrei-blaj/iOS/blob/master/fireBase/Screenshots/4.PNG?raw=true "Second screen")
-![picture alt](https://github.com/andrei-blaj/iOS/blob/master/fireBase/Screenshots/5.PNG?raw=true "First screen") | ![picture alt](https://github.com/andrei-blaj/iOS/blob/master/fireBase/Screenshots/6.PNG?raw=true "Second screen")
-![picture alt](https://github.com/andrei-blaj/iOS/blob/master/fireBase/Screenshots/7.PNG?raw=true "First screen") | ![picture alt](https://github.com/andrei-blaj/iOS/blob/master/fireBase/Screenshots/8.PNG?raw=true "Second screen")
-![picture alt](https://github.com/andrei-blaj/iOS/blob/master/fireBase/Screenshots/9.PNG?raw=true "First screen") | ![picture alt](https://github.com/andrei-blaj/iOS/blob/master/fireBase/Screenshots/10.PNG?raw=true "Second screen")
-![picture alt](https://github.com/andrei-blaj/iOS/blob/master/fireBase/Screenshots/11.PNG?raw=true "First screen") | ![picture alt](https://github.com/andrei-blaj/iOS/blob/master/fireBase/Screenshots/12.PNG?raw=true "Second screen")
+![picture alt](https://github.com/andrei-blaj/iOS/blob/master/breakPoint/Screenshots/1.PNG?raw=true "First screen") | ![picture alt](https://github.com/andrei-blaj/iOS/blob/master/breakPoint/Screenshots/2.PNG?raw=true "Second screen")
+![picture alt](https://github.com/andrei-blaj/iOS/blob/master/breakPoint/Screenshots/3.PNG?raw=true "First screen") | ![picture alt](https://github.com/andrei-blaj/iOS/blob/master/breakPoint/Screenshots/4.PNG?raw=true "Second screen")
+![picture alt](https://github.com/andrei-blaj/iOS/blob/master/breakPoint/Screenshots/5.PNG?raw=true "First screen") | ![picture alt](https://github.com/andrei-blaj/iOS/blob/master/breakPoint/Screenshots/6.PNG?raw=true "Second screen")
+![picture alt](https://github.com/andrei-blaj/iOS/blob/master/breakPoint/Screenshots/7.PNG?raw=true "First screen") | ![picture alt](https://github.com/andrei-blaj/iOS/blob/master/breakPoint/Screenshots/8.PNG?raw=true "Second screen")
+![picture alt](https://github.com/andrei-blaj/iOS/blob/master/breakPoint/Screenshots/9.PNG?raw=true "First screen") | ![picture alt](https://github.com/andrei-blaj/iOS/blob/master/breakPoint/Screenshots/10.PNG?raw=true "Second screen")
+![picture alt](https://github.com/andrei-blaj/iOS/blob/master/breakPoint/Screenshots/11.PNG?raw=true "First screen") | ![picture alt](https://github.com/andrei-blaj/iOS/blob/master/breakPoint/Screenshots/12.PNG?raw=true "Second screen")
 
 - - - -
