@@ -22,10 +22,9 @@
 #### Description: ####
 Coverage of view controllers, stack views, segues, programmatic segues, refactoring, buttons, IBActions and passing data between view controllers using either classes or structs.  
 
-iPhone             	                           									                     		     | iPhone
-:-----------------------------------------------------------------------------------------------------------------------------------------------------------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------------:
-![picture alt](https://github.com/andrei-blaj/iOS/blob/master/app-swoosh/Screenshots/1.png?raw=true "First screen") | ![picture alt](https://github.com/andrei-blaj/iOS/blob/master/app-swoosh/Screenshots/2.png?raw=true "Second screen")
-![picture alt](https://github.com/andrei-blaj/iOS/blob/master/app-swoosh/Screenshots/3.png?raw=true "Third screen") |
+iPhone             	                           									                     		     | iPhone                                                                                                                  | iPhone
+:-----------------------------------------------------------------------------------------------------------------------------------------------------------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------------:
+![picture alt](https://github.com/andrei-blaj/iOS/blob/master/app-swoosh/Screenshots/1.png?raw=true "First screen") | ![picture alt](https://github.com/andrei-blaj/iOS/blob/master/app-swoosh/Screenshots/2.png?raw=true "Second screen") | ![picture alt](https://github.com/andrei-blaj/iOS/blob/master/app-swoosh/Screenshots/3.png?raw=true "Third screen")
 
 - - - -
 
