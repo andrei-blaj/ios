@@ -2,6 +2,7 @@
 
 - - - -
 
+📌 [Vision-App](https://github.com/andrei-blaj/iOS#9-vision-app) (Using the new CoreML and Vision along with the SpeechSynthesizer) <br />
 📌 [BreakPoint](https://github.com/andrei-blaj/iOS#8-breakpoint) (Using Firebase) <br />
 📌 [Smack](https://github.com/andrei-blaj/iOS#5-smack) (Using Heroku and JSON) <br />
 📌 [PixelCity](https://github.com/andrei-blaj/iOS#6-pixelcity) (Using Flickr API and MapKit) <br />
@@ -139,5 +140,21 @@ BreakPoint                                                                      
 ![picture alt](https://github.com/andrei-blaj/iOS/blob/master/breakPoint/Screenshots/1.PNG?raw=true "First screen") | ![picture alt](https://github.com/andrei-blaj/iOS/blob/master/breakPoint/Screenshots/2.PNG?raw=true "Second screen") | ![picture alt](https://github.com/andrei-blaj/iOS/blob/master/breakPoint/Screenshots/3.PNG?raw=true "First screen") | ![picture alt](https://github.com/andrei-blaj/iOS/blob/master/breakPoint/Screenshots/4.PNG?raw=true "Second screen")
 ![picture alt](https://github.com/andrei-blaj/iOS/blob/master/breakPoint/Screenshots/5.PNG?raw=true "First screen") | ![picture alt](https://github.com/andrei-blaj/iOS/blob/master/breakPoint/Screenshots/6.PNG?raw=true "Second screen") | ![picture alt](https://github.com/andrei-blaj/iOS/blob/master/breakPoint/Screenshots/7.PNG?raw=true "First screen") | ![picture alt](https://github.com/andrei-blaj/iOS/blob/master/breakPoint/Screenshots/8.PNG?raw=true "Second screen")
 ![picture alt](https://github.com/andrei-blaj/iOS/blob/master/breakPoint/Screenshots/9.PNG?raw=true "First screen") | ![picture alt](https://github.com/andrei-blaj/iOS/blob/master/breakPoint/Screenshots/10.PNG?raw=true "Second screen") | ![picture alt](https://github.com/andrei-blaj/iOS/blob/master/breakPoint/Screenshots/11.PNG?raw=true "First screen") | ![picture alt](https://github.com/andrei-blaj/iOS/blob/master/breakPoint/Screenshots/12.PNG?raw=true "Second screen")
+
+- - - -
+
+### __9.__ _Vision-App_ ###
+
+- - - -
+
+#### Description: ####
+The app allows the user to find out information about the object in front of them by simply tapping on the screen. <br />
+Upon tap, the application displays the name of the object in front of them (if the object is identifiable). <br />
+The text on the screen will be read by Siri <br />
+*All this was accomplished using CoreML
+
+Vision-App                                                                                                                 | Vision-App                                                                                                                | Vision-App                                                                                                                 | Vision-App
+:-----------------------------------------------------------------------------------------------------------------------------------------------------------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------------:|:-----------------------------------------------------------------------------------------------------------------------------------------------------------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------------:
+![picture alt](https://github.com/andrei-blaj/iOS/blob/master/Vision-App/Screenshots/1.PNG?raw=true "First screen") | ![picture alt](https://github.com/andrei-blaj/iOS/blob/master/Vision-App/Screenshots/2.PNG?raw=true "Second screen") | ![picture alt](https://github.com/andrei-blaj/iOS/blob/master/Vision-App/Screenshots/3.PNG?raw=true "First screen") | ![picture alt](https://github.com/andrei-blaj/iOS/blob/master/Vision-App/Demo/demo.MOV?raw=true "Second screen")
 
 - - - -
