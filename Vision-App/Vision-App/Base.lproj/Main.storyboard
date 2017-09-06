@@ -83,12 +83,17 @@
                                     <constraint firstAttribute="height" constant="130" id="9df-iu-aq5"/>
                                 </constraints>
                             </imageView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="66T-V1-Y5B">
+                                <rect key="frame" x="307" y="572" width="20" height="20"/>
+                                <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="lDQ-O3-JmM" firstAttribute="bottom" secondItem="7Z2-vJ-Tdy" secondAttribute="bottom" constant="20" id="59K-le-G2k"/>
                             <constraint firstItem="lDQ-O3-JmM" firstAttribute="trailing" secondItem="kSP-R8-Dyg" secondAttribute="trailing" constant="20" id="5JH-gg-hf4"/>
                             <constraint firstItem="q9W-EE-mhu" firstAttribute="leading" secondItem="lDQ-O3-JmM" secondAttribute="leading" constant="20" id="AtE-DX-9QD"/>
+                            <constraint firstItem="66T-V1-Y5B" firstAttribute="centerX" secondItem="kSP-R8-Dyg" secondAttribute="centerX" id="FTE-C6-Vyu"/>
                             <constraint firstItem="w9Y-3e-SWF" firstAttribute="bottom" secondItem="lDQ-O3-JmM" secondAttribute="bottom" id="G7S-MK-hGj"/>
                             <constraint firstItem="q9W-EE-mhu" firstAttribute="top" secondItem="lDQ-O3-JmM" secondAttribute="top" constant="20" id="JGl-JR-JIM"/>
                             <constraint firstItem="w9Y-3e-SWF" firstAttribute="trailing" secondItem="lDQ-O3-JmM" secondAttribute="trailing" id="QFY-yB-Qqo"/>
@@ -96,11 +101,13 @@
                             <constraint firstItem="lDQ-O3-JmM" firstAttribute="bottom" secondItem="kSP-R8-Dyg" secondAttribute="bottom" constant="20" id="eLF-az-0KE"/>
                             <constraint firstItem="lDQ-O3-JmM" firstAttribute="trailing" secondItem="q9W-EE-mhu" secondAttribute="trailing" constant="20" id="f5C-TQ-aZR"/>
                             <constraint firstItem="7Z2-vJ-Tdy" firstAttribute="leading" secondItem="lDQ-O3-JmM" secondAttribute="leading" constant="20" id="rbX-HW-w6S"/>
+                            <constraint firstItem="66T-V1-Y5B" firstAttribute="centerY" secondItem="kSP-R8-Dyg" secondAttribute="centerY" id="rc5-vN-PJF"/>
                             <constraint firstItem="w9Y-3e-SWF" firstAttribute="top" secondItem="1dI-ky-y22" secondAttribute="top" id="wHN-Go-8Ey"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="lDQ-O3-JmM"/>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="66T-V1-Y5B" id="yyZ-29-vWr"/>
                         <outlet property="cameraView" destination="w9Y-3e-SWF" id="be6-uv-kD3"/>
                         <outlet property="captureImageView" destination="kSP-R8-Dyg" id="Cgn-cd-vT4"/>
                         <outlet property="confidenceLbl" destination="9Wd-Ib-kUa" id="BnP-bc-iwE"/>
