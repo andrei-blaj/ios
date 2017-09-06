@@ -1,6 +1,6 @@
 //
-//  RoundedShadowButton.swift
-//  Vision
+//  RoundedShadowView.swift
+//  Vision-App
 //
 //  Created by Andrei-Sorin Blaj on 06/09/2017.
 //  Copyright © 2017 Andrei-Sorin Blaj. All rights reserved.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RoundedShadowButton: UIButton {
+class RoundedShadowView: UIView {
 
     override func awakeFromNib() {
         self.layer.shadowColor = UIColor.darkGray.cgColor

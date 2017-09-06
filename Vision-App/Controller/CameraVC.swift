@@ -1,6 +1,6 @@
 //
 //  CameraVC.swift
-//  Vision
+//  Vision-App
 //
 //  Created by Andrei-Sorin Blaj on 06/09/2017.
 //  Copyright © 2017 Andrei-Sorin Blaj. All rights reserved.
@@ -8,6 +8,8 @@
 
 import UIKit
 import AVFoundation
+import CoreML
+import Vision
 
 class CameraVC: UIViewController {
 
@@ -77,7 +79,8 @@ class CameraVC: UIViewController {
     
     @objc func didTapCameraView() {
         let settings = AVCapturePhotoSettings()
-        let previewPixelType = settings.availablePreviewPhotoPixelFormatTypes.first
+        
+        let previewPixelType = settings.availablePreviewPhotoPixelFormatTypes.first!
         let previewFormat = [kCVPixelBufferPixelFormatTypeKey as String: previewPixelType, kCVPixelBufferWidthKey as String: 160, kCVPixelBufferHeightKey as String: 160]
         
         settings.previewPhotoFormat = previewFormat
@@ -94,6 +97,12 @@ extension CameraVC: AVCapturePhotoCaptureDelegate {
             debugPrint(error)
         } else {
             photoData = photo.fileDataRepresentation()
+            
+            do {
+                let 
+            } catch {
+                // Handle errors
+            }
             
             let image = UIImage(data: photoData!)
             self.captureImageView.image = image

@@ -40,6 +40,6 @@
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>NSCameraUsageDescription</key>
-	<string>Your data will only be processed on your device!</string>
+	<string>The photos will only be processed locally.</string>
 </dict>
 </plist>
