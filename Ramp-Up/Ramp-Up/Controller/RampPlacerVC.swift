@@ -10,7 +10,7 @@ import UIKit
 import SceneKit
 import ARKit
 
-class RampPlacerVC: UIViewController, ARSCNViewDelegate {
+class RampPlacerVC: UIViewController, ARSCNViewDelegate, UIPopoverPresentationControllerDelegate {
 
     @IBOutlet var sceneView: ARSCNView!
     
@@ -21,7 +21,7 @@ class RampPlacerVC: UIViewController, ARSCNViewDelegate {
         sceneView.delegate = self
         
         // Show statistics such as fps and timing information
-        sceneView.showsStatistics = true
+        sceneView.showsStatistics = false
         
         // Create a new scene
         let scene = SCNScene(named: "art.scnassets/pipe.scn")!
@@ -77,4 +77,23 @@ class RampPlacerVC: UIViewController, ARSCNViewDelegate {
         // Reset tracking and/or remove existing anchors if consistent tracking is required
         
     }
+    
+    // Without this function the popover would fill the entire screen and we don't want that
+    func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle {
+        return .none
+    }
+    
+    @IBAction func onRampBtnPressed(_ sender: UIButton) {
+        let rampPickerVC = RampPickerVC(size: CGSize(width: 250, height: 500))
+        
+        rampPickerVC.modalPresentationStyle = .popover
+        rampPickerVC.popoverPresentationController?.delegate = self
+        
+        present(rampPickerVC, animated: true, completion: nil)
+        
+        rampPickerVC.popoverPresentationController?.sourceView = sender
+        rampPickerVC.popoverPresentationController?.sourceRect = sender.bounds
+        
+    }
+    
 }
