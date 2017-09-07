@@ -44,42 +44,17 @@ class RampPickerVC: UIViewController {
         let tap = UITapGestureRecognizer(target: self, action: #selector(handleTap(_:)))
         sceneView.addGestureRecognizer(tap)
         
-        let rotatePipe = SCNAction.repeatForever(SCNAction.rotateBy(x: 0, y: CGFloat(0.01 * Double.pi), z: 0, duration: 0.15))
-        let rotatePyramid = SCNAction.repeatForever(SCNAction.rotateBy(x: 0, y: CGFloat(0.01 * Double.pi), z: 0, duration: 0.1))
-        let rotateQuarter = SCNAction.repeatForever(SCNAction.rotateBy(x: 0, y: CGFloat(0.01 * Double.pi), z: 0, duration: 0.2))
+        let pipe = Ramp.getPipe()
+        Ramp.startRotation(node: pipe)
+        scene.rootNode.addChildNode(pipe)
         
-        // created the pipe scene as an object
-        let pipeObj = SCNScene(named: "art.scnassets/pipe.scn")
-        let pipeNode = pipeObj?.rootNode.childNode(withName: "pipe", recursively: true)
+        let pyramid = Ramp.getPyramid()
+        Ramp.startRotation(node: pyramid)
+        scene.rootNode.addChildNode(pyramid)
         
-        pipeNode?.runAction(rotatePipe)
-        
-        // scaled the object so it would fit in the popover
-        pipeNode?.scale = SCNVector3Make(0.0022, 0.0022, 0.0022)
-        pipeNode?.position = SCNVector3Make(-0.95, 0.7, -1)
-        
-        // added the object to the popover
-        scene.rootNode.addChildNode(pipeNode!)
-        
-        let pyramidObj = SCNScene(named: "art.scnassets/pyramid.scn")
-        let pyramidNode = pyramidObj?.rootNode.childNode(withName: "pyramid", recursively: true)
-        
-        pyramidNode?.runAction(rotatePyramid)
-        
-        pyramidNode?.scale = SCNVector3Make(0.0058, 0.0058, 0.0058)
-        pyramidNode?.position = SCNVector3Make(-0.95, -0.35, -1)
-        
-        scene.rootNode.addChildNode(pyramidNode!)
-        
-        let quarterObj = SCNScene(named: "art.scnassets/quarter.scn")
-        let quarterNode = quarterObj?.rootNode.childNode(withName: "quarter", recursively: true)
-        
-        quarterNode?.runAction(rotateQuarter)
-        
-        quarterNode?.scale = SCNVector3Make(0.0058, 0.0058, 0.0058)
-        quarterNode?.position = SCNVector3Make(-0.9, -2.1, -1)
-        
-        scene.rootNode.addChildNode(quarterNode!)
+        let quarter = Ramp.getQuarter()
+        Ramp.startRotation(node: quarter)
+        scene.rootNode.addChildNode(quarter)
         
     }
 
