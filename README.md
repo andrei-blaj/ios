@@ -1,7 +1,7 @@
 ## iOS Development ##
 
 - - - -
-https://github.com/andrei-blaj/iOS/blob/master/iOS%2011%20&%20Swift%204/GoalPost/Screenshots/1.PNG?raw=true
+
 📌 [Vision-App](https://github.com/andrei-blaj/iOS#9-vision-app) (Using the new CoreML and Vision along with the SpeechSynthesizer) <br />
 📌 [BreakPoint](https://github.com/andrei-blaj/iOS#8-breakpoint) (Using Firebase) <br />
 📌 [Smack](https://github.com/andrei-blaj/iOS#5-smack) (Using Heroku and JSON) <br />
