@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3EC501C5DB019621A04DFFDC /* Pods_Yahoo_Weather_API_Practice.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2ED1C2081EFE5FB0EA6584A8 /* Pods_Yahoo_Weather_API_Practice.framework */; };
+		E44204EA1F66CD0D00A5D9DC /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44204E91F66CD0D00A5D9DC /* Weather.swift */; };
 		E46E9E0B1F66A5DC0062C646 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46E9E0A1F66A5DC0062C646 /* AppDelegate.swift */; };
 		E46E9E0D1F66A5DC0062C646 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46E9E0C1F66A5DC0062C646 /* MainVC.swift */; };
 		E46E9E101F66A5DC0062C646 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E46E9E0E1F66A5DC0062C646 /* Main.storyboard */; };
@@ -22,6 +23,7 @@
 		2ED1C2081EFE5FB0EA6584A8 /* Pods_Yahoo_Weather_API_Practice.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Yahoo_Weather_API_Practice.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EE2A169413792F0C148E8AD /* Pods-Yahoo Weather API Practice.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yahoo Weather API Practice.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Yahoo Weather API Practice/Pods-Yahoo Weather API Practice.debug.xcconfig"; sourceTree = "<group>"; };
 		83A3B7F30DF02AE1D0F75810 /* Pods-Yahoo Weather API Practice.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yahoo Weather API Practice.release.xcconfig"; path = "Pods/Target Support Files/Pods-Yahoo Weather API Practice/Pods-Yahoo Weather API Practice.release.xcconfig"; sourceTree = "<group>"; };
+		E44204E91F66CD0D00A5D9DC /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 		E46E9E071F66A5DC0062C646 /* Yahoo Weather API Practice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Yahoo Weather API Practice.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E46E9E0A1F66A5DC0062C646 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E46E9E0C1F66A5DC0062C646 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				E4CF22AA1F66B05100BD48DE /* Location.swift */,
+				E44204E91F66CD0D00A5D9DC /* Weather.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -264,6 +267,7 @@
 				E4CF22AE1F66B15300BD48DE /* WeatherServices.swift in Sources */,
 				E46E9E0B1F66A5DC0062C646 /* AppDelegate.swift in Sources */,
 				E4CF22AB1F66B05100BD48DE /* Location.swift in Sources */,
+				E44204EA1F66CD0D00A5D9DC /* Weather.swift in Sources */,
 				E4CF22A91F66AD7000BD48DE /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
