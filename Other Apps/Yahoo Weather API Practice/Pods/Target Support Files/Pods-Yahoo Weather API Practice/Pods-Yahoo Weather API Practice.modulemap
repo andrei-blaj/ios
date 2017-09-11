@@ -1,0 +1,6 @@
+framework module Pods_Yahoo_Weather_API_Practice {
+  umbrella header "Pods-Yahoo Weather API Practice-umbrella.h"
+
+  export *
+  module * { export * }
+}
