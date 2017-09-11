@@ -33,6 +33,9 @@ class CurrentWeather {
     
     var cityName: String {
         get {
+            if _cityName == nil {
+                _cityName = ""
+            }
             return _cityName
         } set {
             _cityName = newValue
@@ -41,6 +44,9 @@ class CurrentWeather {
     
     var weatherType: String {
         get {
+            if _weatherType == nil {
+                _weatherType = ""
+            }
             return _weatherType
         } set {
             _weatherType = newValue
@@ -49,6 +55,9 @@ class CurrentWeather {
     
     var currentTemp: Double {
         get {
+            if _currentTemp == nil {
+                _currentTemp = 0.0
+            }
             return _currentTemp
         } set {
             _currentTemp = newValue

@@ -16,9 +16,9 @@ class WeatherServices {
     var currentWeather = CurrentWeather()
     var forcasts = [Forcast]()
     
-    func downloadWeatherDetails(completed: DownloadComplete) {
+    func downloadWeatherDetails(completed: @escaping DownloadComplete) {
         
-        let currentWeatherUrl = URL(string: currentWeatherURL(forLatitutde: 47, andLongitude: 23))
+        let currentWeatherUrl = URL(string: currentWeatherURL(forLatitutde: Location.instance.latitude, andLongitude: Location.instance.longitude))
         
         // Alamofire request
         Alamofire.request(currentWeatherUrl!).responseJSON { (response) in
@@ -44,13 +44,16 @@ class WeatherServices {
                 }
                 
             }
+            
+            completed()
+        
         }
         
     }
     
-    func downloadForcastDetails(completed: DownloadComplete) {
+    func downloadForcastDetails(completed: @escaping DownloadComplete) {
         
-        let forcastUrl = URL(string: forcastURL(forLatitutde: 47, andLongitude: 23, withCount: 10))
+        let forcastUrl = URL(string: forcastURL(forLatitutde: Location.instance.latitude, andLongitude: Location.instance.longitude, withCount: 10))
         
         // Alamofire request
         Alamofire.request(forcastUrl!).responseJSON { (response) in
@@ -63,6 +66,7 @@ class WeatherServices {
                 }
                 
             }
+            completed()
         }
         
     }
