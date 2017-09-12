@@ -14,7 +14,12 @@ class DataService {
     
     static let instance = DataService()
     
-    func downloadDarkSkyData(completed: DownloadComplete) {
+    let currentConditions = CurrentConditions()
+    var hourlySummary: String!
+    var hourlyIcon: String!
+    var hourlyForecast = [CurrentConditions]()
+    
+    func downloadDarkSkyData(completed: @escaping DownloadComplete) {
         
         let darkSkyURL = getDarkSkyURL(forLatitude: Location.instance.latitude, andLongitude: Location.instance.longitude)
         
@@ -23,29 +28,47 @@ class DataService {
                 
                 if let currently = result["currently"] as? Dictionary<String, Any> {
                     // Current Weather
+                    self.currentConditions.time = currently["time"] as! Double
+                    self.currentConditions.summary = currently["summary"] as! String
+                    self.currentConditions.icon = currently["icon"] as! String
+                    self.currentConditions.precipProbability = currently["precipProbability"] as! Double
+                    self.currentConditions.precipIntensity = currently["precipIntensity"] as! Double
+                    self.currentConditions.temperature = currently["temperature"] as! Double
+                    self.currentConditions.apparentTemperature = currently["apparentTemperature"] as! Double
+                    self.currentConditions.humidity = currently["humidity"] as! Double
+                    self.currentConditions.pressure = currently["pressure"] as! Double
+                    self.currentConditions.windSpeed = currently["windSpeed"] as! Double
+                    self.currentConditions.windGust = currently["windGust"] as! Double
+                    self.currentConditions.windBearing = currently["windBearing"] as! Double
+                    self.currentConditions.cloudCover = currently["cloudCover"] as! Double
                 }
                 
-                if let minutely = result["minutely"] as? Dictionary<String, Any> {
-                    if let summary = minutely["summary"] as? String {
-                        
-                    }
-                    if let icon = minutely["icon"] as? String {
-                        
-                    }
-                    if let data = minutely["data"] as? Dictionary<String, Any> {
-                        // Weather by the minute for the next hour
-                    }
-                }
+                // There is also and "minutely" dictionary, but in this case it is not necessary
                 
                 if let hourly = result["hourly"] as? Dictionary<String, Any> {
-                    if let summary = hourly["summary"] as? String {
-                    
-                    }
-                    if let icon = hourly["icon"] as? String {
-                        
-                    }
-                    if let data = hourly["data"] as? Dictionary<String, Any> {
+                    if let summary = hourly["summary"] as? String { self.hourlySummary = summary }
+                    if let icon = hourly["icon"] as? String { self.hourlyIcon = icon }
+                    if let data = hourly["data"] as? [Dictionary<String, Any>] {
                         // Weather by the hour
+                        for currently in data {
+                            let currentHour = CurrentConditions()
+                            
+                            currentHour.time = currently["time"] as! Double
+                            currentHour.summary = currently["summary"] as! String
+                            currentHour.icon = currently["icon"] as! String
+                            currentHour.precipProbability = currently["precipProbability"] as! Double
+                            currentHour.precipIntensity = currently["precipIntensity"] as! Double
+                            currentHour.temperature = currently["temperature"] as! Double
+                            currentHour.apparentTemperature = currently["apparentTemperature"] as! Double
+                            currentHour.humidity = currently["humidity"] as! Double
+                            currentHour.pressure = currently["pressure"] as! Double
+                            currentHour.windSpeed = currently["windSpeed"] as! Double
+                            currentHour.windGust = currently["windGust"] as! Double
+                            currentHour.windBearing = currently["windBearing"] as! Double
+                            currentHour.cloudCover = currently["cloudCover"] as! Double
+                            
+                            self.hourlyForecast.append(currentHour)
+                        }
                     }
                 }
                 
@@ -61,6 +84,9 @@ class DataService {
                     }
                 }
                 
+                completed(true)
+            } else {
+                completed(false)
             }
         }
         

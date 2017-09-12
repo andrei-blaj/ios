@@ -37,13 +37,21 @@ class MainVC: UIViewController, CLLocationManagerDelegate {
             
             // Getting the correct information about the user's location
             geoCoder.reverseGeocodeLocation(location, completionHandler: { (placemarks, error) in
-                // Place details
-                var placemark: CLPlacemark?
-                placemark = placemarks?[0]
-                
-                DataService.instance.getLocationData(placemark: placemark!)
+                if error == nil {
+                    // Place details
+                    var placemark: CLPlacemark?
+                    placemark = placemarks?[0]
+                    
+                    DataService.instance.getLocationData(placemark: placemark!)
+                    DataService.instance.downloadDarkSkyData(completed: { (success) in
+                        if success {
+                            print("> Success")
+                        } else {
+                            print("> Failed to obtain a response from the API.")
+                        }
+                    })
+                }
             })
-            
             
         } else {
             self.locationManager.requestWhenInUseAuthorization()
