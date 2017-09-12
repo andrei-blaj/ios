@@ -1,6 +1,6 @@
 //
 //  MainVC.swift
-//  Yahoo Weather API Practice
+//  Dark Sky API
 //
 //  Created by Andrei-Sorin Blaj on 11/09/2017.
 //  Copyright © 2017 Andrei-Sorin Blaj. All rights reserved.
@@ -11,7 +11,7 @@ import CoreLocation
 
 class MainVC: UIViewController, CLLocationManagerDelegate {
 
-    let locationManager = CLLocationManager()
+    var locationManager = CLLocationManager()
     var currentLocation: CLLocation!
     
     override func viewDidLoad() {
@@ -23,7 +23,7 @@ class MainVC: UIViewController, CLLocationManagerDelegate {
         locationManager.startMonitoringSignificantLocationChanges()
         
     }
-
+    
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         if CLLocationManager.authorizationStatus() == .authorizedWhenInUse {
             currentLocation = self.locationManager.location
@@ -32,14 +32,25 @@ class MainVC: UIViewController, CLLocationManagerDelegate {
             Location.instance.latitude = currentLocation.coordinate.latitude
             Location.instance.longitude = currentLocation.coordinate.longitude
             
-            WeatherServices.instance.downloadForcastData {
-                print(WeatherServices.instance.currentWeather.sunrise)
-            }
+            let geoCoder = CLGeocoder()
+            let location = CLLocation(latitude: Location.instance.latitude, longitude: currentLocation.coordinate.longitude)
+            
+            // Getting the correct information about the user's location
+            geoCoder.reverseGeocodeLocation(location, completionHandler: { (placemarks, error) in
+                // Place details
+                var placemark: CLPlacemark?
+                placemark = placemarks?[0]
+                
+                DataService.instance.getLocationData(placemark: placemark!)
+            })
+            
             
         } else {
             self.locationManager.requestWhenInUseAuthorization()
         }
     }
+    
+    
 
 }
 
