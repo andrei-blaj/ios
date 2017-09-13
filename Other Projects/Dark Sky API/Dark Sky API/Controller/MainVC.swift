@@ -11,17 +11,32 @@ import CoreLocation
 
 class MainVC: UIViewController, CLLocationManagerDelegate {
 
+    // Outlets
+    @IBOutlet weak var settingsBtn: UIButton!
+    @IBOutlet weak var cityLbl: UILabel!
+    @IBOutlet weak var regionLabel: UILabel!
+    @IBOutlet weak var temperatureLbl: UILabel!
+    
+    // Variables
     var locationManager = CLLocationManager()
     var currentLocation: CLLocation!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        settingsBtn.addTarget(self.revealViewController(), action: #selector(SWRevealViewController.revealToggle(_:)), for: .touchUpInside)
+        self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+        self.view.addGestureRecognizer(self.revealViewController().tapGestureRecognizer())
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.requestWhenInUseAuthorization()
         locationManager.startMonitoringSignificantLocationChanges()
-        
     }
     
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
@@ -29,8 +44,11 @@ class MainVC: UIViewController, CLLocationManagerDelegate {
             currentLocation = self.locationManager.location
             
             // Passing the current location coordinates to the 'Location' singleton class
-            Location.instance.latitude = currentLocation.coordinate.latitude
-            Location.instance.longitude = currentLocation.coordinate.longitude
+            let x = currentLocation.coordinate.latitude as? CLLocationDegrees
+            let y = currentLocation.coordinate.longitude as? CLLocationDegrees
+            
+            Location.instance.latitude = x
+            Location.instance.longitude = y
             
             let geoCoder = CLGeocoder()
             let location = CLLocation(latitude: currentLocation.coordinate.latitude, longitude: currentLocation.coordinate.longitude)
@@ -47,9 +65,8 @@ class MainVC: UIViewController, CLLocationManagerDelegate {
                         if success {
                             print("> Success")
                             
-                            print(DataService.instance.dailyForecast.count)
-                            print(DataService.instance.hourlyForecast.count)
-                            
+                            self.updateLabels()
+
                         } else {
                             print("> Failed to obtain a response from the API.")
                         }
@@ -58,10 +75,18 @@ class MainVC: UIViewController, CLLocationManagerDelegate {
             })
             
         } else {
-            self.locationManager.requestWhenInUseAuthorization()
+            locationManager.requestWhenInUseAuthorization()
         }
     }
     
+    func updateLabels() {
+        
+        cityLbl.text = Location.instance.city
+        regionLabel.text = "\(Location.instance.region), \(Location.instance.countryCode)"
+        
+        temperatureLbl.text = " \(Int(round(DataService.instance.currentConditions.temperature)))°"
+        
+    }
     
 
 }

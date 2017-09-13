@@ -13,8 +13,8 @@ class Location {
     
     static let instance = Location()
     
-    var _latitude: Double!
-    var _longitude: Double!
+    var latitude: CLLocationDegrees!
+    var longitude: CLLocationDegrees!
     
     var _city: String!
     var _street: String!
@@ -24,27 +24,6 @@ class Location {
     var _countryCode: String!
     
     // Setters & Getters
-    var latitude: Double {
-        get {
-            if _latitude == nil {
-                _latitude = 0.0
-            }
-            return _latitude
-        } set {
-            _latitude = newValue
-        }
-    }
-    
-    var longitude: Double {
-        get {
-            if _longitude == nil {
-                _longitude = 0.0
-            }
-            return _longitude
-        } set {
-            _longitude = newValue
-        }
-    }
     
     var street: String {
         get {

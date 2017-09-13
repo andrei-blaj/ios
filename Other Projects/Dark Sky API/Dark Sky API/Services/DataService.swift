@@ -26,7 +26,7 @@ class DataService {
     
     func downloadDarkSkyData(completed: @escaping DownloadComplete) {
         
-        let darkSkyURL = getDarkSkyURL(forLatitude: Location.instance.latitude, andLongitude: Location.instance.longitude)
+        let darkSkyURL = getDarkSkyURL(forLatitude: Location.instance.latitude!, andLongitude: Location.instance.longitude!)
         
         Alamofire.request(darkSkyURL).responseJSON { (response) in
             if let result = response.result.value as? Dictionary<String, Any> {
@@ -90,7 +90,7 @@ class DataService {
                             currentDay.icon = day["icon"] as! String
                             currentDay.precipProbability = day["precipProbability"] as! Double
                             currentDay.precipIntensity = day["precipIntensity"] as! Double
-                            currentDay.precipType = day["precipType"] as! String
+                            // currentDay.precipType = day["precipType"] as! String
                             currentDay.humidity = day["humidity"] as! Double
                             currentDay.pressure = day["pressure"] as! Double
                             currentDay.windSpeed = day["windSpeed"] as! Double
