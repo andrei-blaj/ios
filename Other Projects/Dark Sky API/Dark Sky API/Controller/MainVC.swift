@@ -33,7 +33,7 @@ class MainVC: UIViewController, CLLocationManagerDelegate {
             Location.instance.longitude = currentLocation.coordinate.longitude
             
             let geoCoder = CLGeocoder()
-            let location = CLLocation(latitude: Location.instance.latitude, longitude: currentLocation.coordinate.longitude)
+            let location = CLLocation(latitude: currentLocation.coordinate.latitude, longitude: currentLocation.coordinate.longitude)
             
             // Getting the correct information about the user's location
             geoCoder.reverseGeocodeLocation(location, completionHandler: { (placemarks, error) in
@@ -46,6 +46,10 @@ class MainVC: UIViewController, CLLocationManagerDelegate {
                     DataService.instance.downloadDarkSkyData(completed: { (success) in
                         if success {
                             print("> Success")
+                            
+                            print(DataService.instance.dailyForecast.count)
+                            print(DataService.instance.hourlyForecast.count)
+                            
                         } else {
                             print("> Failed to obtain a response from the API.")
                         }

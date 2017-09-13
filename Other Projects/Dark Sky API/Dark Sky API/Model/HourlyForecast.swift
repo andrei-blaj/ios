@@ -8,9 +8,4 @@
 
 import Foundation
 
-
-class HourlyForecast {
-    
-    
-    
-}
+class HourlyForecast: CurrentConditions { }

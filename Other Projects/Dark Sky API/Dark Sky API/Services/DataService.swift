@@ -15,9 +15,14 @@ class DataService {
     static let instance = DataService()
     
     let currentConditions = CurrentConditions()
+    
     var hourlySummary: String!
     var hourlyIcon: String!
-    var hourlyForecast = [CurrentConditions]()
+    var hourlyForecast = [HourlyForecast]()
+    
+    var dailySummary: String!
+    var dailyIcon: String!
+    var dailyForecast = [DailyForecast]()
     
     func downloadDarkSkyData(completed: @escaping DownloadComplete) {
         
@@ -51,7 +56,7 @@ class DataService {
                     if let data = hourly["data"] as? [Dictionary<String, Any>] {
                         // Weather by the hour
                         for currently in data {
-                            let currentHour = CurrentConditions()
+                            let currentHour = HourlyForecast()
                             
                             currentHour.time = currently["time"] as! Double
                             currentHour.summary = currently["summary"] as! String
@@ -73,14 +78,39 @@ class DataService {
                 }
                 
                 if let daily = result["daily"] as? Dictionary<String, Any> {
-                    if let summary = daily["summary"] as? String {
-                        
-                    }
-                    if let icon = daily["icon"] as? String {
-                        
-                    }
-                    if let data = daily["data"] as? Dictionary<String, Any> {
+                    if let summary = daily["summary"] as? String { self.dailySummary = summary }
+                    if let icon = daily["icon"] as? String { self.dailyIcon = icon }
+                    if let data = daily["data"] as? [Dictionary<String, Any>] {
                         // Daily weather
+                        for day in data {
+                            let currentDay = DailyForecast()
+
+                            currentDay.time = day["time"] as! Double
+                            currentDay.summary = day["summary"] as! String
+                            currentDay.icon = day["icon"] as! String
+                            currentDay.precipProbability = day["precipProbability"] as! Double
+                            currentDay.precipIntensity = day["precipIntensity"] as! Double
+                            currentDay.precipType = day["precipType"] as! String
+                            currentDay.humidity = day["humidity"] as! Double
+                            currentDay.pressure = day["pressure"] as! Double
+                            currentDay.windSpeed = day["windSpeed"] as! Double
+                            currentDay.windGust = day["windGust"] as! Double
+                            currentDay.windBearing = day["windBearing"] as! Double
+                            currentDay.cloudCover = day["cloudCover"] as! Double
+
+                            currentDay.sunriseTime = day["sunriseTime"] as! Double
+                            currentDay.sunsetTime = day["sunsetTime"] as! Double
+                            currentDay.moonPhase = day["moonPhase"] as! Double
+                            currentDay.precipIntensityMax = day["precipIntensityMax"] as! Double
+                            currentDay.precipIntensityMaxTime = day["precipIntensityMaxTime"] as! Double
+                            currentDay.temperatureHigh = day["temperatureHigh"] as! Double
+                            currentDay.temperatureHighTime = day["temperatureHighTime"] as! Double
+                            currentDay.temperatureLow = day["temperatureLow"] as! Double
+                            currentDay.temperatureLowTime = day["temperatureLowTime"] as! Double
+
+                            self.dailyForecast.append(currentDay)
+
+                        }
                     }
                 }
                 
