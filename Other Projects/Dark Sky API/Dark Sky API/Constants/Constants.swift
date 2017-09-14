@@ -19,3 +19,5 @@ func getDarkSkyURL(forLatitude latitude: CLLocationDegrees, andLongitude longitu
     let url = "\(BASE_URL)\(API_KEY)\(latitude),\(longitude)?units=\(UNITS)"
     return url
 }
+
+let DEGREE_SIGN = "°"
