@@ -17,8 +17,8 @@ class Location {
     var longitude: CLLocationDegrees!
     
     var _city: String!
-    var _street: String!
-    var _zip: String!
+    var _street: String?
+    var _zip: String?
     var _country: String!
     var _region: String! // State or County
     var _countryCode: String!
@@ -30,7 +30,7 @@ class Location {
             if _street == nil {
                 _street = ""
             }
-            return _street
+            return _street!
         } set {
             _street = newValue
         }
@@ -41,7 +41,7 @@ class Location {
             if _zip == nil {
                 _zip = ""
             }
-            return _zip
+            return _zip!
         } set {
             _zip = newValue
         }

@@ -71,7 +71,26 @@
                                     <action selector="searchBtnPressed:" destination="zMQ-CI-bZc" eventType="touchUpInside" id="tqv-9y-g64"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Tap to search for a city..." textAlignment="natural" minimumFontSize="15" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="5sx-lg-wI0" customClass="CustomTextField" customModule="Dark_Sky_API" customModuleProvider="target">
+                            <button opaque="NO" alpha="0.75" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w2E-zF-DLr">
+                                <rect key="frame" x="332" y="742" width="27" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="27" id="LY2-Ii-DLb"/>
+                                    <constraint firstAttribute="height" constant="20" id="vZh-Td-AWo"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="menu"/>
+                            </button>
+                            <button opaque="NO" alpha="0.75" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JXe-mO-VdO">
+                                <rect key="frame" x="16" y="737" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Bz3-1F-aTg"/>
+                                    <constraint firstAttribute="width" constant="30" id="YGS-Ua-QPC"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="location"/>
+                                <connections>
+                                    <action selector="onLocationBtnPressed:" destination="zMQ-CI-bZc" eventType="touchUpInside" id="mr9-fR-PLx"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Tap to search for a city..." textAlignment="natural" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="5sx-lg-wI0" customClass="CustomTextField" customModule="Dark_Sky_API" customModuleProvider="target">
                                 <rect key="frame" x="66" y="55.333333333333329" width="258" height="34.999999999999986"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -111,8 +130,11 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="6ab-qC-Xgv" firstAttribute="bottom" secondItem="w2E-zF-DLr" secondAttribute="bottom" constant="16" id="2HV-dW-QHQ"/>
                             <constraint firstItem="Mj9-tX-N7b" firstAttribute="leading" secondItem="6ab-qC-Xgv" secondAttribute="leading" constant="16" id="5lk-Wb-TCU"/>
+                            <constraint firstItem="JXe-mO-VdO" firstAttribute="leading" secondItem="6ab-qC-Xgv" secondAttribute="leading" constant="16" id="AFk-KW-nik"/>
                             <constraint firstItem="Wzi-7h-sBV" firstAttribute="centerX" secondItem="Fdj-cw-Icd" secondAttribute="centerX" id="Cik-6K-fdf"/>
+                            <constraint firstItem="6ab-qC-Xgv" firstAttribute="trailing" secondItem="w2E-zF-DLr" secondAttribute="trailing" constant="16" id="ECR-5K-7if"/>
                             <constraint firstItem="PFa-Sd-XV8" firstAttribute="centerX" secondItem="Fdj-cw-Icd" secondAttribute="centerX" id="G7M-6e-yop"/>
                             <constraint firstItem="eM5-2H-Ath" firstAttribute="trailing" secondItem="6ab-qC-Xgv" secondAttribute="trailing" id="Gxd-FR-hbb"/>
                             <constraint firstItem="PFa-Sd-XV8" firstAttribute="centerY" secondItem="Fdj-cw-Icd" secondAttribute="centerY" id="JUd-Ly-FC0"/>
@@ -132,11 +154,13 @@
                             <constraint firstItem="Mj9-tX-N7b" firstAttribute="top" secondItem="6ab-qC-Xgv" secondAttribute="top" constant="16" id="s8i-CB-G5O"/>
                             <constraint firstItem="5sx-lg-wI0" firstAttribute="centerY" secondItem="Mj9-tX-N7b" secondAttribute="centerY" id="sle-xW-ZRh"/>
                             <constraint firstItem="qvG-xQ-Vcv" firstAttribute="leading" secondItem="6ab-qC-Xgv" secondAttribute="leading" id="uzK-j5-Epj"/>
+                            <constraint firstItem="JXe-mO-VdO" firstAttribute="centerY" secondItem="w2E-zF-DLr" secondAttribute="centerY" id="wI4-cE-2q3"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6ab-qC-Xgv"/>
                     </view>
                     <connections>
                         <outlet property="cityLbl" destination="6vo-xX-5Jk" id="1gD-1E-yrs"/>
+                        <outlet property="locationBtn" destination="JXe-mO-VdO" id="RRM-RW-V6k"/>
                         <outlet property="regionLabel" destination="sO1-hx-gP2" id="LcZ-pq-GMs"/>
                         <outlet property="searchBtn" destination="wni-0f-psX" id="PUI-tG-BEO"/>
                         <outlet property="searchTextField" destination="5sx-lg-wI0" id="B6C-57-ogs"/>
@@ -193,6 +217,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="location" width="533" height="533"/>
+        <image name="menu" width="20" height="14"/>
         <image name="search_btn" width="28" height="28"/>
         <image name="settings" width="25" height="25"/>
         <image name="zalau-at-night" width="1024" height="768"/>

@@ -37,9 +37,9 @@ class DataService {
                     self.currentConditions.summary = currently["summary"] as! String
                     self.currentConditions.icon = currently["icon"] as! String
                     self.currentConditions.precipProbability = currently["precipProbability"] as! Double
-                    self.currentConditions.precipIntensity = currently["precipIntensity"] as! Double
+                    // self.currentConditions.precipIntensity = currently["precipIntensity"] as! Double
                     self.currentConditions.temperature = currently["temperature"] as! Double
-                    self.currentConditions.apparentTemperature = currently["apparentTemperature"] as! Double
+                    // self.currentConditions.apparentTemperature = currently["apparentTemperature"] as! Double
                     self.currentConditions.humidity = currently["humidity"] as! Double
                     self.currentConditions.pressure = currently["pressure"] as! Double
                     self.currentConditions.windSpeed = currently["windSpeed"] as! Double
@@ -62,9 +62,9 @@ class DataService {
                             currentHour.summary = currently["summary"] as! String
                             currentHour.icon = currently["icon"] as! String
                             currentHour.precipProbability = currently["precipProbability"] as! Double
-                            currentHour.precipIntensity = currently["precipIntensity"] as! Double
+                            // currentHour.precipIntensity = currently["precipIntensity"] as! Double
                             currentHour.temperature = currently["temperature"] as! Double
-                            currentHour.apparentTemperature = currently["apparentTemperature"] as! Double
+                            // currentHour.apparentTemperature = currently["apparentTemperature"] as! Double
                             currentHour.humidity = currently["humidity"] as! Double
                             currentHour.pressure = currently["pressure"] as! Double
                             currentHour.windSpeed = currently["windSpeed"] as! Double
@@ -89,7 +89,7 @@ class DataService {
                             currentDay.summary = day["summary"] as! String
                             currentDay.icon = day["icon"] as! String
                             currentDay.precipProbability = day["precipProbability"] as! Double
-                            currentDay.precipIntensity = day["precipIntensity"] as! Double
+                            // currentDay.precipIntensity = day["precipIntensity"] as! Double
                             // currentDay.precipType = day["precipType"] as! String
                             currentDay.humidity = day["humidity"] as! Double
                             currentDay.pressure = day["pressure"] as! Double
@@ -102,7 +102,7 @@ class DataService {
                             currentDay.sunsetTime = day["sunsetTime"] as! Double
                             currentDay.moonPhase = day["moonPhase"] as! Double
                             currentDay.precipIntensityMax = day["precipIntensityMax"] as! Double
-                            currentDay.precipIntensityMaxTime = day["precipIntensityMaxTime"] as! Double
+                            // currentDay.precipIntensityMaxTime = day["precipIntensityMaxTime"] as! Double
                             currentDay.temperatureHigh = day["temperatureHigh"] as! Double
                             currentDay.temperatureHighTime = day["temperatureHighTime"] as! Double
                             currentDay.temperatureLow = day["temperatureLow"] as! Double
@@ -123,12 +123,11 @@ class DataService {
     }
     
     func getLocationData(placemark: CLPlacemark) {
-        Location.instance.street = placemark.thoroughfare!
-        Location.instance.zip = placemark.postalCode!
-        Location.instance.country = placemark.country!
-        Location.instance.region = placemark.administrativeArea!
-        Location.instance.city = placemark.locality!
-        Location.instance.countryCode = placemark.isoCountryCode!
+        if let x = placemark.thoroughfare { Location.instance.street = x }
+        if let x = placemark.country { Location.instance.country = x }
+        if let x = placemark.administrativeArea { Location.instance.region = x }
+        if let x = placemark.locality { Location.instance.city = x }
+        if let x = placemark.isoCountryCode { Location.instance.countryCode = x }
     }
     
 }

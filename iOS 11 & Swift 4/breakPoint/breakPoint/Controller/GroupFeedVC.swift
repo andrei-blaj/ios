@@ -45,6 +45,8 @@ class GroupFeedVC: UIViewController {
         
         if let userInfo = notification.userInfo {
             
+            print(userInfo)
+            
             let keyboardFrame = (userInfo[UIKeyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
             
             let isKeyboardShowing = notification.name == NSNotification.Name.UIKeyboardWillShow
