@@ -98,16 +98,62 @@
                     <view key="view" contentMode="scaleToFill" id="Qjc-C7-k7g">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Frp-bX-HFM">
+                                <rect key="frame" x="0.0" y="597" width="375" height="70"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="-50" translatesAutoresizingMaskIntoConstraints="NO" id="QnJ-3Z-9TX">
+                                        <rect key="frame" x="25" y="10" width="200" height="50"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menuProfileIcon" translatesAutoresizingMaskIntoConstraints="NO" id="g5U-pM-aUn">
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="50" id="0jK-tX-c2J"/>
+                                                    <constraint firstAttribute="height" constant="50" id="2mM-nz-bhU"/>
+                                                </constraints>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r8u-Mf-qxr">
+                                                <rect key="frame" x="0.0" y="0.0" width="200" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="200" id="1rA-ES-u3Z"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
+                                                <state key="normal" title="Sign in">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="8PG-h6-Dix"/>
+                                            <constraint firstAttribute="width" constant="200" id="MjS-F5-tiZ"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.12941176470588234" green="0.14509803921568626" blue="0.16470588235294117" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="QnJ-3Z-9TX" firstAttribute="leading" secondItem="Frp-bX-HFM" secondAttribute="leading" constant="25" id="7vx-Tg-r9l"/>
+                                    <constraint firstAttribute="bottom" secondItem="QnJ-3Z-9TX" secondAttribute="bottom" constant="10" id="NA7-B8-1sl"/>
+                                    <constraint firstAttribute="height" constant="70" id="Py4-3s-TTt"/>
+                                    <constraint firstItem="QnJ-3Z-9TX" firstAttribute="top" secondItem="Frp-bX-HFM" secondAttribute="top" constant="10" id="s7X-lb-KQv"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="0.20392156859999999" green="0.2274509804" blue="0.25490196079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Frp-bX-HFM" firstAttribute="bottom" secondItem="gmn-CP-xpx" secondAttribute="bottom" id="JlS-Gu-TbT"/>
+                            <constraint firstItem="Frp-bX-HFM" firstAttribute="trailing" secondItem="gmn-CP-xpx" secondAttribute="trailing" id="KUG-1r-0ts"/>
+                            <constraint firstItem="Frp-bX-HFM" firstAttribute="leading" secondItem="gmn-CP-xpx" secondAttribute="leading" id="gvz-xI-Fmw"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="gmn-CP-xpx"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="426-jM-wpF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="985" y="-294"/>
+            <point key="canvasLocation" x="984.79999999999995" y="-294.60269865067471"/>
         </scene>
     </scenes>
     <resources>
+        <image name="menuProfileIcon" width="99" height="99"/>
         <image name="smackBurger" width="40" height="40"/>
     </resources>
 </document>
