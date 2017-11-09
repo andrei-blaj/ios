@@ -15,6 +15,8 @@
 		E444FE821FB36CDE007A69C6 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E444FE811FB36CDE007A69C6 /* SWRevealViewController.m */; };
 		E444FE841FB39D46007A69C6 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E444FE831FB39D46007A69C6 /* MainVC.swift */; };
 		E444FE861FB39D5D007A69C6 /* SideMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E444FE851FB39D5D007A69C6 /* SideMenuVC.swift */; };
+		E499AA121FB4283900DFF3AA /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E499AA111FB4283900DFF3AA /* LoginVC.swift */; };
+		E499AA151FB42EB300DFF3AA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E499AA141FB42EB300DFF3AA /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		E444FE811FB36CDE007A69C6 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		E444FE831FB39D46007A69C6 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		E444FE851FB39D5D007A69C6 /* SideMenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuVC.swift; sourceTree = "<group>"; };
+		E499AA111FB4283900DFF3AA /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		E499AA141FB42EB300DFF3AA /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +66,7 @@
 		E4421C5B1FB21FBB0019BE68 /* Co. Administrator */ = {
 			isa = PBXGroup;
 			children = (
+				E499AA131FB42E9900DFF3AA /* Utilities */,
 				E444FE7E1FB36CBD007A69C6 /* Supporting Files */,
 				E444FE7B1FB36CA3007A69C6 /* Model */,
 				E444FE7C1FB36CAA007A69C6 /* View */,
@@ -95,6 +100,7 @@
 			children = (
 				E444FE831FB39D46007A69C6 /* MainVC.swift */,
 				E444FE851FB39D5D007A69C6 /* SideMenuVC.swift */,
+				E499AA111FB4283900DFF3AA /* LoginVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -107,6 +113,14 @@
 				E444FE7F1FB36CDD007A69C6 /* Co. Administrator-Bridging-Header.h */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E499AA131FB42E9900DFF3AA /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				E499AA141FB42EB300DFF3AA /* Constants.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -184,7 +198,9 @@
 			files = (
 				E4421C651FB21FBB0019BE68 /* Co__Administrator.xcdatamodeld in Sources */,
 				E444FE841FB39D46007A69C6 /* MainVC.swift in Sources */,
+				E499AA121FB4283900DFF3AA /* LoginVC.swift in Sources */,
 				E4421C5D1FB21FBB0019BE68 /* AppDelegate.swift in Sources */,
+				E499AA151FB42EB300DFF3AA /* Constants.swift in Sources */,
 				E444FE821FB36CDE007A69C6 /* SWRevealViewController.m in Sources */,
 				E444FE861FB39D5D007A69C6 /* SideMenuVC.swift in Sources */,
 			);
