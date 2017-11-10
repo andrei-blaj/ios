@@ -164,7 +164,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hv0-lv-Ksh">
-                                <rect key="frame" x="16" y="110" width="343" height="322"/>
+                                <rect key="frame" x="16" y="110" width="343" height="300"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wKF-Mt-9Qi">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="55"/>
@@ -187,12 +187,93 @@
                                             <constraint firstItem="ql2-rW-Xue" firstAttribute="centerY" secondItem="wKF-Mt-9Qi" secondAttribute="centerY" id="bJl-4f-ekP"/>
                                         </constraints>
                                     </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="T0O-Uh-nG7">
+                                        <rect key="frame" x="12" y="67" width="319" height="63.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d9J-Bu-xOo">
+                                                <rect key="frame" x="0.0" y="0.0" width="319" height="23.5"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OTB-hW-fUo">
+                                                <rect key="frame" x="0.0" y="33.5" width="319" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="YZy-dz-Rj4"/>
+                                                </constraints>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" keyboardAppearance="alert"/>
+                                            </textField>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="d9J-Bu-xOo" firstAttribute="leading" secondItem="T0O-Uh-nG7" secondAttribute="leading" id="Jqp-hW-f2P"/>
+                                            <constraint firstAttribute="trailing" secondItem="d9J-Bu-xOo" secondAttribute="trailing" id="nRd-G1-JRf"/>
+                                            <constraint firstAttribute="trailing" secondItem="OTB-hW-fUo" secondAttribute="trailing" id="yvt-Kc-jp9"/>
+                                            <constraint firstItem="OTB-hW-fUo" firstAttribute="leading" secondItem="T0O-Uh-nG7" secondAttribute="leading" id="zez-TU-Tcy"/>
+                                        </constraints>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="byg-j6-gb5">
+                                        <rect key="frame" x="12" y="218" width="319" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="lNs-vk-O6K"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                        <state key="normal" title="Log in"/>
+                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="2n2-0c-mwU">
+                                        <rect key="frame" x="12" y="142.5" width="319" height="63.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ppr-cE-n8I">
+                                                <rect key="frame" x="0.0" y="0.0" width="319" height="23.5"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mCN-0Q-uu5">
+                                                <rect key="frame" x="0.0" y="33.5" width="319" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="QSw-f3-Fpr"/>
+                                                </constraints>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" keyboardAppearance="alert" secureTextEntry="YES"/>
+                                            </textField>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="ppr-cE-n8I" secondAttribute="trailing" id="62f-JX-hsF"/>
+                                            <constraint firstAttribute="trailing" secondItem="mCN-0Q-uu5" secondAttribute="trailing" id="YMg-cr-NOu"/>
+                                            <constraint firstItem="mCN-0Q-uu5" firstAttribute="leading" secondItem="2n2-0c-mwU" secondAttribute="leading" id="dCQ-zI-nXi"/>
+                                            <constraint firstItem="ppr-cE-n8I" firstAttribute="leading" secondItem="2n2-0c-mwU" secondAttribute="leading" id="h92-dj-jgr"/>
+                                        </constraints>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fP6-Xc-1rA">
+                                        <rect key="frame" x="12" y="258" width="319" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="lSu-WR-wqT"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="12"/>
+                                        <state key="normal" title="Don't have an account?"/>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="fP6-Xc-1rA" secondAttribute="trailing" constant="12" id="22k-SU-0kT"/>
+                                    <constraint firstItem="byg-j6-gb5" firstAttribute="leading" secondItem="Hv0-lv-Ksh" secondAttribute="leading" constant="12" id="3y6-lX-dxp"/>
+                                    <constraint firstAttribute="trailing" secondItem="T0O-Uh-nG7" secondAttribute="trailing" constant="12" id="4D3-Yw-rHn"/>
                                     <constraint firstItem="wKF-Mt-9Qi" firstAttribute="top" secondItem="Hv0-lv-Ksh" secondAttribute="top" id="4a0-Qo-0WS"/>
+                                    <constraint firstItem="2n2-0c-mwU" firstAttribute="top" secondItem="T0O-Uh-nG7" secondAttribute="bottom" constant="12" id="CUR-5q-ENF"/>
+                                    <constraint firstAttribute="trailing" secondItem="byg-j6-gb5" secondAttribute="trailing" constant="12" id="JYJ-Je-9li"/>
+                                    <constraint firstItem="fP6-Xc-1rA" firstAttribute="top" secondItem="byg-j6-gb5" secondAttribute="bottom" id="JZv-mz-1Yc"/>
+                                    <constraint firstAttribute="height" constant="300" id="MnO-P5-aD5"/>
+                                    <constraint firstItem="byg-j6-gb5" firstAttribute="top" secondItem="2n2-0c-mwU" secondAttribute="bottom" constant="12" id="OmO-9K-QW9"/>
+                                    <constraint firstItem="T0O-Uh-nG7" firstAttribute="top" secondItem="wKF-Mt-9Qi" secondAttribute="bottom" constant="12" id="TRG-If-6Bu"/>
+                                    <constraint firstItem="2n2-0c-mwU" firstAttribute="leading" secondItem="Hv0-lv-Ksh" secondAttribute="leading" constant="12" id="Y5G-0y-Bj3"/>
                                     <constraint firstItem="wKF-Mt-9Qi" firstAttribute="leading" secondItem="Hv0-lv-Ksh" secondAttribute="leading" id="act-C5-cw5"/>
                                     <constraint firstAttribute="trailing" secondItem="wKF-Mt-9Qi" secondAttribute="trailing" id="bbE-qR-aC6"/>
+                                    <constraint firstItem="fP6-Xc-1rA" firstAttribute="leading" secondItem="Hv0-lv-Ksh" secondAttribute="leading" constant="12" id="fFI-Rd-BSX"/>
+                                    <constraint firstAttribute="trailing" secondItem="2n2-0c-mwU" secondAttribute="trailing" constant="12" id="iqv-pl-4RG"/>
+                                    <constraint firstItem="T0O-Uh-nG7" firstAttribute="leading" secondItem="Hv0-lv-Ksh" secondAttribute="leading" constant="12" id="yXE-md-Zn2"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YVy-7v-Geh">
@@ -214,7 +295,6 @@
                             <constraint firstItem="Hv0-lv-Ksh" firstAttribute="leading" secondItem="zYm-yS-g5O" secondAttribute="leading" constant="16" id="SjZ-Tf-3Rj"/>
                             <constraint firstItem="Hv0-lv-Ksh" firstAttribute="top" secondItem="zYm-yS-g5O" secondAttribute="top" constant="90" id="kZT-IN-h2k"/>
                             <constraint firstItem="zYm-yS-g5O" firstAttribute="trailing" secondItem="Hv0-lv-Ksh" secondAttribute="trailing" constant="16" id="pQx-Xp-AdT"/>
-                            <constraint firstItem="zYm-yS-g5O" firstAttribute="bottom" secondItem="Hv0-lv-Ksh" secondAttribute="bottom" constant="235" id="tic-Eg-vOV"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="zYm-yS-g5O"/>
                     </view>

@@ -22,7 +22,4 @@ class MainVC: UIViewController {
         self.view.addGestureRecognizer(self.revealViewController().tapGestureRecognizer())
     }
     
-    
-
-
 }
