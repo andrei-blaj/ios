@@ -1,0 +1,6 @@
+framework module Pods_Co__Administrator {
+  umbrella header "Pods-Co. Administrator-umbrella.h"
+
+  export *
+  module * { export * }
+}
