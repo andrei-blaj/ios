@@ -12,6 +12,23 @@ import SwiftyJSON
 
 class SessionsNetworkManager {
     
+    static let instance = SessionsNetworkManager()
+    
+    private init() {
+        _isLoggedIn = false
+    } // This makes sure that the singleton instance is unique and prevents outside objects from creating their own instances of this class
+    
+    var _isLoggedIn: Bool
+    
+    var isLoggedIn: Bool {
+        get {
+            return _isLoggedIn
+        }
+        set {
+            _isLoggedIn = newValue
+        }
+    }
+    
     class func login(email: String, password: String, successHandler: @escaping ((String) -> Void), failureHandler: @escaping ((String) -> Void)) {
         let params: Parameters = ["email" : email, "password" : password]
         Alamofire.request("\(NetworkManager.host())/login",

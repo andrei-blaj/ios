@@ -21,24 +21,26 @@ class UsersNetworkManager {
                 switch response.result {
                 case .success(let data):
                     let json = JSON(data)
-                    var currentUser = ["id" : json["id"]]
                     
-                    currentUser["email"] = json["email"]
-                    currentUser["first_name"] = json["first_name"]
-                    currentUser["last_name"] = json["last_name"]
-                    currentUser["register_as"] = json["register_as"]
-                    currentUser["company_name"] = json["company_name"]
-                    currentUser["ceo_email"] = json["ceo_email"]
-                    currentUser["manager_email"] = json["manager_email"]
-                    currentUser["ceo"] = json["ceo"]
-                    currentUser["man"] = json["man"]
-                    currentUser["emp"] = json["emp"]
-                    currentUser["paid"] = json["paid"]
-                    currentUser["num_of_managers"] = json["num_of_managers"]
-                    currentUser["num_of_employees"] = json["num_of_employees"]
-                    currentUser["company_plan_id"] = json["company_plan_id"]
-                    
+                    let currentUser: [String: Any] = [
+                        "id": json["id"].intValue,
+                        "email": json["email"].stringValue,
+                        "first_name": json["first_name"].stringValue,
+                        "last_name": json["last_name"].stringValue,
+                        "register_as": json["register_as"].stringValue,
+                        "company_name": json["company_name"].stringValue,
+                        "ceo_email": json["ceo_email"].stringValue,
+                        "manager_email": json["manager_email"].stringValue,
+                        "ceo": json["ceo"].boolValue,
+                        "man": json["man"].boolValue,
+                        "emp": json["emp"].boolValue,
+                        "paid": json["paid"].boolValue,
+                        "num_of_managers": json["num_of_managers"].intValue,
+                        "num_of_employees": json["num_of_employees"].intValue,
+                        "company_plan_id": json["company_plan_id"].intValue
+                    ]
                     //                    let authToken = json["auth_token"].stringValue
+                    
                     successHandler(currentUser)
                 case .failure(let error):
                     print(error)
