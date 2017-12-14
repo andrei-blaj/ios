@@ -11,6 +11,5 @@ import Foundation
 // Segues
 let TO_LOGIN = "toLogin"
 
-let NOTIF_USER_DATA_DID_CHANGE = Notification.Name("notifUserDataChanged")
 
 

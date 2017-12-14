@@ -10,18 +10,32 @@ import Foundation
 import Alamofire
 import SwiftyJSON
 
-class User {
+struct User {
     
-    static let instance = User()
-    
-    private init() {}
+    init(json: JSON) {
+        self.id = json["id"].intValue
+        self.email = json["email"].stringValue
+        self.firstName = json["first_name"].stringValue
+        self.lastName = json["last_name"].stringValue
+        self.registerAs = json["register_as"].stringValue
+        self.companyName = json["company_name"].stringValue
+        self.ceoEmail = json["ceo_email"].stringValue
+        self.managerEmail = json["manager_email"].stringValue
+        self.ceo = json["ceo"].boolValue
+        self.man = json["man"].boolValue
+        self.emp = json["emp"].boolValue
+        self.paid = json["paid"].boolValue
+        self.numOfManagers = json["num_of_managers"].intValue
+        self.numOfEmployees = json["num_of_employees"].intValue
+        self.companyPlanId = json["company_plan_id"].intValue
+    }
     
     var _id: Int!
-    var _email: String!, _first_name: String!, _last_name: String!
-    var _register_as: String!, _company_name: String!
-    var _ceo_email: String!, _manager_email: String!
+    var _email: String!, _firstName: String!, _lastName: String!
+    var _registerAs: String!, _companyName: String!
+    var _ceoEmail: String!, _managerEmail: String!
     var _ceo: Bool!, _man: Bool!, _emp: Bool!, _paid: Bool!
-    var _num_of_managers: Int!, _num_of_employees: Int!, _company_plan_id: Int!
+    var _numOfManagers: Int!, _numOfEmployees: Int!, _companyPlanId: Int!
     
     var id: Int {
         get { return _id == nil ? 0 : _id }
@@ -33,34 +47,34 @@ class User {
         set { _email = newValue }
     }
     
-    var first_name: String {
-        get { return _first_name == nil ? "" : _first_name }
-        set { _first_name = newValue }
+    var firstName: String {
+        get { return _firstName == nil ? "" : _firstName }
+        set { _firstName = newValue }
     }
     
-    var last_name: String {
-        get { return _last_name == nil ? "" : _last_name }
-        set { _last_name = newValue }
+    var lastName: String {
+        get { return _lastName == nil ? "" : _lastName }
+        set { _lastName = newValue }
     }
     
-    var register_as: String {
-        get { return _register_as == nil ? "" : _register_as }
-        set { _register_as = newValue }
+    var registerAs: String {
+        get { return _registerAs == nil ? "" : _registerAs }
+        set { _registerAs = newValue }
     }
     
-    var company_name: String {
-        get { return _company_name == nil ? "" : _company_name }
-        set { _company_name = newValue }
+    var companyName: String {
+        get { return _companyName == nil ? "" : _companyName }
+        set { _companyName = newValue }
     }
     
-    var ceo_email: String {
-        get { return _ceo_email == nil ? "" : _ceo_email }
-        set { _ceo_email = newValue }
+    var ceoEmail: String {
+        get { return _ceoEmail == nil ? "" : _ceoEmail }
+        set { _ceoEmail = newValue }
     }
     
-    var manager_email: String {
-        get { return _manager_email == nil ? "" : _manager_email }
-        set { _manager_email = newValue }
+    var managerEmail: String {
+        get { return _managerEmail == nil ? "" : _managerEmail }
+        set { _managerEmail = newValue }
     }
     
     var ceo: Bool {
@@ -83,23 +97,19 @@ class User {
         set { _paid = newValue }
     }
     
-    var num_of_managers: Int {
-        get { return _num_of_managers == nil ? 0 : _num_of_managers }
-        set { _num_of_managers = newValue }
+    var numOfManagers: Int {
+        get { return _numOfManagers == nil ? 0 : _numOfManagers }
+        set { _numOfManagers = newValue }
     }
     
-    var num_of_employees: Int {
-        get { return _num_of_employees == nil ? 0 : _num_of_employees }
-        set { _num_of_employees = newValue }
+    var numOfEmployees: Int {
+        get { return _numOfEmployees == nil ? 0 : _numOfEmployees }
+        set { _numOfEmployees = newValue }
     }
     
-    var company_plan_id: Int {
-        get { return _company_plan_id == nil ? 0 : _company_plan_id }
-        set { _company_plan_id = newValue }
-    }
-    
-    func setUserData(userData: [String: Any]) {
-        
+    var companyPlanId: Int {
+        get { return _companyPlanId == nil ? 0 : _companyPlanId }
+        set { _companyPlanId = newValue }
     }
     
 }
