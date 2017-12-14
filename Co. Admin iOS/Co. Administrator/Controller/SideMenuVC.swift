@@ -24,8 +24,8 @@ class SideMenuVC: UIViewController {
         self.revealViewController().rearViewRevealWidth = self.view.frame.size.width - 60
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(true)
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
         self.tableView.reloadData()
         setupUserInfo()
     }
@@ -76,7 +76,7 @@ extension SideMenuVC: UITableViewDelegate, UITableViewDataSource {
             if Session.shared.currentUser!.man {
                 title = manMenuElements[indexPath.row + 1]
                 icon = manMenuIcons[indexPath.row + 1]
-            } else {
+            } else if Session.shared.currentUser!.emp {
                 title = empMenuElements[indexPath.row + 1]
                 icon = empMenuIcons[indexPath.row + 1]
             }
