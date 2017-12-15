@@ -32,4 +32,9 @@ class Session {
         return authToken != nil
     }
     
+    func logout() {
+        authToken = nil
+        
+    }
+    
 }

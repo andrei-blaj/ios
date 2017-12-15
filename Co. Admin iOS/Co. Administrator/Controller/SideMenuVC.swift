@@ -10,6 +10,7 @@ import UIKit
 
 class SideMenuVC: UIViewController {
 
+    @IBOutlet weak var companyPlanLabel: UILabel!
     @IBOutlet weak var loginBtn: UIButton!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var companyNameLabel: UILabel!
@@ -27,22 +28,26 @@ class SideMenuVC: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         self.tableView.reloadData()
-        setupUserInfo()
+        setupViewData()
     }
 
     @IBAction func onLoginBtnPressed(_ sender: Any) {
-        if !Session.shared.isLoggedIn() {
+        if Session.shared.isLoggedIn() {
+            performSegue(withIdentifier: TO_USER_DETAILS, sender: nil)
+        } else {
             performSegue(withIdentifier: TO_LOGIN, sender: nil)
         }
     }
     
-    func setupUserInfo() {
+    func setupViewData() {
         if Session.shared.isLoggedIn() {
             loginBtn.setTitle("\(Session.shared.currentUser!.firstName)", for: .normal)
             companyNameLabel.text = "\(Session.shared.currentUser!.companyName)"
+            companyPlanLabel.text = companyPlan[Session.shared.currentUser!.companyPlanId]
         } else {
             loginBtn.setTitle("Login", for: .normal)
             companyNameLabel.text = "Welcome"
+            companyPlanLabel.text = ""
         }
     }
     
@@ -57,11 +62,11 @@ extension SideMenuVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if Session.shared.isLoggedIn() {
             if Session.shared.currentUser!.ceo {
-                return 6
+                return 5
             } else if Session.shared.currentUser!.man {
-                return 4
-            } else {
                 return 3
+            } else {
+                return 2
             }
         }
         return 0

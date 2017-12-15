@@ -18,7 +18,11 @@ class MainVC: UIViewController {
 
         sideMenuBtn.addTarget(self.revealViewController(), action: #selector(SWRevealViewController.revealToggle(_:)), for: .touchUpInside)
         
-        companyNameLabel.text = "Home"
+        if Session.shared.isLoggedIn() {
+            companyNameLabel.text = "Home"
+        } else {
+            companyNameLabel.text = "Co. Administrator"
+        }
         
         self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         self.view.addGestureRecognizer(self.revealViewController().tapGestureRecognizer())
