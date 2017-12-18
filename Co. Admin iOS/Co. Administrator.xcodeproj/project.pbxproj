@@ -23,6 +23,8 @@
 		E444FE861FB39D5D007A69C6 /* SideMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E444FE851FB39D5D007A69C6 /* SideMenuVC.swift */; };
 		E499AA121FB4283900DFF3AA /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E499AA111FB4283900DFF3AA /* LoginVC.swift */; };
 		E499AA151FB42EB300DFF3AA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E499AA141FB42EB300DFF3AA /* Constants.swift */; };
+		E49B353A1FE53122009881D5 /* RegistrationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49B35391FE53122009881D5 /* RegistrationVC.swift */; };
+		E49B353C1FE799C0009881D5 /* HomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49B353B1FE799C0009881D5 /* HomeCell.swift */; };
 		E4D699B11FE2A98300B89414 /* SideMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D699B01FE2A98300B89414 /* SideMenuCell.swift */; };
 		E4E4F4B91FE435F3002ACB09 /* UserDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E4F4B81FE435F3002ACB09 /* UserDetailsVC.swift */; };
 /* End PBXBuildFile section */
@@ -50,6 +52,8 @@
 		E444FE851FB39D5D007A69C6 /* SideMenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuVC.swift; sourceTree = "<group>"; };
 		E499AA111FB4283900DFF3AA /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		E499AA141FB42EB300DFF3AA /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		E49B35391FE53122009881D5 /* RegistrationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationVC.swift; sourceTree = "<group>"; };
+		E49B353B1FE799C0009881D5 /* HomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCell.swift; sourceTree = "<group>"; };
 		E4D699B01FE2A98300B89414 /* SideMenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuCell.swift; sourceTree = "<group>"; };
 		E4E4F4B81FE435F3002ACB09 /* UserDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -150,6 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				E4D699B01FE2A98300B89414 /* SideMenuCell.swift */,
+				E49B353B1FE799C0009881D5 /* HomeCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -161,6 +166,7 @@
 				E444FE851FB39D5D007A69C6 /* SideMenuVC.swift */,
 				E499AA111FB4283900DFF3AA /* LoginVC.swift */,
 				E4E4F4B81FE435F3002ACB09 /* UserDetailsVC.swift */,
+				E49B35391FE53122009881D5 /* RegistrationVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -265,12 +271,14 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-Co. Administrator/Pods-Co. Administrator-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/FontAwesome.swift/FontAwesome_swift.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FontAwesome_swift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -320,6 +328,7 @@
 			files = (
 				E4421C651FB21FBB0019BE68 /* Co__Administrator.xcdatamodeld in Sources */,
 				E444FE841FB39D46007A69C6 /* MainVC.swift in Sources */,
+				E49B353C1FE799C0009881D5 /* HomeCell.swift in Sources */,
 				E499AA121FB4283900DFF3AA /* LoginVC.swift in Sources */,
 				E41C90921FDEAB9C00F5435E /* SessionsNetworkManager.swift in Sources */,
 				E41E38201FDEF9A10040460C /* UsersNetworkManager.swift in Sources */,
@@ -331,6 +340,7 @@
 				E444FE861FB39D5D007A69C6 /* SideMenuVC.swift in Sources */,
 				E41E38241FE08AF40040460C /* User.swift in Sources */,
 				E4E4F4B91FE435F3002ACB09 /* UserDetailsVC.swift in Sources */,
+				E49B353A1FE53122009881D5 /* RegistrationVC.swift in Sources */,
 				E4D699B11FE2A98300B89414 /* SideMenuCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

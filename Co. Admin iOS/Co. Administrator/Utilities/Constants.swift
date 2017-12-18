@@ -11,6 +11,6 @@ import Foundation
 // Segues
 let TO_LOGIN = "toLogin"
 let TO_USER_DETAILS = "toUserDetailsVC"
-
+let TO_REGISTRATION = "toRegistration"
 
 

@@ -9,5 +9,6 @@ target 'Co. Administrator' do
   pod 'Alamofire', '~> 4.5'
   pod 'SwiftyJSON'
   pod 'FontAwesome.swift'
+  pod 'IQKeyboardManagerSwift'
 
 end

@@ -17,7 +17,18 @@ class LoginVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        setupTextFieldBorderColor()
+    }
+    
+    func setupTextFieldBorderColor() {
+        let borderColor = #colorLiteral(red: 0.8374180198, green: 0.8374378085, blue: 0.8374271393, alpha: 1)
+        
+        emailTextField.layer.borderColor = borderColor.cgColor
+        passwordTextField.layer.borderColor = borderColor.cgColor
+        
+        emailTextField.layer.borderWidth = 1.0
+        passwordTextField.layer.borderWidth = 1.0
     }
     
     @IBAction func onLoginButtonPressed(_ sender: UIButton) {
@@ -35,6 +46,10 @@ class LoginVC: UIViewController {
         }
     }
 
+    @IBAction func onRegistrationBtnPressed(_ sender: Any) {
+        performSegue(withIdentifier: TO_REGISTRATION, sender: nil)
+    }
+    
     @IBAction func onBackBtnPressed(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }

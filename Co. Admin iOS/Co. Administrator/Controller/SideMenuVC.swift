@@ -21,7 +21,7 @@ class SideMenuVC: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         
-        self.tableView.reloadData()
+        tableView.reloadData()
         self.revealViewController().rearViewRevealWidth = self.view.frame.size.width - 60
     }
     
@@ -62,7 +62,7 @@ extension SideMenuVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if Session.shared.isLoggedIn() {
             if Session.shared.currentUser!.ceo {
-                return 5
+                return 4
             } else if Session.shared.currentUser!.man {
                 return 3
             } else {
