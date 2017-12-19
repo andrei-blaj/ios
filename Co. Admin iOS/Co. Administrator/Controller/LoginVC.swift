@@ -37,7 +37,14 @@ class LoginVC: UIViewController {
 
                 Session.shared.currentUser = currentUser
                 
-                self.dismiss(animated: true, completion: nil)
+                if Session.shared.isLoggedIn() {
+                    self.save(completion: { (saveSuccessful) in
+                        if saveSuccessful {
+                            self.dismiss(animated: true, completion: nil)
+                        } // otherwise error print message from the save method will be saved
+                    })
+                }
+                
             }, failureHandler: { (error) in
                 print(error)
             })
@@ -54,4 +61,25 @@ class LoginVC: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
+}
+
+
+// Core Data
+extension LoginVC {
+    func save(completion: (_ finished: Bool) -> ()) {
+        guard let managedContext = appDelegate?.persistentContainer.viewContext else { return } // still need to figure this out
+        let savedUser = SavedUserData(context: managedContext)
+        
+        savedUser.user_id = Int16((Session.shared.currentUser?.id)!)
+        savedUser.auth_token = Session.shared.authToken
+        
+        do {
+            try managedContext.save()
+            completion(true)
+        } catch {
+            print("Could not save: \(error.localizedDescription)")
+            completion(false)
+        }
+        
+    }
 }

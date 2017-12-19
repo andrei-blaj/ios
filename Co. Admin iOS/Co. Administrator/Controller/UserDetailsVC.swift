@@ -21,7 +21,22 @@ class UserDetailsVC: UIViewController {
     
     @IBAction func onLogoutBtnPressed(_ sender: Any) {
         Session.shared.logout()
+        self.removeSavedUser()
         dismiss(animated: true, completion: nil)
     }
     
+}
+
+extension UserDetailsVC {
+    func removeSavedUser() {
+        guard let managedContext = appDelegate?.persistentContainer.viewContext else { return }
+        managedContext.delete(Session.shared.savedUserData[0])
+        
+        do {
+            try managedContext.save()
+            print("Removal successful!")
+        } catch {
+            print("Could not save: \(error.localizedDescription)")
+        }
+    }
 }

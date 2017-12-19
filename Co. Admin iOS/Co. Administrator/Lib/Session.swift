@@ -17,6 +17,8 @@ class Session {
     var currentUser: User?
     var authToken: String?
 
+    var savedUserData: [SavedUserData] = []
+
     class func host() -> String {
         #if arch(i386) || arch(x86_64)
             //simulator
@@ -29,7 +31,7 @@ class Session {
     }
     
     func isLoggedIn() -> Bool {
-        return authToken != nil
+        return authToken != nil && currentUser != nil
     }
     
     func logout() {

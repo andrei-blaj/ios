@@ -7,6 +7,9 @@
 //
 
 import UIKit
+import CoreData
+
+let appDelegate = UIApplication.shared.delegate as? AppDelegate
 
 class MainVC: UIViewController {
 
@@ -30,7 +33,9 @@ class MainVC: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         
-        self.tableView.reloadData()
+        tableView.reloadData()
+        
+        updateUserData()
         
         if Session.shared.isLoggedIn() {
             companyNameLabel.text = "Home"
@@ -39,6 +44,46 @@ class MainVC: UIViewController {
         }
     }
     
+}
+
+extension MainVC {
+    
+    // Load data from core data
+    func updateUserData() {
+        self.fetchUserData { (fetchSuccessful) in
+            if fetchSuccessful {
+                if Session.shared.savedUserData.count > 0 {
+                    let saved_user_id = Session.shared.savedUserData[0].user_id
+                    let saved_user_auth_token = Session.shared.savedUserData[0].auth_token
+                    
+                    Session.shared.authToken = saved_user_auth_token
+                    
+                    UsersNetworkManager.getCurrentUser(user_id: Int(saved_user_id), successHandler: { (currentUser) in
+                        Session.shared.currentUser = currentUser
+                        self.tableView.reloadData()
+                    }, failureHandler: { (error) in
+                        print(error)
+                    })
+                }
+            }
+        }
+    }
+    
+    // Retrieve the data from the persistent container using a fetch request
+    func fetchUserData(completion: (_ complete: Bool) -> ()) {
+        guard let managedContext = appDelegate?.persistentContainer.viewContext else { return }
+        
+        let fetchRequest = NSFetchRequest<SavedUserData>(entityName: "SavedUserData")
+        
+        do {
+            Session.shared.savedUserData = try managedContext.fetch(fetchRequest)
+            completion(true)
+        } catch {
+            print("Could not fetch: \(error.localizedDescription)")
+            completion(false)
+        }
+        
+    }
 }
 
 extension MainVC: UITableViewDelegate, UITableViewDataSource {
