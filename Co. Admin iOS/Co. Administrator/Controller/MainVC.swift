@@ -23,12 +23,6 @@ class MainVC: UIViewController {
         
         sideMenuBtn.addTarget(self.revealViewController(), action: #selector(SWRevealViewController.revealToggle(_:)), for: .touchUpInside)
         
-        if Session.shared.isLoggedIn() {
-            companyNameLabel.text = "Home"
-        } else {
-            companyNameLabel.text = "Co. Administrator"
-        }
-        
         self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         self.view.addGestureRecognizer(self.revealViewController().tapGestureRecognizer())
     }
@@ -37,11 +31,24 @@ class MainVC: UIViewController {
         super.viewWillAppear(true)
         
         self.tableView.reloadData()
+        
+        if Session.shared.isLoggedIn() {
+            companyNameLabel.text = "Home"
+        } else {
+            companyNameLabel.text = "Co. Administrator"
+        }
     }
     
 }
 
 extension MainVC: UITableViewDelegate, UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if (indexPath.row != 0) {
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: homeTableViewCellIdentifiers[indexPath.row + 1]!)
+            self.revealViewController().setFront(vc, animated: true)
+        }
+    }
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -64,9 +71,6 @@ extension MainVC: UITableViewDelegate, UITableViewDataSource {
         
         if let cell = tableView.dequeueReusableCell(withIdentifier: "homeCell", for: indexPath) as? HomeCell {
             
-            // Still need to add the SEGUE identifier for performing segues when tapping button
-            // Will modify when I'll create the views
-            
             let title = homeTableViewCellTitles[indexPath.row + 1]
             let number = "\(1)"
             let icon = homeTableViewCellIcons[indexPath.row + 1]
@@ -75,7 +79,9 @@ extension MainVC: UITableViewDelegate, UITableViewDataSource {
             let mainViewColor = homeTableViewCellMainViewColor[indexPath.row + 1]
             let secondaryViewColor = homeTableViewCellSecondaryViewColor[indexPath.row + 1]
             
-            cell.configureCell(cellTitle: title!, cellNumber: number, cellFontAwesome: icon!, btnTitle: btnTitle!, mainViewColor: mainViewColor!, secondaryViewColor: secondaryViewColor!)
+            cell.configureCell(index: indexPath.row + 1, cellTitle: title!, cellNumber: number, cellFontAwesome: icon!, btnTitle: btnTitle!, mainViewColor: mainViewColor!, secondaryViewColor: secondaryViewColor!)
+            
+            cell.selectionStyle = UITableViewCellSelectionStyle.none
             
             return cell
         }

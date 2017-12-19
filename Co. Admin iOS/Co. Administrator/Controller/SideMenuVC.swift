@@ -20,14 +20,14 @@ class SideMenuVC: UIViewController {
         
         tableView.delegate = self
         tableView.dataSource = self
-        
-        tableView.reloadData()
+    
         self.revealViewController().rearViewRevealWidth = self.view.frame.size.width - 60
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        self.tableView.reloadData()
+        
+        tableView.reloadData()
         setupViewData()
     }
 
@@ -46,14 +46,18 @@ class SideMenuVC: UIViewController {
             companyPlanLabel.text = companyPlan[Session.shared.currentUser!.companyPlanId]
         } else {
             loginBtn.setTitle("Login", for: .normal)
-            companyNameLabel.text = "Welcome"
+            companyNameLabel.text = "Please log in"
             companyPlanLabel.text = ""
         }
     }
     
 }
 
-extension SideMenuVC: UITableViewDelegate, UITableViewDataSource {
+extension SideMenuVC: UITableViewDelegate, UITableViewDataSource, HomeCellDelegator {
+    
+    func callSegueForHomeCell(withIdentifier segueIdentifier: String) {
+        performSegue(withIdentifier: segueIdentifier, sender: nil)
+    }
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -86,7 +90,9 @@ extension SideMenuVC: UITableViewDelegate, UITableViewDataSource {
                 icon = empMenuIcons[indexPath.row + 1]
             }
             
-            cell.configureCell(menuElementTitle: title!, menuIconName: icon!)
+            cell.configureCell(index: indexPath.row + 1, menuElementTitle: title!, menuIconName: icon!)
+            
+            cell.delegate = self
             
             return cell
         }

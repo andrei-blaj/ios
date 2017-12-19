@@ -11,6 +11,8 @@
 		E41C90921FDEAB9C00F5435E /* SessionsNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41C90911FDEAB9C00F5435E /* SessionsNetworkManager.swift */; };
 		E41E38201FDEF9A10040460C /* UsersNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41E381F1FDEF9A10040460C /* UsersNetworkManager.swift */; };
 		E41E38241FE08AF40040460C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41E38231FE08AF40040460C /* User.swift */; };
+		E42A9C711FE841C80034262C /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42A9C701FE841C80034262C /* Protocols.swift */; };
+		E42A9C731FE8482E0034262C /* ProjectsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42A9C721FE8482E0034262C /* ProjectsVC.swift */; };
 		E43BBA851FE2AF0200E98C02 /* Structures.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43BBA841FE2AF0200E98C02 /* Structures.swift */; };
 		E4421C5D1FB21FBB0019BE68 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4421C5C1FB21FBB0019BE68 /* AppDelegate.swift */; };
 		E4421C621FB21FBB0019BE68 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4421C601FB21FBB0019BE68 /* Main.storyboard */; };
@@ -21,10 +23,13 @@
 		E444FE821FB36CDE007A69C6 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E444FE811FB36CDE007A69C6 /* SWRevealViewController.m */; };
 		E444FE841FB39D46007A69C6 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E444FE831FB39D46007A69C6 /* MainVC.swift */; };
 		E444FE861FB39D5D007A69C6 /* SideMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E444FE851FB39D5D007A69C6 /* SideMenuVC.swift */; };
+		E48F0EA51FE92D0300D08F09 /* ManagersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48F0EA41FE92D0300D08F09 /* ManagersVC.swift */; };
+		E48F0EA71FE92D4100D08F09 /* EmployeesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48F0EA61FE92D4100D08F09 /* EmployeesVC.swift */; };
 		E499AA121FB4283900DFF3AA /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E499AA111FB4283900DFF3AA /* LoginVC.swift */; };
 		E499AA151FB42EB300DFF3AA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E499AA141FB42EB300DFF3AA /* Constants.swift */; };
 		E49B353A1FE53122009881D5 /* RegistrationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49B35391FE53122009881D5 /* RegistrationVC.swift */; };
 		E49B353C1FE799C0009881D5 /* HomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49B353B1FE799C0009881D5 /* HomeCell.swift */; };
+		E49B353E1FE80B51009881D5 /* ProjectsNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49B353D1FE80B51009881D5 /* ProjectsNetworkManager.swift */; };
 		E4D699B11FE2A98300B89414 /* SideMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D699B01FE2A98300B89414 /* SideMenuCell.swift */; };
 		E4E4F4B91FE435F3002ACB09 /* UserDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E4F4B81FE435F3002ACB09 /* UserDetailsVC.swift */; };
 /* End PBXBuildFile section */
@@ -36,6 +41,8 @@
 		E41C90911FDEAB9C00F5435E /* SessionsNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionsNetworkManager.swift; sourceTree = "<group>"; };
 		E41E381F1FDEF9A10040460C /* UsersNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersNetworkManager.swift; sourceTree = "<group>"; };
 		E41E38231FE08AF40040460C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		E42A9C701FE841C80034262C /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
+		E42A9C721FE8482E0034262C /* ProjectsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsVC.swift; sourceTree = "<group>"; };
 		E43BBA841FE2AF0200E98C02 /* Structures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Structures.swift; sourceTree = "<group>"; };
 		E4421C591FB21FBB0019BE68 /* Co. Administrator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Co. Administrator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4421C5C1FB21FBB0019BE68 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -50,10 +57,13 @@
 		E444FE811FB36CDE007A69C6 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		E444FE831FB39D46007A69C6 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		E444FE851FB39D5D007A69C6 /* SideMenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuVC.swift; sourceTree = "<group>"; };
+		E48F0EA41FE92D0300D08F09 /* ManagersVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagersVC.swift; sourceTree = "<group>"; };
+		E48F0EA61FE92D4100D08F09 /* EmployeesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeesVC.swift; sourceTree = "<group>"; };
 		E499AA111FB4283900DFF3AA /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		E499AA141FB42EB300DFF3AA /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		E49B35391FE53122009881D5 /* RegistrationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationVC.swift; sourceTree = "<group>"; };
 		E49B353B1FE799C0009881D5 /* HomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCell.swift; sourceTree = "<group>"; };
+		E49B353D1FE80B51009881D5 /* ProjectsNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsNetworkManager.swift; sourceTree = "<group>"; };
 		E4D699B01FE2A98300B89414 /* SideMenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuCell.swift; sourceTree = "<group>"; };
 		E4E4F4B81FE435F3002ACB09 /* UserDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -92,6 +102,7 @@
 			children = (
 				E41C90911FDEAB9C00F5435E /* SessionsNetworkManager.swift */,
 				E41E381F1FDEF9A10040460C /* UsersNetworkManager.swift */,
+				E49B353D1FE80B51009881D5 /* ProjectsNetworkManager.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -167,6 +178,9 @@
 				E499AA111FB4283900DFF3AA /* LoginVC.swift */,
 				E4E4F4B81FE435F3002ACB09 /* UserDetailsVC.swift */,
 				E49B35391FE53122009881D5 /* RegistrationVC.swift */,
+				E42A9C721FE8482E0034262C /* ProjectsVC.swift */,
+				E48F0EA41FE92D0300D08F09 /* ManagersVC.swift */,
+				E48F0EA61FE92D4100D08F09 /* EmployeesVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -186,6 +200,7 @@
 			children = (
 				E499AA141FB42EB300DFF3AA /* Constants.swift */,
 				E43BBA841FE2AF0200E98C02 /* Structures.swift */,
+				E42A9C701FE841C80034262C /* Protocols.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -326,15 +341,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E48F0EA71FE92D4100D08F09 /* EmployeesVC.swift in Sources */,
 				E4421C651FB21FBB0019BE68 /* Co__Administrator.xcdatamodeld in Sources */,
+				E42A9C731FE8482E0034262C /* ProjectsVC.swift in Sources */,
 				E444FE841FB39D46007A69C6 /* MainVC.swift in Sources */,
 				E49B353C1FE799C0009881D5 /* HomeCell.swift in Sources */,
+				E42A9C711FE841C80034262C /* Protocols.swift in Sources */,
 				E499AA121FB4283900DFF3AA /* LoginVC.swift in Sources */,
+				E48F0EA51FE92D0300D08F09 /* ManagersVC.swift in Sources */,
 				E41C90921FDEAB9C00F5435E /* SessionsNetworkManager.swift in Sources */,
 				E41E38201FDEF9A10040460C /* UsersNetworkManager.swift in Sources */,
 				E4421C5D1FB21FBB0019BE68 /* AppDelegate.swift in Sources */,
 				E499AA151FB42EB300DFF3AA /* Constants.swift in Sources */,
 				E43BBA851FE2AF0200E98C02 /* Structures.swift in Sources */,
+				E49B353E1FE80B51009881D5 /* ProjectsNetworkManager.swift in Sources */,
 				E443CCB91FE17C200008C6F4 /* Session.swift in Sources */,
 				E444FE821FB36CDE007A69C6 /* SWRevealViewController.m in Sources */,
 				E444FE861FB39D5D007A69C6 /* SideMenuVC.swift in Sources */,
