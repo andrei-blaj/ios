@@ -25,7 +25,7 @@ class Session {
             return "http://localhost:3000/api"
         #else
             //device
-            return "http://d0e149d0.ngrok.io/api"
+            return "http://\(NGROK).ngrok.io/api"
             // return "http://yourapp.herokuapp.com/"
         #endif
     }

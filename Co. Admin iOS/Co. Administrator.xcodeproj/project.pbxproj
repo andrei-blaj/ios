@@ -23,6 +23,8 @@
 		E444FE821FB36CDE007A69C6 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E444FE811FB36CDE007A69C6 /* SWRevealViewController.m */; };
 		E444FE841FB39D46007A69C6 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E444FE831FB39D46007A69C6 /* MainVC.swift */; };
 		E444FE861FB39D5D007A69C6 /* SideMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E444FE851FB39D5D007A69C6 /* SideMenuVC.swift */; };
+		E47141C41FEA8D1B00651359 /* UpgradePlanVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E47141C31FEA8D1B00651359 /* UpgradePlanVC.swift */; };
+		E47141C61FEA9E8300651359 /* UpgradePlanCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E47141C51FEA9E8300651359 /* UpgradePlanCell.swift */; };
 		E48F0EA51FE92D0300D08F09 /* ManagersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48F0EA41FE92D0300D08F09 /* ManagersVC.swift */; };
 		E48F0EA71FE92D4100D08F09 /* EmployeesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48F0EA61FE92D4100D08F09 /* EmployeesVC.swift */; };
 		E499AA121FB4283900DFF3AA /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E499AA111FB4283900DFF3AA /* LoginVC.swift */; };
@@ -57,6 +59,8 @@
 		E444FE811FB36CDE007A69C6 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		E444FE831FB39D46007A69C6 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		E444FE851FB39D5D007A69C6 /* SideMenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuVC.swift; sourceTree = "<group>"; };
+		E47141C31FEA8D1B00651359 /* UpgradePlanVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpgradePlanVC.swift; sourceTree = "<group>"; };
+		E47141C51FEA9E8300651359 /* UpgradePlanCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpgradePlanCell.swift; sourceTree = "<group>"; };
 		E48F0EA41FE92D0300D08F09 /* ManagersVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagersVC.swift; sourceTree = "<group>"; };
 		E48F0EA61FE92D4100D08F09 /* EmployeesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeesVC.swift; sourceTree = "<group>"; };
 		E499AA111FB4283900DFF3AA /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
@@ -166,6 +170,7 @@
 			children = (
 				E4D699B01FE2A98300B89414 /* SideMenuCell.swift */,
 				E49B353B1FE799C0009881D5 /* HomeCell.swift */,
+				E47141C51FEA9E8300651359 /* UpgradePlanCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -181,6 +186,7 @@
 				E42A9C721FE8482E0034262C /* ProjectsVC.swift */,
 				E48F0EA41FE92D0300D08F09 /* ManagersVC.swift */,
 				E48F0EA61FE92D4100D08F09 /* EmployeesVC.swift */,
+				E47141C31FEA8D1B00651359 /* UpgradePlanVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -287,6 +293,7 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/FontAwesome.swift/FontAwesome_swift.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Stripe/Stripe.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -294,6 +301,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FontAwesome_swift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Stripe.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -350,11 +358,13 @@
 				E499AA121FB4283900DFF3AA /* LoginVC.swift in Sources */,
 				E48F0EA51FE92D0300D08F09 /* ManagersVC.swift in Sources */,
 				E41C90921FDEAB9C00F5435E /* SessionsNetworkManager.swift in Sources */,
+				E47141C61FEA9E8300651359 /* UpgradePlanCell.swift in Sources */,
 				E41E38201FDEF9A10040460C /* UsersNetworkManager.swift in Sources */,
 				E4421C5D1FB21FBB0019BE68 /* AppDelegate.swift in Sources */,
 				E499AA151FB42EB300DFF3AA /* Constants.swift in Sources */,
 				E43BBA851FE2AF0200E98C02 /* Structures.swift in Sources */,
 				E49B353E1FE80B51009881D5 /* ProjectsNetworkManager.swift in Sources */,
+				E47141C41FEA8D1B00651359 /* UpgradePlanVC.swift in Sources */,
 				E443CCB91FE17C200008C6F4 /* Session.swift in Sources */,
 				E444FE821FB36CDE007A69C6 /* SWRevealViewController.m in Sources */,
 				E444FE861FB39D5D007A69C6 /* SideMenuVC.swift in Sources */,

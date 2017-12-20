@@ -77,3 +77,29 @@ let empMenuIcons : [Int: String] = [1: "fa-home",
 
 let empMenuElements : [Int: String] = [1: "Home",
                                        2: "See Projects"]
+
+// Upgrade Plan
+
+let cellHeadings : [Int: String] = [1: "Expanding",
+                                    2: "Business",
+                                    3: "Enterprise"]
+
+let managers : [Int: String] = [1: "5",
+                                2: "15",
+                                3: "Unlimited"]
+
+let employees : [Int: String] = [1: "30",
+                                2: "150",
+                                3: "Unlimited"]
+
+let projects : [Int: String] = [1: "20",
+                                2: "50",
+                                3: "Unlimited"]
+
+let prices : [Int: String] = [1: "$99",
+                             2: "$199",
+                             3: "$399"]
+
+
+
+

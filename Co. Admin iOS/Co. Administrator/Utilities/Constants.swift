@@ -12,5 +12,9 @@ import Foundation
 let TO_LOGIN = "toLogin"
 let TO_USER_DETAILS = "toUserDetailsVC"
 let TO_REGISTRATION = "toRegistration"
+let TO_UPGRADE_PLAN = "toUpgradePlanVC"
+
+// NGROK
+let NGROK = "83831494"
 
 

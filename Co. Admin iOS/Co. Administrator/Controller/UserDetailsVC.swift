@@ -10,9 +10,22 @@ import UIKit
 
 class UserDetailsVC: UIViewController {
 
+    @IBOutlet weak var upgradePlanBtn: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        
+        upgradePlanBtn.isHidden = true
+        
+        if Session.shared.isLoggedIn() {
+            if (Session.shared.currentUser?.ceo)! {
+                upgradePlanBtn.isHidden = false
+            }
+        }
     }
 
     @IBAction func onCloseBtnPressed(_ sender: Any) {
@@ -23,6 +36,10 @@ class UserDetailsVC: UIViewController {
         Session.shared.logout()
         self.removeSavedUser()
         dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func onUpgradePlanBtnPressed(_ sender: Any) {
+        performSegue(withIdentifier: TO_UPGRADE_PLAN, sender: nil)
     }
     
 }

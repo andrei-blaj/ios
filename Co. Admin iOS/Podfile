@@ -10,5 +10,6 @@ target 'Co. Administrator' do
   pod 'SwiftyJSON'
   pod 'FontAwesome.swift'
   pod 'IQKeyboardManagerSwift'
+  pod 'Stripe'
 
 end
