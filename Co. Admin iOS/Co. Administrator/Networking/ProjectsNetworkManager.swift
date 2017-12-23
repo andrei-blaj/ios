@@ -12,18 +12,18 @@ import SwiftyJSON
 
 class ProjectsNetworkManager {
     
-    class func getProjectCount(successHandler: @escaping ((Int) -> Void), failureHandler: @escaping ((String) -> Void)) {
+    class func getProjectCount(userEmail: String, successHandler: @escaping ((Int) -> Void), failureHandler: @escaping ((String) -> Void)) {
         
         let auth_token = Session.shared.authToken!
-        let params: Parameters = ["auth_token": auth_token]
+        let params: Parameters = ["auth_token": auth_token, "user_email": userEmail]
         
         Alamofire.request("\(Session.host())/projects/project_count", parameters: params)
             .responseJSON { response in
                 switch response.result {
                 case .success(let data):
                     let json = JSON(data)
-                    let project_count = json["project_count"].intValue
-                    successHandler(project_count)
+                    let projectCount = json["project_count"].intValue
+                    successHandler(projectCount)
                 case .failure(let error):
                     print(error)
                     guard let errorMessage = String(data: response.data!, encoding: .utf8) else {

@@ -13,8 +13,10 @@ let TO_LOGIN = "toLogin"
 let TO_USER_DETAILS = "toUserDetailsVC"
 let TO_REGISTRATION = "toRegistration"
 let TO_UPGRADE_PLAN = "toUpgradePlanVC"
+let TO_PAYMENT = "toPaymentVC"
+let TO_EMP_INFO = "toEmployeeInformationVC"
 
 // NGROK
-let NGROK = "83831494"
+let NGROK = "3688cff4"
 
 

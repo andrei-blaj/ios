@@ -29,7 +29,7 @@ class HomeCell: UITableViewCell {
             cellTitleLabel.text = cellTitle
             cellNumberLabel.text = ""
         case 2:
-            ProjectsNetworkManager.getProjectCount(successHandler: { (project_count) in
+            ProjectsNetworkManager.getProjectCount(userEmail: Session.shared.currentUser!.email, successHandler: { (project_count) in
                 if project_count == 0 {
                     self.cellTitleLabel.text = "No projects"
                     self.cellNumberLabel.text = ""

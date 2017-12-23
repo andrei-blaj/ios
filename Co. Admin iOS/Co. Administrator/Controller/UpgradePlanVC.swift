@@ -27,6 +27,10 @@ class UpgradePlanVC: UIViewController {
 
 extension UpgradePlanVC: UITableViewDelegate, UITableViewDataSource {
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: TO_PAYMENT, sender: nil)
+    }
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }

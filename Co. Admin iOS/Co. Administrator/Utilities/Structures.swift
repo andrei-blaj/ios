@@ -8,6 +8,12 @@
 
 import Foundation
 
+struct employeeInformation {
+    var firstName: String
+    var lastName: String
+    var email: String
+}
+
 // Home Page Table View Cell Elements
 
 let homeTableViewCellTitles: [Int: String] = [1: "Welcome!",
