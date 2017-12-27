@@ -15,6 +15,7 @@ let TO_REGISTRATION = "toRegistration"
 let TO_UPGRADE_PLAN = "toUpgradePlanVC"
 let TO_PAYMENT = "toPaymentVC"
 let TO_EMP_INFO = "toEmployeeInformationVC"
+let TO_MAN_INFO = "toManagerInformationVC"
 
 // NGROK
 let NGROK = "490e4194"

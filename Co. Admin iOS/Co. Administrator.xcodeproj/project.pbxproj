@@ -26,6 +26,7 @@
 		E444FE821FB36CDE007A69C6 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E444FE811FB36CDE007A69C6 /* SWRevealViewController.m */; };
 		E444FE841FB39D46007A69C6 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E444FE831FB39D46007A69C6 /* MainVC.swift */; };
 		E444FE861FB39D5D007A69C6 /* SideMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E444FE851FB39D5D007A69C6 /* SideMenuVC.swift */; };
+		E46569121FF0CB9D00015A4F /* ProjectCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46569111FF0CB9D00015A4F /* ProjectCell.swift */; };
 		E47141C41FEA8D1B00651359 /* UpgradePlanVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E47141C31FEA8D1B00651359 /* UpgradePlanVC.swift */; };
 		E47141C61FEA9E8300651359 /* UpgradePlanCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E47141C51FEA9E8300651359 /* UpgradePlanCell.swift */; };
 		E48F0EA51FE92D0300D08F09 /* ManagersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48F0EA41FE92D0300D08F09 /* ManagersVC.swift */; };
@@ -35,6 +36,7 @@
 		E49B353A1FE53122009881D5 /* RegistrationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49B35391FE53122009881D5 /* RegistrationVC.swift */; };
 		E49B353C1FE799C0009881D5 /* HomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49B353B1FE799C0009881D5 /* HomeCell.swift */; };
 		E49B353E1FE80B51009881D5 /* ProjectsNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49B353D1FE80B51009881D5 /* ProjectsNetworkManager.swift */; };
+		E4ABB01E1FF2621E009F793E /* UIStoryBoardSegueFromRight.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4ABB01D1FF2621E009F793E /* UIStoryBoardSegueFromRight.swift */; };
 		E4D699B11FE2A98300B89414 /* SideMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D699B01FE2A98300B89414 /* SideMenuCell.swift */; };
 		E4E4F4B91FE435F3002ACB09 /* UserDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E4F4B81FE435F3002ACB09 /* UserDetailsVC.swift */; };
 /* End PBXBuildFile section */
@@ -65,6 +67,7 @@
 		E444FE811FB36CDE007A69C6 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		E444FE831FB39D46007A69C6 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		E444FE851FB39D5D007A69C6 /* SideMenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuVC.swift; sourceTree = "<group>"; };
+		E46569111FF0CB9D00015A4F /* ProjectCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectCell.swift; sourceTree = "<group>"; };
 		E47141C31FEA8D1B00651359 /* UpgradePlanVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpgradePlanVC.swift; sourceTree = "<group>"; };
 		E47141C51FEA9E8300651359 /* UpgradePlanCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpgradePlanCell.swift; sourceTree = "<group>"; };
 		E48F0EA41FE92D0300D08F09 /* ManagersVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagersVC.swift; sourceTree = "<group>"; };
@@ -74,6 +77,7 @@
 		E49B35391FE53122009881D5 /* RegistrationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationVC.swift; sourceTree = "<group>"; };
 		E49B353B1FE799C0009881D5 /* HomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCell.swift; sourceTree = "<group>"; };
 		E49B353D1FE80B51009881D5 /* ProjectsNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsNetworkManager.swift; sourceTree = "<group>"; };
+		E4ABB01D1FF2621E009F793E /* UIStoryBoardSegueFromRight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStoryBoardSegueFromRight.swift; sourceTree = "<group>"; };
 		E4D699B01FE2A98300B89414 /* SideMenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuCell.swift; sourceTree = "<group>"; };
 		E4E4F4B81FE435F3002ACB09 /* UserDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -159,6 +163,7 @@
 			isa = PBXGroup;
 			children = (
 				E443CCB81FE17C200008C6F4 /* Session.swift */,
+				E4ABB01D1FF2621E009F793E /* UIStoryBoardSegueFromRight.swift */,
 			);
 			path = Lib;
 			sourceTree = "<group>";
@@ -178,6 +183,7 @@
 				E49B353B1FE799C0009881D5 /* HomeCell.swift */,
 				E47141C51FEA9E8300651359 /* UpgradePlanCell.swift */,
 				E40661B41FEDB83F00106728 /* EmployeeCell.swift */,
+				E46569111FF0CB9D00015A4F /* ProjectCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -362,6 +368,7 @@
 				E40661B31FED368000106728 /* PaymentVC.swift in Sources */,
 				E4421C651FB21FBB0019BE68 /* Co__Administrator.xcdatamodeld in Sources */,
 				E42A9C731FE8482E0034262C /* ProjectsVC.swift in Sources */,
+				E46569121FF0CB9D00015A4F /* ProjectCell.swift in Sources */,
 				E444FE841FB39D46007A69C6 /* MainVC.swift in Sources */,
 				E49B353C1FE799C0009881D5 /* HomeCell.swift in Sources */,
 				E42A9C711FE841C80034262C /* Protocols.swift in Sources */,
@@ -371,6 +378,7 @@
 				E47141C61FEA9E8300651359 /* UpgradePlanCell.swift in Sources */,
 				E41E38201FDEF9A10040460C /* UsersNetworkManager.swift in Sources */,
 				E4421C5D1FB21FBB0019BE68 /* AppDelegate.swift in Sources */,
+				E4ABB01E1FF2621E009F793E /* UIStoryBoardSegueFromRight.swift in Sources */,
 				E499AA151FB42EB300DFF3AA /* Constants.swift in Sources */,
 				E43BBA851FE2AF0200E98C02 /* Structures.swift in Sources */,
 				E49B353E1FE80B51009881D5 /* ProjectsNetworkManager.swift in Sources */,

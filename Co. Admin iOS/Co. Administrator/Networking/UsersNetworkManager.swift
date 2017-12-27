@@ -215,4 +215,33 @@ class UsersNetworkManager {
         
     }
     
+    class func getSuperiorForEmp(employeeEmail: String, successHandler: @escaping (([String: Any]) -> Void), failureHandler: @escaping ((String) -> Void)) {
+        
+        let auth_token = Session.shared.authToken!
+        let params: Parameters = ["auth_token": auth_token, "employee_email": employeeEmail]
+        
+        Alamofire.request("\(Session.host())/users/get_superior_of_employee", parameters: params)
+            .responseJSON { response in
+                switch response.result {
+                case .success(let data):
+                    let json = JSON(data)
+                    var result: [String: Any] = [:]
+                    
+                    result["first_name"] = json["first_name"].stringValue
+                    result["last_name"] = json["last_name"].stringValue
+                    result["email"] = json["email"].stringValue
+                    
+                    successHandler(result)
+                case .failure(let error):
+                    print(error)
+                    guard let errorMessage = String(data: response.data!, encoding: .utf8) else {
+                        failureHandler("Sorry. Server Problem.")
+                        return
+                    }
+                    failureHandler(errorMessage)
+                }
+        }
+        
+    }
+    
 }

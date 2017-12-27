@@ -18,6 +18,8 @@ class MainVC: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
+    var refreshControl: UIRefreshControl!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -28,10 +30,17 @@ class MainVC: UIViewController {
         
         self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         self.view.addGestureRecognizer(self.revealViewController().tapGestureRecognizer())
+        
+        refreshControl = UIRefreshControl()
+//        refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
+        refreshControl.addTarget(self, action: #selector(refresh), for: .valueChanged)
+        tableView.addSubview(refreshControl)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
+        
+        tableView.isHidden = true
         
         tableView.reloadData()
         
@@ -44,6 +53,10 @@ class MainVC: UIViewController {
         }
     }
     
+    @objc func refresh(sender:AnyObject) {
+        // Code to refresh table view
+        updateUserData()
+    }
 }
 
 extension MainVC {
@@ -60,9 +73,15 @@ extension MainVC {
                     
                     UsersNetworkManager.getCurrentUser(user_id: Int(saved_user_id), successHandler: { (currentUser) in
                         Session.shared.currentUser = currentUser
+                        
                         self.tableView.reloadData()
+                        self.tableView.isHidden = false
+                        
+                        self.refreshControl.endRefreshing()
                     }, failureHandler: { (error) in
                         print(error)
+                        
+                        self.refreshControl.endRefreshing()
                     })
                 }
             }

@@ -10,17 +10,20 @@ import UIKit
 
 class EmployeeProfileVC: UIViewController {
 
+    var employeeBackgroundColor = UIColor()
     var employeeName = String()
     var employeeEmail = String()
     var employeeProjectCount = Int()
+    var employeeStatus = String()
     
     @IBOutlet weak var employeeFontAwesomeLabel: UILabel!
     @IBOutlet weak var employeeNameLabel: UILabel!
     @IBOutlet weak var employeeEmailLabel: UILabel!
     @IBOutlet weak var employeeProjectsLabel: UILabel!
+    @IBOutlet weak var employeeStatusLabel: UILabel!
     
     @IBOutlet weak var tableView: UITableView!
-    
+        
     var employeeList: [Int: employeeInformation] = [:]
     
     override func viewDidLoad() {
@@ -33,10 +36,17 @@ class EmployeeProfileVC: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         
-        populateEmployeeList()
+        if employeeStatus == "Manager" {
+            populateEmployeeList()
+        } else {
+            tableView.isHidden = true
+            setupView()
+        }
     }
     
     func setupView() {
+        
+        employeeFontAwesomeLabel.backgroundColor = employeeBackgroundColor
         employeeFontAwesomeLabel.layer.cornerRadius = 35
         employeeFontAwesomeLabel.clipsToBounds = true
         employeeFontAwesomeLabel.font = UIFont.fontAwesome(ofSize: 60)
@@ -44,32 +54,41 @@ class EmployeeProfileVC: UIViewController {
         
         employeeNameLabel.text = employeeName
         employeeEmailLabel.text = employeeEmail
+        employeeStatusLabel.text = employeeStatus
         
-        ProjectsNetworkManager.getProjectCount(userEmail: employeeEmail, successHandler: { (response) in
-            self.employeeProjectCount = response
-            
-            if self.employeeProjectCount == 0 {
-                if self.employeeList.count == 0 {
-                    self.employeeProjectsLabel.text = "No projects assigned."
+        if employeeStatus == "Manager" {
+            ProjectsNetworkManager.getProjectCount(userEmail: employeeEmail, successHandler: { (response) in
+                self.employeeProjectCount = response
+                
+                if self.employeeProjectCount == 0 {
+                    if self.employeeList.count == 0 {
+                        self.employeeProjectsLabel.text = "No projects assigned."
+                    } else {
+                        self.employeeProjectsLabel.text = "Responsible for"
+                    }
+                } else if self.employeeProjectCount == 1 {
+                    if self.employeeList.count == 0 {
+                        self.employeeProjectsLabel.text = "In charge of 1 project."
+                    } else {
+                        self.employeeProjectsLabel.text = "In charge of 1 project.\n Responsible for"
+                    }
                 } else {
-                    self.employeeProjectsLabel.text = "In charge of the following employees"
+                    if self.employeeList.count == 0 {
+                        self.employeeProjectsLabel.text = "In charge of \(self.employeeProjectCount) projects."
+                    } else {
+                        self.employeeProjectsLabel.text = "In charge of \(self.employeeProjectCount) projects.\n Responsible for"
+                    }
                 }
-            } else if self.employeeProjectCount == 1 {
-                if self.employeeList.count == 0 {
-                    self.employeeProjectsLabel.text = "In charge of 1 project"
-                } else {
-                    self.employeeProjectsLabel.text = "In charge of 1 project & the following employees"
-                }
-            } else {
-                if self.employeeList.count == 0 {
-                    self.employeeProjectsLabel.text = "In charge of \(self.employeeProjectCount) projects"
-                } else {
-                    self.employeeProjectsLabel.text = "In charge of \(self.employeeProjectCount) projects & the following employees"
-                }
+                
+            }) { (error) in
+                print(error)
             }
-            
-        }) { (error) in
-            print(error)
+        } else {
+            UsersNetworkManager.getSuperiorForEmp(employeeEmail: employeeEmail, successHandler: { (superior) in
+                self.employeeProjectsLabel.text = "Supervised by \(superior["first_name"]!) \(superior["last_name"]!) \n \(superior["email"]!)"
+            }, failureHandler: { (error) in
+                print(error)
+            })
         }
         
     }
@@ -83,10 +102,6 @@ class EmployeeProfileVC: UIViewController {
         }) { (error) in
             print(error)
         }
-    }
-
-    @IBAction func onCloseBtnPressed(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
     }
     
 }

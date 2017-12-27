@@ -14,12 +14,19 @@ struct employeeInformation {
     var email: String
 }
 
+struct ProjectInformation {
+    var name: String
+    var deadline: String
+    var completed: Bool
+    var id: Int
+}
+
 // Home Page Table View Cell Elements
 
 let homeTableViewCellTitles: [Int: String] = [1: "Welcome!",
-                                              2: "Projects:",
-                                              3: "Employees:",
-                                              4: "Managers:"]
+                                              2: "Number of projects:",
+                                              3: "Number of employees:",
+                                              4: "Number of managers:"]
 
 let homeTableViewCellIcons: [Int: String] = [1: "fa-home", 2: "fa-folder-open-o", 3: "fa-user", 4: "fa-users"]
 

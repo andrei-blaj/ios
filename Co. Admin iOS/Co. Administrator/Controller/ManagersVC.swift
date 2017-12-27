@@ -10,13 +10,25 @@ import UIKit
 
 class ManagersVC: UIViewController {
 
+    var employeeBackgroundColor = UIColor()
     var employeeName = String()
     var employeeEmail = String()
+    var employeeStatus = String()
     
     @IBOutlet weak var sideMenuBtn: UIButton!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     var managerList: [Int: employeeInformation] = [:]
+    
+    var refreshControl: UIRefreshControl!
+    
+    @IBAction func prepareForUnwind(segue: UIStoryboardSegue) {}
+    
+    override func unwind(for unwindSegue: UIStoryboardSegue, towardsViewController subsequentVC: UIViewController) {
+        let segue = UIStoryBoardUnwindSegueFromRight(identifier: unwindSegue.identifier, source: unwindSegue.source, destination: unwindSegue.destination)
+        segue.perform()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,20 +40,41 @@ class ManagersVC: UIViewController {
         self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         self.view.addGestureRecognizer(self.revealViewController().tapGestureRecognizer())
         
+        refreshControl = UIRefreshControl()
+//        refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
+        refreshControl.addTarget(self, action: #selector(refresh), for: .valueChanged)
+        tableView.addSubview(refreshControl)
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        
+        activityIndicator.startAnimating()
+        activityIndicator.isHidden = false
+        tableView.isHidden = true
+        populateManagerList()
+    }
+    
+    @objc func refresh(sender:AnyObject) {
+        // Code to refresh table view
         populateManagerList()
     }
     
     func populateManagerList() {
         UsersNetworkManager.getManagers(successHandler: { (response) in
             self.managerList = response
+            
             self.tableView.reloadData()
+            self.tableView.isHidden = false
+            
+            self.activityIndicator.stopAnimating()
+            self.activityIndicator.isHidden = true
+            
+            self.refreshControl.endRefreshing()
         }) { (error) in
             print(error)
+            
+            self.refreshControl.endRefreshing()
         }
     }
     
@@ -50,6 +83,8 @@ class ManagersVC: UIViewController {
         
         EmployeeProfileViewController.employeeName = employeeName
         EmployeeProfileViewController.employeeEmail = employeeEmail
+        EmployeeProfileViewController.employeeStatus = employeeStatus
+        EmployeeProfileViewController.employeeBackgroundColor = employeeBackgroundColor
     }
 
 }
@@ -59,8 +94,10 @@ extension ManagersVC: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         employeeName = "\(managerList[indexPath.row]!.firstName) \(managerList[indexPath.row]!.lastName)"
         employeeEmail = managerList[indexPath.row]!.email
+        employeeStatus = "Manager"
+        employeeBackgroundColor = #colorLiteral(red: 0.1605996788, green: 0.6530888677, blue: 0.2737731636, alpha: 1)
         
-        performSegue(withIdentifier: TO_EMP_INFO, sender: nil)
+        performSegue(withIdentifier: TO_MAN_INFO, sender: nil)
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {

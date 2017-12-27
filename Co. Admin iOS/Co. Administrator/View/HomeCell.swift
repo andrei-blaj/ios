@@ -91,7 +91,7 @@ class HomeCell: UITableViewCell {
             return
         }
         
-        cellFontAwesomeLabel.font = UIFont.fontAwesome(ofSize: 60)
+        cellFontAwesomeLabel.font = UIFont.fontAwesome(ofSize: 50)
         cellFontAwesomeLabel.text = String.fontAwesomeIcon(code: cellFontAwesome)
         
         if index == 1 {
