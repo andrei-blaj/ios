@@ -53,13 +53,40 @@ class ProjectsNetworkManager {
                     let projectList = dict["projects"]! as! [[String: Any]]
                     
                     for project in projectList {
-                        let projectInfo = ProjectInformation(name: project["title"] as! String, deadline: project["deadline"] as! String, completed: project["completed"] as! Bool, id: project["id"] as! Int)
+                        let projectInfo = ProjectInformation(name: project["title"] as! String, deadline: project["deadline"] as! String, completed: project["completed"] as! Bool, id: project["id"] as! Int, description: "", managerEmail: "", companyName: "")
                         
                         result[k] = projectInfo
                         k += 1
                     }
                     
                     successHandler(result)
+                case .failure(let error):
+                    print(error)
+                    guard let errorMessage = String(data: response.data!, encoding: .utf8) else {
+                        failureHandler("Sorry. Server Problem.")
+                        return
+                    }
+                    failureHandler(errorMessage)
+                }
+        }
+    }
+    
+    class func getProject(projectId: Int, successHandler: @escaping ((ProjectInformation) -> Void), failureHandler: @escaping ((String) -> Void)) {
+        
+        let auth_token = Session.shared.authToken!
+        let params: Parameters = ["auth_token": auth_token, "project_id": projectId]
+        
+        Alamofire.request("\(Session.host())/projects/get_project", parameters: params)
+            .responseJSON { response in
+                switch response.result {
+                case .success(let data):
+                    let json = JSON(data)
+                    
+                    let project = json["project"]
+                    
+                    let projectInfo = ProjectInformation(name: project["title"].stringValue, deadline: project["deadline"].stringValue, completed: project["completed"].boolValue, id: project["id"].intValue, description: project["description"].stringValue, managerEmail: project["manager_email"].stringValue, companyName: project["company_name"].stringValue)
+                    
+                    successHandler(projectInfo)
                 case .failure(let error):
                     print(error)
                     guard let errorMessage = String(data: response.data!, encoding: .utf8) else {
@@ -84,5 +111,7 @@ class ProjectsNetworkManager {
             }
         }
     }
+    
+    
     
 }

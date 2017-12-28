@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		14D6FD1C900C980B4F3497EC /* Pods_Co__Administrator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54C709DAD911BB35B8722167 /* Pods_Co__Administrator.framework */; };
+		35A2A7C71FF41D1F0009A283 /* DailyTasksNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A2A7C61FF41D1F0009A283 /* DailyTasksNetworkManager.swift */; };
 		E40661B31FED368000106728 /* PaymentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40661B21FED368000106728 /* PaymentVC.swift */; };
 		E40661B51FEDB83F00106728 /* EmployeeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40661B41FEDB83F00106728 /* EmployeeCell.swift */; };
 		E40661B71FEE750F00106728 /* EmployeeProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40661B61FEE750F00106728 /* EmployeeProfileVC.swift */; };
@@ -27,8 +28,10 @@
 		E444FE841FB39D46007A69C6 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E444FE831FB39D46007A69C6 /* MainVC.swift */; };
 		E444FE861FB39D5D007A69C6 /* SideMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E444FE851FB39D5D007A69C6 /* SideMenuVC.swift */; };
 		E46569121FF0CB9D00015A4F /* ProjectCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46569111FF0CB9D00015A4F /* ProjectCell.swift */; };
+		E46FD5FF1FF3200D000CCD25 /* ProjectInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46FD5FE1FF3200D000CCD25 /* ProjectInfoVC.swift */; };
 		E47141C41FEA8D1B00651359 /* UpgradePlanVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E47141C31FEA8D1B00651359 /* UpgradePlanVC.swift */; };
 		E47141C61FEA9E8300651359 /* UpgradePlanCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E47141C51FEA9E8300651359 /* UpgradePlanCell.swift */; };
+		E47E956E1FF3E5CE00B9061F /* DailyTaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E47E956D1FF3E5CE00B9061F /* DailyTaskCell.swift */; };
 		E48F0EA51FE92D0300D08F09 /* ManagersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48F0EA41FE92D0300D08F09 /* ManagersVC.swift */; };
 		E48F0EA71FE92D4100D08F09 /* EmployeesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48F0EA61FE92D4100D08F09 /* EmployeesVC.swift */; };
 		E499AA121FB4283900DFF3AA /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E499AA111FB4283900DFF3AA /* LoginVC.swift */; };
@@ -42,6 +45,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		35A2A7C61FF41D1F0009A283 /* DailyTasksNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyTasksNetworkManager.swift; sourceTree = "<group>"; };
 		54C709DAD911BB35B8722167 /* Pods_Co__Administrator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Co__Administrator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		738173F31562E11E63188F2F /* Pods-Co. Administrator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Co. Administrator.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Co. Administrator/Pods-Co. Administrator.debug.xcconfig"; sourceTree = "<group>"; };
 		95458CCECA462E19645FC5F1 /* Pods-Co. Administrator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Co. Administrator.release.xcconfig"; path = "Pods/Target Support Files/Pods-Co. Administrator/Pods-Co. Administrator.release.xcconfig"; sourceTree = "<group>"; };
@@ -68,8 +72,10 @@
 		E444FE831FB39D46007A69C6 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		E444FE851FB39D5D007A69C6 /* SideMenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuVC.swift; sourceTree = "<group>"; };
 		E46569111FF0CB9D00015A4F /* ProjectCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectCell.swift; sourceTree = "<group>"; };
+		E46FD5FE1FF3200D000CCD25 /* ProjectInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectInfoVC.swift; sourceTree = "<group>"; };
 		E47141C31FEA8D1B00651359 /* UpgradePlanVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpgradePlanVC.swift; sourceTree = "<group>"; };
 		E47141C51FEA9E8300651359 /* UpgradePlanCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpgradePlanCell.swift; sourceTree = "<group>"; };
+		E47E956D1FF3E5CE00B9061F /* DailyTaskCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyTaskCell.swift; sourceTree = "<group>"; };
 		E48F0EA41FE92D0300D08F09 /* ManagersVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagersVC.swift; sourceTree = "<group>"; };
 		E48F0EA61FE92D4100D08F09 /* EmployeesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeesVC.swift; sourceTree = "<group>"; };
 		E499AA111FB4283900DFF3AA /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
@@ -117,6 +123,7 @@
 				E41C90911FDEAB9C00F5435E /* SessionsNetworkManager.swift */,
 				E41E381F1FDEF9A10040460C /* UsersNetworkManager.swift */,
 				E49B353D1FE80B51009881D5 /* ProjectsNetworkManager.swift */,
+				35A2A7C61FF41D1F0009A283 /* DailyTasksNetworkManager.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -184,6 +191,7 @@
 				E47141C51FEA9E8300651359 /* UpgradePlanCell.swift */,
 				E40661B41FEDB83F00106728 /* EmployeeCell.swift */,
 				E46569111FF0CB9D00015A4F /* ProjectCell.swift */,
+				E47E956D1FF3E5CE00B9061F /* DailyTaskCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -202,6 +210,7 @@
 				E47141C31FEA8D1B00651359 /* UpgradePlanVC.swift */,
 				E40661B21FED368000106728 /* PaymentVC.swift */,
 				E40661B61FEE750F00106728 /* EmployeeProfileVC.swift */,
+				E46FD5FE1FF3200D000CCD25 /* ProjectInfoVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -368,8 +377,10 @@
 				E40661B31FED368000106728 /* PaymentVC.swift in Sources */,
 				E4421C651FB21FBB0019BE68 /* Co__Administrator.xcdatamodeld in Sources */,
 				E42A9C731FE8482E0034262C /* ProjectsVC.swift in Sources */,
+				E47E956E1FF3E5CE00B9061F /* DailyTaskCell.swift in Sources */,
 				E46569121FF0CB9D00015A4F /* ProjectCell.swift in Sources */,
 				E444FE841FB39D46007A69C6 /* MainVC.swift in Sources */,
+				E46FD5FF1FF3200D000CCD25 /* ProjectInfoVC.swift in Sources */,
 				E49B353C1FE799C0009881D5 /* HomeCell.swift in Sources */,
 				E42A9C711FE841C80034262C /* Protocols.swift in Sources */,
 				E499AA121FB4283900DFF3AA /* LoginVC.swift in Sources */,
@@ -377,6 +388,7 @@
 				E41C90921FDEAB9C00F5435E /* SessionsNetworkManager.swift in Sources */,
 				E47141C61FEA9E8300651359 /* UpgradePlanCell.swift in Sources */,
 				E41E38201FDEF9A10040460C /* UsersNetworkManager.swift in Sources */,
+				35A2A7C71FF41D1F0009A283 /* DailyTasksNetworkManager.swift in Sources */,
 				E4421C5D1FB21FBB0019BE68 /* AppDelegate.swift in Sources */,
 				E4ABB01E1FF2621E009F793E /* UIStoryBoardSegueFromRight.swift in Sources */,
 				E499AA151FB42EB300DFF3AA /* Constants.swift in Sources */,

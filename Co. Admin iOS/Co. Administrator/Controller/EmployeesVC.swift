@@ -61,19 +61,23 @@ class EmployeesVC: UIViewController {
     }
     
     func populateEmployeeList() {
-        UsersNetworkManager.getEmployeesForCeo(successHandler: { (response) in
-            self.employeeList = response
-            
-            self.tableView.reloadData()
-            self.tableView.isHidden = false
-            
-            self.activityIndicator.stopAnimating()
-            self.activityIndicator.isHidden = true
-            
-            self.refreshControl.endRefreshing()
-        }) { (error) in
-            print(error)
-            
+        if Session.shared.isLoggedIn() {
+            UsersNetworkManager.getEmployeesForCeo(successHandler: { (response) in
+                self.employeeList = response
+                
+                self.tableView.reloadData()
+                self.tableView.isHidden = false
+                
+                self.activityIndicator.stopAnimating()
+                self.activityIndicator.isHidden = true
+                
+                self.refreshControl.endRefreshing()
+            }) { (error) in
+                print(error)
+                
+                self.refreshControl.endRefreshing()
+            }
+        } else {
             self.refreshControl.endRefreshing()
         }
     }

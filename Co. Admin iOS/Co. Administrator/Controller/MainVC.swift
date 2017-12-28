@@ -42,8 +42,6 @@ class MainVC: UIViewController {
         
         tableView.isHidden = true
         
-        tableView.reloadData()
-        
         updateUserData()
         
         if Session.shared.isLoggedIn() {
@@ -81,9 +79,22 @@ extension MainVC {
                     }, failureHandler: { (error) in
                         print(error)
                         
+                        self.tableView.reloadData()
+                        self.tableView.isHidden = false
+                        
                         self.refreshControl.endRefreshing()
                     })
+                } else {
+                    self.tableView.reloadData()
+                    self.tableView.isHidden = false
+                    
+                    self.refreshControl.endRefreshing()
                 }
+            } else {
+                self.tableView.reloadData()
+                self.tableView.isHidden = false
+                
+                self.refreshControl.endRefreshing()
             }
         }
     }

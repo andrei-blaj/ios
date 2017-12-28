@@ -14,8 +14,6 @@ class UIStoryBoardSegueFromRight: UIStoryboardSegue {
         let fromViewController = self.source
         let toViewController = self.destination
         
-        print("performing")
-        
         fromViewController.view.superview?.insertSubview(toViewController.view, aboveSubview: fromViewController.view)
         toViewController.view.transform = CGAffineTransform(translationX: fromViewController.view.frame.size.width, y: 0)
         
@@ -37,7 +35,7 @@ class UIStoryBoardUnwindSegueFromRight: UIStoryboardSegue {
         toViewController.view.superview?.insertSubview(toViewController.view, belowSubview: fromViewController.view)
         fromViewController.view.transform = CGAffineTransform(translationX: 0, y: 0)
         
-//        fromViewController.view.superview?.insertSubview(toViewController.view, belowSubview: fromViewController.view)
+        fromViewController.view.superview?.insertSubview(toViewController.view, belowSubview: fromViewController.view)
 //        fromViewController.view.transform = CGAffineTransform(translationX: 0, y: 0)
         
         UIView.animate(withDuration: 0.3, delay: 0.0, options: UIViewAnimationOptions.curveEaseInOut, animations: {

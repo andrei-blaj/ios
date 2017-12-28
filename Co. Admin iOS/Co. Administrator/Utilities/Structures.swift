@@ -19,6 +19,16 @@ struct ProjectInformation {
     var deadline: String
     var completed: Bool
     var id: Int
+    
+    var description: String
+    var managerEmail: String
+    var companyName: String
+}
+
+struct TaskInformation {
+    var taskDescription: String
+    var taskDeadline: String
+    var completed: Bool
 }
 
 // Home Page Table View Cell Elements

@@ -27,6 +27,12 @@ class SideMenuVC: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         
+        if !Session.shared.isLoggedIn() && Session.shared.logoutProtocol == false {
+            Session.shared.logoutProtocol == true
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: "mainVC")
+            self.revealViewController().setFront(vc, animated: true)
+        }
+        
         tableView.reloadData()
         setupViewData()
     }

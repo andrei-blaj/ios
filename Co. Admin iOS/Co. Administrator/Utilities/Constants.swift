@@ -16,8 +16,9 @@ let TO_UPGRADE_PLAN = "toUpgradePlanVC"
 let TO_PAYMENT = "toPaymentVC"
 let TO_EMP_INFO = "toEmployeeInformationVC"
 let TO_MAN_INFO = "toManagerInformationVC"
+let TO_PROJ_INFO = "seeProjectInformationVC"
 
 // NGROK
-let NGROK = "490e4194"
+let NGROK = "181d8a09"
 
 

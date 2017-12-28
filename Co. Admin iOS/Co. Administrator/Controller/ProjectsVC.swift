@@ -17,6 +17,9 @@ class ProjectsVC: UIViewController {
     
     var projects: [Int: ProjectInformation] = [:]
     
+    var projectId = Int()
+    var projectTitle = String()
+    
     var refreshControl: UIRefreshControl!
     var working: Bool = false
     
@@ -51,26 +54,47 @@ class ProjectsVC: UIViewController {
         populateProjectsList()
     }
     
+    @IBAction func prepareForUnwind(segue: UIStoryboardSegue) {}
+    
     func populateProjectsList() {
-        ProjectsNetworkManager.getProjects(successHandler: { (response) in
-            self.projects = response
-            
-            self.tableView.reloadData()
-            self.tableView.isHidden = false
-            
-            self.stopDeletionActivityIndicator()
-            
-            self.refreshControl.endRefreshing()
-        }) { (error) in
-            print(error)
-            
+        if Session.shared.isLoggedIn() {
+            ProjectsNetworkManager.getProjects(successHandler: { (response) in
+                self.projects = response
+        
+                self.tableView.reloadData()
+                self.tableView.isHidden = false
+        
+                self.stopDeletionActivityIndicator()
+        
+                self.refreshControl.endRefreshing()
+            }) { (error) in
+                print(error)
+                
+                self.refreshControl.endRefreshing()
+            }
+        } else {
             self.refreshControl.endRefreshing()
         }
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let ProjectInfoViewController = segue.destination as! ProjectInfoVC
+        
+        ProjectInfoViewController.projectId = projectId
+        ProjectInfoViewController.projectTitle = projectTitle
+    }
+    
 }
 
 extension ProjectsVC: UITableViewDelegate, UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        projectId = projects[indexPath.row]!.id
+        projectTitle = "\(projects[indexPath.row]!.name)"
+        
+        performSegue(withIdentifier: TO_PROJ_INFO, sender: nil)
+    }
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1

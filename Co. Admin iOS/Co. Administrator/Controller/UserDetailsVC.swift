@@ -33,8 +33,11 @@ class UserDetailsVC: UIViewController {
     }
     
     @IBAction func onLogoutBtnPressed(_ sender: Any) {
-        Session.shared.logout()
         self.removeSavedUser()
+        Session.shared.logout()
+        
+        Session.shared.logoutProtocol = false
+        
         dismiss(animated: true, completion: nil)
     }
     

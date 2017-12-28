@@ -33,7 +33,7 @@ class LoginVC: UIViewController {
     
     @IBAction func onLoginButtonPressed(_ sender: UIButton) {
         SessionsNetworkManager.login(email: emailTextField.text!, password: passwordTextField.text!, successHandler: { (id, authToken) in
-            UsersNetworkManager.getCurrentUser(user_id: Int(id)!, successHandler: { (currentUser) in
+            UsersNetworkManager.getCurrentUser(user_id: Int(id), successHandler: { (currentUser) in
 
                 Session.shared.currentUser = currentUser
                 

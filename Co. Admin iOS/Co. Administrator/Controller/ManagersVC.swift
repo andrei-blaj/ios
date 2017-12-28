@@ -61,19 +61,23 @@ class ManagersVC: UIViewController {
     }
     
     func populateManagerList() {
-        UsersNetworkManager.getManagers(successHandler: { (response) in
-            self.managerList = response
-            
-            self.tableView.reloadData()
-            self.tableView.isHidden = false
-            
-            self.activityIndicator.stopAnimating()
-            self.activityIndicator.isHidden = true
-            
-            self.refreshControl.endRefreshing()
-        }) { (error) in
-            print(error)
-            
+        if Session.shared.isLoggedIn() {
+            UsersNetworkManager.getManagers(successHandler: { (response) in
+                self.managerList = response
+                
+                self.tableView.reloadData()
+                self.tableView.isHidden = false
+                
+                self.activityIndicator.stopAnimating()
+                self.activityIndicator.isHidden = true
+                
+                self.refreshControl.endRefreshing()
+            }) { (error) in
+                print(error)
+                
+                self.refreshControl.endRefreshing()
+            }
+        } else {
             self.refreshControl.endRefreshing()
         }
     }

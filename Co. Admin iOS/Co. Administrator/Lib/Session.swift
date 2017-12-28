@@ -16,6 +16,7 @@ class Session {
     
     var currentUser: User?
     var authToken: String?
+    var logoutProtocol: Bool?
 
     var savedUserData: [SavedUserData] = []
 
@@ -36,7 +37,6 @@ class Session {
     
     func logout() {
         authToken = nil
-        
     }
     
 }
