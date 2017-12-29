@@ -23,13 +23,6 @@ class EmployeesVC: UIViewController {
     
     var refreshControl: UIRefreshControl!
     
-    @IBAction func prepareForUnwind(segue: UIStoryboardSegue) {}
-    
-    override func unwind(for unwindSegue: UIStoryboardSegue, towardsViewController subsequentVC: UIViewController) {
-        let segue = UIStoryBoardUnwindSegueFromRight(identifier: unwindSegue.identifier, source: unwindSegue.source, destination: unwindSegue.destination)
-        segue.perform()
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -62,7 +55,7 @@ class EmployeesVC: UIViewController {
     
     func populateEmployeeList() {
         if Session.shared.isLoggedIn() {
-            UsersNetworkManager.getEmployeesForCeo(successHandler: { (response) in
+            UsersNetworkManager.getEmployees(successHandler: { (response) in
                 self.employeeList = response
                 
                 self.tableView.reloadData()

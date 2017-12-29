@@ -29,6 +29,14 @@ struct TaskInformation {
     var taskDescription: String
     var taskDeadline: String
     var completed: Bool
+    var id: Int
+}
+
+struct ContributionInformation {
+    var content: String
+    var userId: Int
+    var createdAt: String
+    var imagePath: String
 }
 
 // Home Page Table View Cell Elements
@@ -47,7 +55,7 @@ let homeTableViewCellButtonTitle: [Int: String] = [1: "See more info",
 
 let homeTableViewCellSegues: [Int: String] = [1: "toMainVC", 2: "toSeeProjectsVC", 3: "toSeeEmployeesVC", 4: "toSeeManagersVC"]
 
-let homeTableViewCellIdentifiers: [Int: String] = [1: "mainVC", 2: "projectsVC", 3: "employeesVC", 4: "managersVC"]
+let homeTableViewCellIdentifiers: [Int: String] = [1: "mainVC", 2: "ProjectsNavController", 3: "EmployeesNavigationController", 4: "ManagersNavigationController"]
 
 let homeTableViewCellMainViewColor: [Int: UIColor] = [1: #colorLiteral(red: 0, green: 0.4793452024, blue: 0.9990863204, alpha: 1), 2: #colorLiteral(red: 0.9980931878, green: 0.7577217221, blue: 0.03260162845, alpha: 1), 3: #colorLiteral(red: 0.8642227054, green: 0.2102498114, blue: 0.2715340257, alpha: 1), 4: #colorLiteral(red: 0.1565668285, green: 0.6565688252, blue: 0.2710740268, alpha: 1)]
 

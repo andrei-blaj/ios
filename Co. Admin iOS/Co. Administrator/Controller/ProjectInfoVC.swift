@@ -13,36 +13,31 @@ class ProjectInfoVC: UIViewController {
     // Variables
     var projectId = Int()
     var projectTitle = String()
+    
+    var taskId = Int()
+    var taskDescription = String()
+    var taskDeadline = String()
 
-    var processCount = 0
-    
-    // Outlets
-    @IBOutlet weak var projectTitleLabel: UILabel!
-    @IBOutlet weak var projectDescriptionLabel: UILabel!
-    @IBOutlet weak var projectDeadlineLabel: UILabel!
-    @IBOutlet weak var toDoLabel: UILabel!
-    @IBOutlet weak var completedLabel: UILabel!
-    
-    @IBOutlet weak var toDoLabelHeight: NSLayoutConstraint!
-    @IBOutlet weak var completedLabelHeight: NSLayoutConstraint!
-    
-    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
-    
-    @IBOutlet weak var scrollView: UIScrollView!
-    
-    // Table Views
-    @IBOutlet weak var toDoTableView: UITableView!
-    @IBOutlet weak var completedTableView: UITableView!
-    
-    @IBOutlet weak var toDoTableViewHeight: NSLayoutConstraint!
-    @IBOutlet weak var completedTableViewHeight: NSLayoutConstraint!
+    var processCount = Int()
     
     var tasks: [Int: TaskInformation] = [:]
     var toDoTasks: [Int: TaskInformation] = [:]
     var completedTasks: [Int: TaskInformation] = [:]
     
+    // Outlets
+    @IBOutlet weak var projectTitleLabel: UILabel!
+    @IBOutlet weak var projectDescriptionLabel: UILabel!
+    @IBOutlet weak var projectDeadlineLabel: UILabel!
+    
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    
+    // Table View
+    @IBOutlet weak var tableView: UITableView!
+    
+    // Refresh Control
+    var refreshControl: UIRefreshControl!
+    
     @IBAction func goBack(sender: Any) {
-        self.navigationController!.popViewController(animated: true)
         if let nav = navigationController {
             nav.popViewController(animated: true)
         }
@@ -51,39 +46,33 @@ class ProjectInfoVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     
-        scrollView.isScrollEnabled = true
+        tableView.delegate = self
+        tableView.dataSource = self
         
-        toDoTableView.dataSource = self
-        toDoTableView.delegate = self
-        
-        completedTableView.delegate = self
-        completedTableView.dataSource = self
+        refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(refresh), for: .valueChanged)
+        tableView.addSubview(refreshControl)
+    }
+    
+    @objc func refresh(sender:AnyObject) {
+        // Code to refresh table view
+        updateTaskTableViews()
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         
+        processCount = 0
+        
         activityIndicator.startAnimating()
         activityIndicator.isHidden = false
         
-        toDoTableView.isHidden = true
-        completedTableView.isHidden = true
-        
         projectDescriptionLabel.isHidden = true
         projectDeadlineLabel.isHidden = true
-        toDoLabel.isHidden = true
-        completedLabel.isHidden = true
-        
-        toDoTableViewHeight.constant = 0
-        completedTableViewHeight.constant = 0
         
         projectTitleLabel.text = projectTitle
         
-        toDoLabel.font = UIFont.fontAwesome(ofSize: 25)
-        toDoLabel.text = "\(String.fontAwesomeIcon(code: "fa-tasks")!)  To Do"
-        
-        completedLabel.font = UIFont.fontAwesome(ofSize: 25)
-        completedLabel.text = "\(String.fontAwesomeIcon(code: "fa-tasks")!)  Completed"
+        tableView.isHidden = true
         
         ProjectsNetworkManager.getProject(projectId: projectId, successHandler: { (projectInfo) in
             // Add font awesome icons
@@ -118,6 +107,9 @@ class ProjectInfoVC: UIViewController {
         DailyTasksNetworkManager.getDailyTasks(projectId: projectId, successHandler: { (dailyTasks) in
             self.tasks = dailyTasks
             
+            self.completedTasks = [:]
+            self.toDoTasks = [:]
+            
             var i = 0
             var j = 0
             
@@ -130,50 +122,9 @@ class ProjectInfoVC: UIViewController {
                     j += 1
                 }
             }
-            
-            self.toDoTableView.reloadData()
-            self.completedTableView.reloadData()
-            
-            self.toDoTableView.isHidden = false
-            self.completedTableView.isHidden = false
-            
-            if self.completedTasks.count == 0 {
-                self.completedTableView.isHidden = true
-                self.completedLabel.isHidden = true
-                self.completedLabelHeight.constant = 0
-            } else {
-                self.completedLabel.isHidden = false
-            }
-            
-            switch self.completedTasks.count {
-            case 0:
-                self.completedTableViewHeight.constant = 0
-            case 1:
-                self.completedTableViewHeight.constant = 70
-            case 2:
-                self.completedTableViewHeight.constant = 140
-            default:
-                self.completedTableViewHeight.constant = 210
-            }
-            
-            if self.toDoTasks.count == 0 {
-                self.toDoTableView.isHidden = true
-                self.toDoLabel.isHidden = true
-                self.toDoLabelHeight.constant = 0
-            } else {
-                self.toDoLabel.isHidden = false
-            }
-            
-            switch self.toDoTasks.count {
-            case 0:
-                self.toDoTableViewHeight.constant = 0
-            case 1:
-                self.toDoTableViewHeight.constant = 70
-            case 2:
-                self.toDoTableViewHeight.constant = 140
-            default:
-                self.toDoTableViewHeight.constant = 210
-            }
+        
+            self.tableView.reloadData()
+            self.tableView.isHidden = false
             
             self.processCount += 1
             
@@ -182,40 +133,106 @@ class ProjectInfoVC: UIViewController {
                 self.activityIndicator.isHidden = true
             }
             
+            self.refreshControl.endRefreshing()
+            
         }) { (error) in
             print(error)
             
             self.activityIndicator.stopAnimating()
             self.activityIndicator.isHidden = true
+            
+            self.refreshControl.endRefreshing()
         }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let TaskInformationViewController = segue.destination as! TaskInfoVC
+        
+        TaskInformationViewController.taskId = taskId
+        TaskInformationViewController.taskDeadline = taskDeadline
+        TaskInformationViewController.taskDescription = taskDescription
     }
     
 }
 
 extension ProjectInfoVC: UITableViewDelegate, UITableViewDataSource {
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        if indexPath.section == 0 {
+            if toDoTasks.count > 0 {
+                taskId = toDoTasks[indexPath.row]!.id
+                taskDescription = toDoTasks[indexPath.row]!.taskDescription
+                taskDeadline = toDoTasks[indexPath.row]!.taskDeadline
+            } else {
+                taskId = completedTasks[indexPath.row]!.id
+                taskDescription = completedTasks[indexPath.row]!.taskDescription
+                taskDeadline = completedTasks[indexPath.row]!.taskDeadline
+            }
+        } else {
+            taskId = completedTasks[indexPath.row]!.id
+            taskDescription = completedTasks[indexPath.row]!.taskDescription
+            taskDeadline = completedTasks[indexPath.row]!.taskDeadline
+        }
+        
+        performSegue(withIdentifier: TO_TASK_INFO, sender: nil)
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        if toDoTasks.count == 0 {
+            if completedTasks.count == 0 {
+                return nil
+            }
+            return "Completed"
+        } else {
+            if completedTasks.count == 0 {
+                return "To Do"
+            }
+            if section == 0 {
+                return "To Do"
+            } else {
+                return "Completed"
+            }
+        }
+    }
+    
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        if toDoTasks.count == 0 || completedTasks.count == 0 {
+            return 1
+        }
+        return 2
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if tableView.tag == 1 {
-            // To Do Table View
-            return toDoTasks.count
-        } else {
-            // Completed Table View
+        if toDoTasks.count == 0 {
+            if completedTasks.count == 0 {
+                return 0
+            }
             return completedTasks.count
+        } else {
+            if completedTasks.count == 0 {
+                return toDoTasks.count
+            }
+            if section == 0 {
+                return toDoTasks.count
+            } else {
+                return completedTasks.count
+            }
         }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "dailyTaskCell", for: indexPath) as? DailyTaskCell {
             
-            if tableView.tag == 1 {
-                // To Do Table View
-                cell.configureCell(taskDescription: "\(toDoTasks[indexPath.row]!.taskDescription)", fontAwesomeCode: "fa-square-o")
+            if indexPath.section == 0 {
+                // To Do
+                if toDoTasks.count == 0 {
+                    cell.configureCell(taskDescription: "\(completedTasks[indexPath.row]!.taskDescription)", fontAwesomeCode: "fa-check-square-o")
+                } else {
+                    cell.configureCell(taskDescription: "\(toDoTasks[indexPath.row]!.taskDescription)", fontAwesomeCode: "fa-square-o")
+                }
             } else {
-                // Completed Table View
+                // Completed
                 cell.configureCell(taskDescription: "\(completedTasks[indexPath.row]!.taskDescription)", fontAwesomeCode: "fa-check-square-o")
             }
             

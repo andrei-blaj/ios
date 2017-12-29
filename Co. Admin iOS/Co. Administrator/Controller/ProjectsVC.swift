@@ -131,29 +131,40 @@ extension ProjectsVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         
-        if editingStyle == .delete {
-            startDeletionActivityIndicator()
-            ProjectsNetworkManager.delete(projectId: self.projects[indexPath.row]!.id, completion: { (deletionSuccessful) in
-                if deletionSuccessful {
-                    
-                    ProjectsNetworkManager.getProjects(successHandler: { (response) in
-                        self.projects = response
+        let alert = UIAlertController(title: "Are you sure?", message: "This action cannot be undone", preferredStyle: .alert)
+        let action1 = UIAlertAction(title: "Confirm", style: .destructive) { (confirmed) in
+            if editingStyle == .delete {
+                self.startDeletionActivityIndicator()
+                ProjectsNetworkManager.delete(projectId: self.projects[indexPath.row]!.id, completion: { (deletionSuccessful) in
+                    if deletionSuccessful {
                         
-                        self.tableView.beginUpdates()
-                        self.tableView.deleteRows(at: [indexPath], with: .automatic)
-                        self.tableView.endUpdates()
-                        
-                        self.stopDeletionActivityIndicator()
-                        
-                    }) { (error) in
-                        print(error)
+                        ProjectsNetworkManager.getProjects(successHandler: { (response) in
+                            self.projects = response
+                            
+                            self.tableView.beginUpdates()
+                            self.tableView.deleteRows(at: [indexPath], with: .automatic)
+                            self.tableView.endUpdates()
+                            
+                            self.stopDeletionActivityIndicator()
+                            
+                        }) { (error) in
+                            print(error)
+                            self.stopDeletionActivityIndicator()
+                        }
+                    } else {
                         self.stopDeletionActivityIndicator()
                     }
-                } else {
-                    self.stopDeletionActivityIndicator()
-                }
-            })
+                })
+            }
         }
+        let action2 = UIAlertAction(title: "Cancel", style: .cancel) { (confirmed) in
+            return
+        }
+        
+        alert.addAction(action1)
+        alert.addAction(action2)
+        
+        present(alert, animated: true, completion: nil)
         
     }
     

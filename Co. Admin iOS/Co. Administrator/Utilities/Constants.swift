@@ -17,6 +17,7 @@ let TO_PAYMENT = "toPaymentVC"
 let TO_EMP_INFO = "toEmployeeInformationVC"
 let TO_MAN_INFO = "toManagerInformationVC"
 let TO_PROJ_INFO = "seeProjectInformationVC"
+let TO_TASK_INFO = "toDailyTaskInfoVC"
 
 // NGROK
 let NGROK = "181d8a09"

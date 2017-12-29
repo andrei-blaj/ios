@@ -44,6 +44,12 @@ class EmployeeProfileVC: UIViewController {
         }
     }
     
+    @IBAction func goBack(sender: Any) {
+        if let nav = navigationController {
+            nav.popViewController(animated: true)
+        }
+    }
+    
     func setupView() {
         
         employeeFontAwesomeLabel.backgroundColor = employeeBackgroundColor

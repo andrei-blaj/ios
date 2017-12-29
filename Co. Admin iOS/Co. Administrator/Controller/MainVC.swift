@@ -12,12 +12,15 @@ import CoreData
 let appDelegate = UIApplication.shared.delegate as? AppDelegate
 
 class MainVC: UIViewController {
-
+    
+    // Outlets
     @IBOutlet weak var companyNameLabel: UILabel!
     @IBOutlet weak var sideMenuBtn: UIButton!
     
+    // Table View
     @IBOutlet weak var tableView: UITableView!
     
+    // Refresh Control
     var refreshControl: UIRefreshControl!
     
     override func viewDidLoad() {

@@ -39,9 +39,9 @@
 		E49B353A1FE53122009881D5 /* RegistrationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49B35391FE53122009881D5 /* RegistrationVC.swift */; };
 		E49B353C1FE799C0009881D5 /* HomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49B353B1FE799C0009881D5 /* HomeCell.swift */; };
 		E49B353E1FE80B51009881D5 /* ProjectsNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49B353D1FE80B51009881D5 /* ProjectsNetworkManager.swift */; };
-		E4ABB01E1FF2621E009F793E /* UIStoryBoardSegueFromRight.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4ABB01D1FF2621E009F793E /* UIStoryBoardSegueFromRight.swift */; };
 		E4D699B11FE2A98300B89414 /* SideMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D699B01FE2A98300B89414 /* SideMenuCell.swift */; };
 		E4E4F4B91FE435F3002ACB09 /* UserDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E4F4B81FE435F3002ACB09 /* UserDetailsVC.swift */; };
+		E4F2FB321FF65946003ED62C /* TaskInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F2FB311FF65946003ED62C /* TaskInfoVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -83,9 +83,9 @@
 		E49B35391FE53122009881D5 /* RegistrationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationVC.swift; sourceTree = "<group>"; };
 		E49B353B1FE799C0009881D5 /* HomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCell.swift; sourceTree = "<group>"; };
 		E49B353D1FE80B51009881D5 /* ProjectsNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsNetworkManager.swift; sourceTree = "<group>"; };
-		E4ABB01D1FF2621E009F793E /* UIStoryBoardSegueFromRight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStoryBoardSegueFromRight.swift; sourceTree = "<group>"; };
 		E4D699B01FE2A98300B89414 /* SideMenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuCell.swift; sourceTree = "<group>"; };
 		E4E4F4B81FE435F3002ACB09 /* UserDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsVC.swift; sourceTree = "<group>"; };
+		E4F2FB311FF65946003ED62C /* TaskInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskInfoVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,7 +170,6 @@
 			isa = PBXGroup;
 			children = (
 				E443CCB81FE17C200008C6F4 /* Session.swift */,
-				E4ABB01D1FF2621E009F793E /* UIStoryBoardSegueFromRight.swift */,
 			);
 			path = Lib;
 			sourceTree = "<group>";
@@ -211,6 +210,7 @@
 				E40661B21FED368000106728 /* PaymentVC.swift */,
 				E40661B61FEE750F00106728 /* EmployeeProfileVC.swift */,
 				E46FD5FE1FF3200D000CCD25 /* ProjectInfoVC.swift */,
+				E4F2FB311FF65946003ED62C /* TaskInfoVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -376,6 +376,7 @@
 				E48F0EA71FE92D4100D08F09 /* EmployeesVC.swift in Sources */,
 				E40661B31FED368000106728 /* PaymentVC.swift in Sources */,
 				E4421C651FB21FBB0019BE68 /* Co__Administrator.xcdatamodeld in Sources */,
+				E4F2FB321FF65946003ED62C /* TaskInfoVC.swift in Sources */,
 				E42A9C731FE8482E0034262C /* ProjectsVC.swift in Sources */,
 				E47E956E1FF3E5CE00B9061F /* DailyTaskCell.swift in Sources */,
 				E46569121FF0CB9D00015A4F /* ProjectCell.swift in Sources */,
@@ -390,7 +391,6 @@
 				E41E38201FDEF9A10040460C /* UsersNetworkManager.swift in Sources */,
 				35A2A7C71FF41D1F0009A283 /* DailyTasksNetworkManager.swift in Sources */,
 				E4421C5D1FB21FBB0019BE68 /* AppDelegate.swift in Sources */,
-				E4ABB01E1FF2621E009F793E /* UIStoryBoardSegueFromRight.swift in Sources */,
 				E499AA151FB42EB300DFF3AA /* Constants.swift in Sources */,
 				E43BBA851FE2AF0200E98C02 /* Structures.swift in Sources */,
 				E49B353E1FE80B51009881D5 /* ProjectsNetworkManager.swift in Sources */,

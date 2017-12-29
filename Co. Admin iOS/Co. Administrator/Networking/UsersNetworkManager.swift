@@ -143,12 +143,12 @@ class UsersNetworkManager {
         
     }
     
-    class func getEmployeesForCeo(successHandler: @escaping (([Int: employeeInformation]) -> Void), failureHandler: @escaping ((String) -> Void)) {
+    class func getEmployees(successHandler: @escaping (([Int: employeeInformation]) -> Void), failureHandler: @escaping ((String) -> Void)) {
         
         let auth_token = Session.shared.authToken!
         let params: Parameters = ["auth_token": auth_token]
         
-        Alamofire.request("\(Session.host())/users/get_employees_for_ceo", parameters: params)
+        Alamofire.request("\(Session.host())/users/get_employees", parameters: params)
             .responseJSON { response in
                 switch response.result {
                 case .success(let data):

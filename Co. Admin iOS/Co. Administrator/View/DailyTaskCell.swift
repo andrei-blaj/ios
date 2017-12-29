@@ -13,7 +13,7 @@ class DailyTaskCell: UITableViewCell {
     @IBOutlet weak var taskDescriptionLabel: UILabel!
     
     func configureCell(taskDescription: String, fontAwesomeCode: String) {
-        taskDescriptionLabel.font = UIFont.fontAwesome(ofSize: 18)
+        taskDescriptionLabel.font = UIFont.fontAwesome(ofSize: 22)
         taskDescriptionLabel.text = "\(String.fontAwesomeIcon(code: fontAwesomeCode)!)  \(taskDescription)"
     }
 

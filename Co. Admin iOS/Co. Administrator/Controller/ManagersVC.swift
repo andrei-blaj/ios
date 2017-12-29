@@ -23,13 +23,6 @@ class ManagersVC: UIViewController {
     
     var refreshControl: UIRefreshControl!
     
-    @IBAction func prepareForUnwind(segue: UIStoryboardSegue) {}
-    
-    override func unwind(for unwindSegue: UIStoryboardSegue, towardsViewController subsequentVC: UIViewController) {
-        let segue = UIStoryBoardUnwindSegueFromRight(identifier: unwindSegue.identifier, source: unwindSegue.source, destination: unwindSegue.destination)
-        segue.perform()
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
