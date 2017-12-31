@@ -262,6 +262,8 @@ extension MapVC: MKMapViewDelegate {
                     
                     guard let image = response.result.value else { return }
                     
+                    print(image)
+                    
                     self.imageArray.append(image)
                     self.progressLabel?.text = "\(self.imageArray.count * 100 / NUMBER_OF_PHOTOS)%"
                     
