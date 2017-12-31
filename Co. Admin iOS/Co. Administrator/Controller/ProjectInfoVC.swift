@@ -49,6 +49,9 @@ class ProjectInfoVC: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         
+        tableView.estimatedRowHeight = 50
+        tableView.rowHeight = UITableViewAutomaticDimension
+        
         refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action: #selector(refresh), for: .valueChanged)
         tableView.addSubview(refreshControl)

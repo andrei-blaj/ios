@@ -36,7 +36,7 @@ struct ContributionInformation {
     var content: String
     var userId: Int
     var createdAt: String
-    var imagePath: String
+    var imagePath: String?
 }
 
 // Home Page Table View Cell Elements

@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Alamofire
+import AlamofireImage
 
 class TaskInfoVC: UIViewController {
 
@@ -16,6 +18,8 @@ class TaskInfoVC: UIViewController {
     var taskDeadline = String()
     
     var contributionsForTask: [Int: ContributionInformation] = [:]
+    var contributionImages: [Int: Any] = [:]
+    var contributionUsers: [Int: String] = [:]
     
     // Outlets
     @IBOutlet weak var taskDescriptionLabel: UILabel!
@@ -36,6 +40,11 @@ class TaskInfoVC: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         
+        tableView.estimatedRowHeight = 120
+        tableView.rowHeight = UITableViewAutomaticDimension
+        
+        registerForPreviewing(with: self, sourceView: tableView!)
+        
     }
     
     @IBAction func goBack(sender: Any) {
@@ -53,8 +62,11 @@ class TaskInfoVC: UIViewController {
         
         sendMessageBtn.isHidden = true
         
-        taskDescriptionLabel.text = taskDescription
-        taskDeadlineLabel.text = taskDeadline
+        taskDescriptionLabel.font = UIFont.fontAwesome(ofSize: 20)
+        taskDescriptionLabel.text = "\(String.fontAwesomeIcon(code: "fa-info-circle")!)  \(taskDescription)"
+        
+        taskDeadlineLabel.font = UIFont.fontAwesome(ofSize: 18)
+        taskDeadlineLabel.text = "\(String.fontAwesomeIcon(code: "fa-calendar")!)  \(taskDeadline)"
         
         tableView.isHidden = true
         
@@ -75,16 +87,51 @@ class TaskInfoVC: UIViewController {
     
     func updateTaskContributions() {
         DailyTasksNetworkManager.getContributionsForDailyTask(withId: taskId, successHandler: { (response) in
-            print(response)
             
+            self.contributionsForTask = response
             
+            var countImages = 0
             
-            
-            
-            self.activityIndicator.isHidden = true
-            self.activityIndicator.stopAnimating()
+            for (key, contribution) in self.contributionsForTask {
+                
+                if let imagePath = contribution.imagePath {
+                    let url = "\(Session.baseUrl())\(imagePath)"
+                    Alamofire.request(url).responseImage(completionHandler: { (response) in
+                        if response.result.value != nil {
+                            let img = response.result.value
+
+                            self.contributionImages[key] = img!
+
+                            countImages += 1
+                            if countImages == self.contributionsForTask.count {
+                                self.tableView.reloadData()
+                                self.tableView.isHidden = false
+                                
+                                self.activityIndicator.isHidden = true
+                                self.activityIndicator.stopAnimating()
+                             }
+                        }
+                    })
+                } else {
+                    self.contributionImages[key] = ""
+
+                    countImages += 1
+                    if countImages == self.contributionsForTask.count {
+                        self.tableView.reloadData()
+                        self.tableView.isHidden = false
+                        
+                        self.activityIndicator.isHidden = true
+                        self.activityIndicator.stopAnimating()
+                    }
+                }
+
+            }
+  
         }) { (error) in
             print(error)
+            
+            self.tableView.reloadData()
+            self.tableView.isHidden = false
             
             self.activityIndicator.isHidden = true
             self.activityIndicator.stopAnimating()
@@ -95,16 +142,80 @@ class TaskInfoVC: UIViewController {
 
 extension TaskInfoVC: UITableViewDataSource, UITableViewDelegate {
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let popVC = storyboard?.instantiateViewController(withIdentifier: "PopVC") as? PopVC else { return }
+        
+        if let image = contributionImages[indexPath.row] as? UIImage {
+            popVC.initData(forImage: image)
+            present(popVC, animated: true, completion: nil)
+        }
+    }
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return contributionsForTask.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "contributionCell", for: indexPath) as? ContributionCell {
+            
+            let name = ""
+            let createdAt = self.contributionsForTask[indexPath.row]!.createdAt
+            let content = self.contributionsForTask[indexPath.row]!.content
+            let img = self.contributionImages[indexPath.row]
+            
+            cell.configureCell(addedBy: name, onDate: createdAt, description: content, image: img as Any)
+//
+//            UsersNetworkManager.getCurrentUser(user_id: contributionsForTask[indexPath.row]!.userId, successHandler: { (response) in
+//
+//                let name = "\(response.firstName) \(response.lastName)"
+//                let createdAt = self.contributionsForTask[indexPath.row]!.createdAt
+//                let content = self.contributionsForTask[indexPath.row]!.content
+////                let img = self.contributionImages[self.contributionsForTask.count - indexPath.row - 1]!
+//                let img = ""
+//
+//                cell.configureCell(addedBy: name, onDate: createdAt, description: content, image: img)
+//            }, failureHandler: { (error) in
+//                print(error)
+//            })
+            
+            cell.selectionStyle = UITableViewCellSelectionStyle.none
+            
+            return cell
+        }
+        
+        return ContributionCell()
     }
     
 }
+
+extension TaskInfoVC: UIViewControllerPreviewingDelegate {
+    
+    func previewingContext(_ previewingContext: UIViewControllerPreviewing, viewControllerForLocation location: CGPoint) -> UIViewController? {
+        guard let indexPath = tableView.indexPathForRow(at: location), let cell = tableView.cellForRow(at: indexPath) else { return nil }
+        
+        guard let popVC = storyboard?.instantiateViewController(withIdentifier: "PopVC") as? PopVC else { return nil }
+        
+        if let image = contributionImages[indexPath.row] as? UIImage {
+            popVC.initData(forImage: image)
+        } else {
+            return nil
+        }
+        
+        previewingContext.sourceRect = cell.contentView.frame
+        
+        return popVC
+    }
+    
+    func previewingContext(_ previewingContext: UIViewControllerPreviewing, commit viewControllerToCommit: UIViewController) {
+        present(viewControllerToCommit, animated: true, completion: nil)
+    }
+
+}
+
+
+

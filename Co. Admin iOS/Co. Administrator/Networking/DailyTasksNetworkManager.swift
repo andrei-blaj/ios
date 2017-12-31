@@ -30,7 +30,11 @@ class DailyTasksNetworkManager {
                     let taskList = dict["daily_tasks"]! as! [[String: Any]]
                     
                     for task in taskList {
-                        let taskInfo = TaskInformation(taskDescription: task["task_description"] as! String, taskDeadline: task["task_deadline"] as! String, completed: task["completed"] as! Bool, id: task["id"] as! Int)
+                        var taskInfo = TaskInformation(taskDescription: task["task_description"] as! String, taskDeadline: task["task_deadline"] as! String, completed: task["completed"] as! Bool, id: task["id"] as! Int)
+                        
+                        let trimmedTaskDescription = taskInfo.taskDescription.replacingOccurrences(of: "^\\n*", with: "", options: .regularExpression)
+                        
+                        taskInfo.taskDescription = trimmedTaskDescription
                         
                         result[k] = taskInfo
                         k += 1
@@ -69,7 +73,7 @@ class DailyTasksNetworkManager {
                     for contribution in contributions {
                         let content = contribution["content"] as! String
                         let image = contribution["image"] as! [String: Any]
-                        let imageUrl = image["url"] as! String
+                        let imageUrl = image["url"] as? String
                         let userId = contribution["user_id"] as! Int
                         let createdAt = contribution["created_at"] as! String
 

@@ -12,6 +12,7 @@
 		E40661B31FED368000106728 /* PaymentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40661B21FED368000106728 /* PaymentVC.swift */; };
 		E40661B51FEDB83F00106728 /* EmployeeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40661B41FEDB83F00106728 /* EmployeeCell.swift */; };
 		E40661B71FEE750F00106728 /* EmployeeProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40661B61FEE750F00106728 /* EmployeeProfileVC.swift */; };
+		E41A3FED1FF85F2A005334C5 /* PopVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41A3FEC1FF85F2A005334C5 /* PopVC.swift */; };
 		E41C90921FDEAB9C00F5435E /* SessionsNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41C90911FDEAB9C00F5435E /* SessionsNetworkManager.swift */; };
 		E41E38201FDEF9A10040460C /* UsersNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41E381F1FDEF9A10040460C /* UsersNetworkManager.swift */; };
 		E41E38241FE08AF40040460C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41E38231FE08AF40040460C /* User.swift */; };
@@ -32,6 +33,7 @@
 		E47141C41FEA8D1B00651359 /* UpgradePlanVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E47141C31FEA8D1B00651359 /* UpgradePlanVC.swift */; };
 		E47141C61FEA9E8300651359 /* UpgradePlanCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E47141C51FEA9E8300651359 /* UpgradePlanCell.swift */; };
 		E47E956E1FF3E5CE00B9061F /* DailyTaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E47E956D1FF3E5CE00B9061F /* DailyTaskCell.swift */; };
+		E48A11111FF71A6400D08337 /* ContributionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48A11101FF71A6400D08337 /* ContributionCell.swift */; };
 		E48F0EA51FE92D0300D08F09 /* ManagersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48F0EA41FE92D0300D08F09 /* ManagersVC.swift */; };
 		E48F0EA71FE92D4100D08F09 /* EmployeesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48F0EA61FE92D4100D08F09 /* EmployeesVC.swift */; };
 		E499AA121FB4283900DFF3AA /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E499AA111FB4283900DFF3AA /* LoginVC.swift */; };
@@ -52,6 +54,7 @@
 		E40661B21FED368000106728 /* PaymentVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentVC.swift; sourceTree = "<group>"; };
 		E40661B41FEDB83F00106728 /* EmployeeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeCell.swift; sourceTree = "<group>"; };
 		E40661B61FEE750F00106728 /* EmployeeProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeProfileVC.swift; sourceTree = "<group>"; };
+		E41A3FEC1FF85F2A005334C5 /* PopVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopVC.swift; sourceTree = "<group>"; };
 		E41C90911FDEAB9C00F5435E /* SessionsNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionsNetworkManager.swift; sourceTree = "<group>"; };
 		E41E381F1FDEF9A10040460C /* UsersNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersNetworkManager.swift; sourceTree = "<group>"; };
 		E41E38231FE08AF40040460C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -76,6 +79,7 @@
 		E47141C31FEA8D1B00651359 /* UpgradePlanVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpgradePlanVC.swift; sourceTree = "<group>"; };
 		E47141C51FEA9E8300651359 /* UpgradePlanCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpgradePlanCell.swift; sourceTree = "<group>"; };
 		E47E956D1FF3E5CE00B9061F /* DailyTaskCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyTaskCell.swift; sourceTree = "<group>"; };
+		E48A11101FF71A6400D08337 /* ContributionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContributionCell.swift; sourceTree = "<group>"; };
 		E48F0EA41FE92D0300D08F09 /* ManagersVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagersVC.swift; sourceTree = "<group>"; };
 		E48F0EA61FE92D4100D08F09 /* EmployeesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeesVC.swift; sourceTree = "<group>"; };
 		E499AA111FB4283900DFF3AA /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
@@ -191,6 +195,7 @@
 				E40661B41FEDB83F00106728 /* EmployeeCell.swift */,
 				E46569111FF0CB9D00015A4F /* ProjectCell.swift */,
 				E47E956D1FF3E5CE00B9061F /* DailyTaskCell.swift */,
+				E48A11101FF71A6400D08337 /* ContributionCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -211,6 +216,7 @@
 				E40661B61FEE750F00106728 /* EmployeeProfileVC.swift */,
 				E46FD5FE1FF3200D000CCD25 /* ProjectInfoVC.swift */,
 				E4F2FB311FF65946003ED62C /* TaskInfoVC.swift */,
+				E41A3FEC1FF85F2A005334C5 /* PopVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -315,6 +321,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Co. Administrator/Pods-Co. Administrator-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
 				"${BUILT_PRODUCTS_DIR}/FontAwesome.swift/FontAwesome_swift.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Stripe/Stripe.framework",
@@ -323,6 +330,7 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FontAwesome_swift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Stripe.framework",
@@ -379,6 +387,7 @@
 				E4F2FB321FF65946003ED62C /* TaskInfoVC.swift in Sources */,
 				E42A9C731FE8482E0034262C /* ProjectsVC.swift in Sources */,
 				E47E956E1FF3E5CE00B9061F /* DailyTaskCell.swift in Sources */,
+				E41A3FED1FF85F2A005334C5 /* PopVC.swift in Sources */,
 				E46569121FF0CB9D00015A4F /* ProjectCell.swift in Sources */,
 				E444FE841FB39D46007A69C6 /* MainVC.swift in Sources */,
 				E46FD5FF1FF3200D000CCD25 /* ProjectInfoVC.swift in Sources */,
@@ -390,6 +399,7 @@
 				E47141C61FEA9E8300651359 /* UpgradePlanCell.swift in Sources */,
 				E41E38201FDEF9A10040460C /* UsersNetworkManager.swift in Sources */,
 				35A2A7C71FF41D1F0009A283 /* DailyTasksNetworkManager.swift in Sources */,
+				E48A11111FF71A6400D08337 /* ContributionCell.swift in Sources */,
 				E4421C5D1FB21FBB0019BE68 /* AppDelegate.swift in Sources */,
 				E499AA151FB42EB300DFF3AA /* Constants.swift in Sources */,
 				E43BBA851FE2AF0200E98C02 /* Structures.swift in Sources */,

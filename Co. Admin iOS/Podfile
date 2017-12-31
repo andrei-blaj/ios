@@ -7,6 +7,7 @@ target 'Co. Administrator' do
 
   # Pods for Co. Administrator
   pod 'Alamofire', '~> 4.5'
+  pod 'AlamofireImage'
   pod 'SwiftyJSON'
   pod 'FontAwesome.swift'
   pod 'IQKeyboardManagerSwift'

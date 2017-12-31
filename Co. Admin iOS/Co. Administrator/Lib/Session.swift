@@ -31,6 +31,17 @@ class Session {
         #endif
     }
     
+    class func baseUrl() -> String {
+        #if arch(i386) || arch(x86_64)
+            //simulator
+            return "http://localhost:3000"
+        #else
+            //device
+            return "http://\(NGROK).ngrok.io"
+            // return "http://yourapp.herokuapp.com/"
+        #endif
+    }
+    
     func isLoggedIn() -> Bool {
         return authToken != nil && currentUser != nil
     }

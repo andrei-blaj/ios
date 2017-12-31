@@ -22,4 +22,5 @@ let TO_TASK_INFO = "toDailyTaskInfoVC"
 // NGROK
 let NGROK = "181d8a09"
 
-
+// BASE URL
+let BASE_URL = "http://\(NGROK).ngrok.io"
