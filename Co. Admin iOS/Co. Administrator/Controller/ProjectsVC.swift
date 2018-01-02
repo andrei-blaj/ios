@@ -9,9 +9,12 @@
 import UIKit
 
 class ProjectsVC: UIViewController {
-
+    
+    // Outlets
     @IBOutlet weak var sideMenuBtn: UIButton!
     @IBOutlet weak var tableView: UITableView!
+    
+    @IBOutlet weak var notificationBubbleLabel: UILabel!
     
     @IBOutlet weak var delectionActivityIndicator: UIActivityIndicatorView!
     
@@ -44,14 +47,39 @@ class ProjectsVC: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         
+        showNotifications()
+        
         tableView.isHidden = true
         startDeletionActivityIndicator()
         populateProjectsList()
+        
     }
     
     @objc func refresh(sender:AnyObject) {
         // Code to refresh table view
         populateProjectsList()
+        showNotifications()
+    }
+    
+    func showNotifications() {
+        // If there are any new project notification for the current user then the bubble will be displayed, otherwise .isHidden = true
+        
+        print("gagagagaga")
+        
+        notificationBubbleLabel.isHidden = true
+        notificationBubbleLabel.font = UIFont.fontAwesome(ofSize: 17)
+        notificationBubbleLabel.text = String.fontAwesomeIcon(code: "fa-circle")
+        
+        NotificationsNetworkManager.getProjectNotifications(successHandler: { (projectCount) in
+            if projectCount > 0 {
+                self.notificationBubbleLabel.isHidden = false
+            } else {
+                print("No projects")
+            }
+        }) { (error) in
+            print(error)
+        }
+        
     }
     
     @IBAction func prepareForUnwind(segue: UIStoryboardSegue) {}
@@ -82,6 +110,7 @@ class ProjectsVC: UIViewController {
         
         ProjectInfoViewController.projectId = projectId
         ProjectInfoViewController.projectTitle = projectTitle
+        ProjectInfoViewController.firstTime = true
     }
     
 }

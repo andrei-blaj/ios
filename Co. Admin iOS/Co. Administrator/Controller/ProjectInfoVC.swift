@@ -17,6 +17,7 @@ class ProjectInfoVC: UIViewController {
     var taskId = Int()
     var taskDescription = String()
     var taskDeadline = String()
+    var firstTime = Bool()
 
     var processCount = Int()
     
@@ -65,45 +66,48 @@ class ProjectInfoVC: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         
-        processCount = 0
-        
-        activityIndicator.startAnimating()
-        activityIndicator.isHidden = false
-        
-        projectDescriptionLabel.isHidden = true
-        projectDeadlineLabel.isHidden = true
-        
         projectTitleLabel.text = projectTitle
         
-        tableView.isHidden = true
-        
-        ProjectsNetworkManager.getProject(projectId: projectId, successHandler: { (projectInfo) in
-            // Add font awesome icons
-            self.projectDescriptionLabel.font = UIFont.fontAwesome(ofSize: 18)
-            self.projectDescriptionLabel.text = "\(String.fontAwesomeIcon(code: "fa-info-circle")!)  \(projectInfo.description)"
+        if firstTime == true {
             
-            self.projectDeadlineLabel.font = UIFont.fontAwesome(ofSize: 18)
-            self.projectDeadlineLabel.text = "\(String.fontAwesomeIcon(code: "fa-calendar")!)  \(projectInfo.deadline)"
+            processCount = 0
             
-            self.projectDescriptionLabel.isHidden = false
-            self.projectDeadlineLabel.isHidden = false
+            projectDescriptionLabel.isHidden = true
+            projectDeadlineLabel.isHidden = true
             
-            self.processCount += 1
+            tableView.isHidden = true
             
-            if self.processCount == 2 {
+            activityIndicator.startAnimating()
+            activityIndicator.isHidden = false
+            
+            ProjectsNetworkManager.getProject(projectId: projectId, successHandler: { (projectInfo) in
+                // Add font awesome icons
+                self.projectDescriptionLabel.font = UIFont.fontAwesome(ofSize: 18)
+                self.projectDescriptionLabel.text = "\(String.fontAwesomeIcon(code: "fa-info-circle")!)  \(projectInfo.description)"
+                
+                self.projectDeadlineLabel.font = UIFont.fontAwesome(ofSize: 18)
+                self.projectDeadlineLabel.text = "\(String.fontAwesomeIcon(code: "fa-calendar")!)  \(projectInfo.deadline)"
+                
+                self.projectDescriptionLabel.isHidden = false
+                self.projectDeadlineLabel.isHidden = false
+                
+                self.processCount += 1
+                
+                if self.processCount == 2 {
+                    self.activityIndicator.stopAnimating()
+                    self.activityIndicator.isHidden = true
+                }
+                
+            }) { (error) in
+                print(error)
+                
                 self.activityIndicator.stopAnimating()
                 self.activityIndicator.isHidden = true
             }
             
-        }) { (error) in
-            print(error)
-            
-            self.activityIndicator.stopAnimating()
-            self.activityIndicator.isHidden = true
+            updateTaskTableViews()
+            firstTime = false
         }
-        
-        updateTaskTableViews()
-        
     }
     
     func updateTaskTableViews() {
@@ -154,6 +158,7 @@ class ProjectInfoVC: UIViewController {
         TaskInformationViewController.taskId = taskId
         TaskInformationViewController.taskDeadline = taskDeadline
         TaskInformationViewController.taskDescription = taskDescription
+        TaskInformationViewController.firstTime = true
     }
     
 }
@@ -246,4 +251,45 @@ extension ProjectInfoVC: UITableViewDelegate, UITableViewDataSource {
         
         return DailyTaskCell()
     }
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        // If the task is now yet completed and the current user is a MANAGER
+        if Session.shared.currentUser!.man == true && indexPath.section == 0 {
+            return true
+        }
+        return false
+    }
+    
+    func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCellEditingStyle {
+        return .none
+    }
+    
+    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        let markAsCompletedAction = UITableViewRowAction(style: .normal, title: "Mark as completed") { (rowAction, indexPath) in
+            
+            self.activityIndicator.startAnimating()
+            self.activityIndicator.isHidden = false
+            
+            let taskId = self.toDoTasks[indexPath.row]!.id
+            
+            DailyTasksNetworkManager.markAsCompleted(taskId: taskId, completion: { (success) in
+                if success {
+                    self.processCount = 1
+                    
+                    self.updateTaskTableViews()
+                } else {
+                    print("Could not mark as completed")
+                    
+                    self.activityIndicator.stopAnimating()
+                    self.activityIndicator.isHidden = true
+                }
+            })
+            
+        }
+        
+        markAsCompletedAction.backgroundColor = #colorLiteral(red: 0, green: 0.4757328033, blue: 0.9871261716, alpha: 1)
+        
+        return [markAsCompletedAction]
+    }
+    
 }

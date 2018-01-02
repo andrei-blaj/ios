@@ -124,6 +124,7 @@ extension MainVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if (indexPath.row != 0) {
             let vc = self.storyboard?.instantiateViewController(withIdentifier: homeTableViewCellIdentifiers[indexPath.row + 1]!)
+            
             self.revealViewController().setFront(vc, animated: true)
         }
     }

@@ -33,6 +33,7 @@ struct TaskInformation {
 }
 
 struct ContributionInformation {
+    var id: Int
     var content: String
     var userId: Int
     var createdAt: String

@@ -41,6 +41,8 @@
 		E49B353A1FE53122009881D5 /* RegistrationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49B35391FE53122009881D5 /* RegistrationVC.swift */; };
 		E49B353C1FE799C0009881D5 /* HomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49B353B1FE799C0009881D5 /* HomeCell.swift */; };
 		E49B353E1FE80B51009881D5 /* ProjectsNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49B353D1FE80B51009881D5 /* ProjectsNetworkManager.swift */; };
+		E4A0A9BD1FF90093006EF4D4 /* ContributionsNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A0A9BC1FF90093006EF4D4 /* ContributionsNetworkManager.swift */; };
+		E4BA05D51FFBACEC00711DBA /* NotificationsNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4BA05D41FFBACEC00711DBA /* NotificationsNetworkManager.swift */; };
 		E4D699B11FE2A98300B89414 /* SideMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D699B01FE2A98300B89414 /* SideMenuCell.swift */; };
 		E4E4F4B91FE435F3002ACB09 /* UserDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E4F4B81FE435F3002ACB09 /* UserDetailsVC.swift */; };
 		E4F2FB321FF65946003ED62C /* TaskInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F2FB311FF65946003ED62C /* TaskInfoVC.swift */; };
@@ -87,6 +89,8 @@
 		E49B35391FE53122009881D5 /* RegistrationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationVC.swift; sourceTree = "<group>"; };
 		E49B353B1FE799C0009881D5 /* HomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCell.swift; sourceTree = "<group>"; };
 		E49B353D1FE80B51009881D5 /* ProjectsNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsNetworkManager.swift; sourceTree = "<group>"; };
+		E4A0A9BC1FF90093006EF4D4 /* ContributionsNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContributionsNetworkManager.swift; sourceTree = "<group>"; };
+		E4BA05D41FFBACEC00711DBA /* NotificationsNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsNetworkManager.swift; sourceTree = "<group>"; };
 		E4D699B01FE2A98300B89414 /* SideMenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuCell.swift; sourceTree = "<group>"; };
 		E4E4F4B81FE435F3002ACB09 /* UserDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsVC.swift; sourceTree = "<group>"; };
 		E4F2FB311FF65946003ED62C /* TaskInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskInfoVC.swift; sourceTree = "<group>"; };
@@ -128,6 +132,8 @@
 				E41E381F1FDEF9A10040460C /* UsersNetworkManager.swift */,
 				E49B353D1FE80B51009881D5 /* ProjectsNetworkManager.swift */,
 				35A2A7C61FF41D1F0009A283 /* DailyTasksNetworkManager.swift */,
+				E4A0A9BC1FF90093006EF4D4 /* ContributionsNetworkManager.swift */,
+				E4BA05D41FFBACEC00711DBA /* NotificationsNetworkManager.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -405,12 +411,14 @@
 				E43BBA851FE2AF0200E98C02 /* Structures.swift in Sources */,
 				E49B353E1FE80B51009881D5 /* ProjectsNetworkManager.swift in Sources */,
 				E47141C41FEA8D1B00651359 /* UpgradePlanVC.swift in Sources */,
+				E4A0A9BD1FF90093006EF4D4 /* ContributionsNetworkManager.swift in Sources */,
 				E443CCB91FE17C200008C6F4 /* Session.swift in Sources */,
 				E444FE821FB36CDE007A69C6 /* SWRevealViewController.m in Sources */,
 				E40661B51FEDB83F00106728 /* EmployeeCell.swift in Sources */,
 				E40661B71FEE750F00106728 /* EmployeeProfileVC.swift in Sources */,
 				E444FE861FB39D5D007A69C6 /* SideMenuVC.swift in Sources */,
 				E41E38241FE08AF40040460C /* User.swift in Sources */,
+				E4BA05D51FFBACEC00711DBA /* NotificationsNetworkManager.swift in Sources */,
 				E4E4F4B91FE435F3002ACB09 /* UserDetailsVC.swift in Sources */,
 				E49B353A1FE53122009881D5 /* RegistrationVC.swift in Sources */,
 				E4D699B11FE2A98300B89414 /* SideMenuCell.swift in Sources */,

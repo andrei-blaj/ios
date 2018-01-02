@@ -53,12 +53,33 @@ class DailyTasksNetworkManager {
         
     }
     
+    class func markAsCompleted(taskId: Int, completion: @escaping (_ complete: Bool) -> ()) {
+        
+        let auth_token = Session.shared.authToken!
+        let params: Parameters = ["auth_token": auth_token, "task_id": taskId]
+        
+        Alamofire.request("\(Session.host())/daily_tasks/mark_as_completed",
+            method: .patch,
+            parameters: params,
+            encoding: JSONEncoding.default)
+            .validate()
+            .responseJSON { (response) in
+                if response.result.error == nil {
+                    completion(true)
+                } else {
+                    debugPrint(response.result.error as Any)
+                    completion(false)
+                }
+        }
+    }
+    
     class func getContributionsForDailyTask(withId taskId: Int, successHandler: @escaping (([Int: ContributionInformation]) -> Void), failureHandler: @escaping ((String) -> Void)) {
         
         let auth_token = Session.shared.authToken!
         let params: Parameters = ["auth_token": auth_token, "daily_task_id": taskId]
         
-        Alamofire.request("\(Session.host())/contributions/get_contributions", parameters: params)
+        Alamofire.request("\(Session.host())/contributions/get_contributions",
+            parameters: params)
             .responseJSON { response in
                 switch response.result {
                 case .success(let data):
@@ -71,13 +92,14 @@ class DailyTasksNetworkManager {
                     let contributions = dict["contributions"] as! [[String: Any]]
                     
                     for contribution in contributions {
+                        let id = contribution["id"] as! Int
                         let content = contribution["content"] as! String
                         let image = contribution["image"] as! [String: Any]
                         let imageUrl = image["url"] as? String
                         let userId = contribution["user_id"] as! Int
                         let createdAt = contribution["created_at"] as! String
 
-                        let contributionToAdd = ContributionInformation(content: content, userId: userId, createdAt: createdAt, imagePath: imageUrl)
+                        let contributionToAdd = ContributionInformation(id: id, content: content, userId: userId, createdAt: createdAt, imagePath: imageUrl)
                         
                         result[k] = contributionToAdd
                         k += 1
@@ -96,8 +118,4 @@ class DailyTasksNetworkManager {
         }
         
     }
-    
-    
-    
-    
 }
