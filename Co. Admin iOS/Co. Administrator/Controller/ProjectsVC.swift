@@ -64,17 +64,13 @@ class ProjectsVC: UIViewController {
     func showNotifications() {
         // If there are any new project notification for the current user then the bubble will be displayed, otherwise .isHidden = true
         
-        print("gagagagaga")
-        
         notificationBubbleLabel.isHidden = true
         notificationBubbleLabel.font = UIFont.fontAwesome(ofSize: 17)
         notificationBubbleLabel.text = String.fontAwesomeIcon(code: "fa-circle")
         
-        NotificationsNetworkManager.getProjectNotifications(successHandler: { (projectCount) in
-            if projectCount > 0 {
+        NotificationsNetworkManager.getNotifications(notificationType: "new_proj", successHandler: { (notifCount) in
+            if notifCount > 0 {
                 self.notificationBubbleLabel.isHidden = false
-            } else {
-                print("No projects")
             }
         }) { (error) in
             print(error)

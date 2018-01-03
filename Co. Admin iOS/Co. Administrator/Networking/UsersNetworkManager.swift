@@ -124,7 +124,7 @@ class UsersNetworkManager {
                     let managerList = dict["manager_list"]! as! [[String: Any]]
                     
                     for manager in managerList {
-                        let managerInfo = employeeInformation(firstName: manager["first_name"] as! String, lastName: manager["last_name"] as! String, email: manager["email"] as! String)
+                        let managerInfo = employeeInformation(id: manager["id"] as! Int, firstName: manager["first_name"] as! String, lastName: manager["last_name"] as! String, email: manager["email"] as! String)
                         
                         result[k] = managerInfo
                         k += 1
@@ -160,7 +160,7 @@ class UsersNetworkManager {
                     let employeeList = dict["employee_list"]! as! [[String: Any]]
                     
                     for employee in employeeList {
-                        let empInfo = employeeInformation(firstName: employee["first_name"] as! String, lastName: employee["last_name"] as! String, email: employee["email"] as! String)
+                        let empInfo = employeeInformation(id: employee["id"] as! Int, firstName: employee["first_name"] as! String, lastName: employee["last_name"] as! String, email: employee["email"] as! String)
                         
                         result[k] = empInfo
                         k += 1
@@ -196,7 +196,7 @@ class UsersNetworkManager {
                     let employeeList = dict["employee_list"]! as! [[String: Any]]
 
                     for employee in employeeList {
-                        let empInfo = employeeInformation(firstName: employee["first_name"] as! String, lastName: employee["last_name"] as! String, email: employee["email"] as! String)
+                        let empInfo = employeeInformation(id: employee["id"] as! Int, firstName: employee["first_name"] as! String, lastName: employee["last_name"] as! String, email: employee["email"] as! String)
 
                         result[k] = empInfo
                         k += 1

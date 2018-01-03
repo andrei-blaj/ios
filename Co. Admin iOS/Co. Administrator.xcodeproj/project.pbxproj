@@ -29,6 +29,7 @@
 		E444FE841FB39D46007A69C6 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E444FE831FB39D46007A69C6 /* MainVC.swift */; };
 		E444FE861FB39D5D007A69C6 /* SideMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E444FE851FB39D5D007A69C6 /* SideMenuVC.swift */; };
 		E46569121FF0CB9D00015A4F /* ProjectCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46569111FF0CB9D00015A4F /* ProjectCell.swift */; };
+		E46656AD1FFCF94700895C26 /* PaymentsNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46656AC1FFCF94700895C26 /* PaymentsNetworkManager.swift */; };
 		E46FD5FF1FF3200D000CCD25 /* ProjectInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46FD5FE1FF3200D000CCD25 /* ProjectInfoVC.swift */; };
 		E47141C41FEA8D1B00651359 /* UpgradePlanVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E47141C31FEA8D1B00651359 /* UpgradePlanVC.swift */; };
 		E47141C61FEA9E8300651359 /* UpgradePlanCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E47141C51FEA9E8300651359 /* UpgradePlanCell.swift */; };
@@ -77,6 +78,8 @@
 		E444FE831FB39D46007A69C6 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		E444FE851FB39D5D007A69C6 /* SideMenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuVC.swift; sourceTree = "<group>"; };
 		E46569111FF0CB9D00015A4F /* ProjectCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectCell.swift; sourceTree = "<group>"; };
+		E46656AB1FFCBBBE00895C26 /* stripe-test-bridging-header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "stripe-test-bridging-header.h"; sourceTree = "<group>"; };
+		E46656AC1FFCF94700895C26 /* PaymentsNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentsNetworkManager.swift; sourceTree = "<group>"; };
 		E46FD5FE1FF3200D000CCD25 /* ProjectInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectInfoVC.swift; sourceTree = "<group>"; };
 		E47141C31FEA8D1B00651359 /* UpgradePlanVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpgradePlanVC.swift; sourceTree = "<group>"; };
 		E47141C51FEA9E8300651359 /* UpgradePlanCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpgradePlanCell.swift; sourceTree = "<group>"; };
@@ -134,6 +137,7 @@
 				35A2A7C61FF41D1F0009A283 /* DailyTasksNetworkManager.swift */,
 				E4A0A9BC1FF90093006EF4D4 /* ContributionsNetworkManager.swift */,
 				E4BA05D41FFBACEC00711DBA /* NotificationsNetworkManager.swift */,
+				E46656AC1FFCF94700895C26 /* PaymentsNetworkManager.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -233,6 +237,7 @@
 				E444FE801FB36CDE007A69C6 /* SWRevealViewController.h */,
 				E444FE811FB36CDE007A69C6 /* SWRevealViewController.m */,
 				E444FE7F1FB36CDD007A69C6 /* Co. Administrator-Bridging-Header.h */,
+				E46656AB1FFCBBBE00895C26 /* stripe-test-bridging-header.h */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -404,6 +409,7 @@
 				E41C90921FDEAB9C00F5435E /* SessionsNetworkManager.swift in Sources */,
 				E47141C61FEA9E8300651359 /* UpgradePlanCell.swift in Sources */,
 				E41E38201FDEF9A10040460C /* UsersNetworkManager.swift in Sources */,
+				E46656AD1FFCF94700895C26 /* PaymentsNetworkManager.swift in Sources */,
 				35A2A7C71FF41D1F0009A283 /* DailyTasksNetworkManager.swift in Sources */,
 				E48A11111FF71A6400D08337 /* ContributionCell.swift in Sources */,
 				E4421C5D1FB21FBB0019BE68 /* AppDelegate.swift in Sources */,

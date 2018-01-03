@@ -12,14 +12,12 @@ import SwiftyJSON
 
 class ContributionsNetworkManager {
     
-    class func createContribution(dailyTaskId: Int, image: String, content: String, timeStamp: String, completion: @escaping (_ complete: Bool) -> ()) {
-        
-        print("rez: \(content)")
+    class func createContribution(userId: Int, dailyTaskId: Int, image: String, content: String, timeStamp: String, completion: @escaping (_ complete: Bool) -> ()) {
         
         let auth_token = Session.shared.authToken!
-        let params: Parameters = ["auth_token": auth_token, "daily_task_id": dailyTaskId, "image": image, "content": content, "timestamp": timeStamp]
+        let params: Parameters = ["auth_token": auth_token, "user_id": userId, "daily_task_id": dailyTaskId, "image": image, "content": content, "timestamp": timeStamp]
         
-        Alamofire.request("\(Session.host())/contributions",
+        Alamofire.request("\(Session.host())/contributions/create_contribution",
             method: .post,
             parameters: params,
             encoding: JSONEncoding.default)

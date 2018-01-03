@@ -30,7 +30,7 @@ class DailyTasksNetworkManager {
                     let taskList = dict["daily_tasks"]! as! [[String: Any]]
                     
                     for task in taskList {
-                        var taskInfo = TaskInformation(taskDescription: task["task_description"] as! String, taskDeadline: task["task_deadline"] as! String, completed: task["completed"] as! Bool, id: task["id"] as! Int)
+                        var taskInfo = TaskInformation(id: task["id"] as! Int, taskDescription: task["task_description"] as! String, taskDeadline: task["task_deadline"] as! String, completed: task["completed"] as! Bool)
                         
                         let trimmedTaskDescription = taskInfo.taskDescription.replacingOccurrences(of: "^\\n*", with: "", options: .regularExpression)
                         

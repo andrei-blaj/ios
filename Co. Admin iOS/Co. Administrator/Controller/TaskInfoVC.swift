@@ -43,6 +43,9 @@ class TaskInfoVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        activityIndicator.startAnimating()
+        activityIndicator.isHidden = false
+        
         tableView.delegate = self
         tableView.dataSource = self
         
@@ -56,10 +59,6 @@ class TaskInfoVC: UIViewController {
         tableView.addSubview(refreshControl)
         
         working = false
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(true)
         
         setupView()
     }
@@ -78,16 +77,12 @@ class TaskInfoVC: UIViewController {
         
         taskDeadlineLabel.font = UIFont.fontAwesome(ofSize: 18)
         taskDeadlineLabel.text = "\(String.fontAwesomeIcon(code: "fa-calendar")!)  \(taskDeadline)"
-
-        activityIndicator.startAnimating()
-        activityIndicator.isHidden = false
         
-        if firstTime == true {
-            tableView.isHidden = true
-            
-            updateTaskContributions()
-            firstTime = false
-        }
+        tableView.isHidden = true
+        
+        updateTaskContributions()
+        firstTime = false
+
     }
     
     @IBAction func goBack(sender: Any) {
@@ -106,7 +101,7 @@ class TaskInfoVC: UIViewController {
         
         let currentDate = Date()
         
-        ContributionsNetworkManager.createContribution(dailyTaskId: taskId, image: "", content: "\(userInputTextField.text!)", timeStamp: "\(currentDate)") { success in
+        ContributionsNetworkManager.createContribution(userId: Session.shared.currentUser!.id, dailyTaskId: taskId, image: "", content: "\(userInputTextField.text!)", timeStamp: "\(currentDate)") { success in
             if success {
 
                 self.updateTaskContributions()
@@ -196,10 +191,6 @@ class TaskInfoVC: UIViewController {
             print(error)
             
             self.afterDownloadReloadData()
-        }
-        
-        if contributionsForTask.count == 0 {
-            afterDownloadReloadData()
         }
         
     }

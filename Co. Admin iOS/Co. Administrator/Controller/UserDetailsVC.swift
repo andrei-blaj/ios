@@ -22,7 +22,7 @@ class UserDetailsVC: UIViewController {
         upgradePlanBtn.isHidden = true
         
         if Session.shared.isLoggedIn() {
-            if (Session.shared.currentUser?.ceo)! {
+            if Session.shared.currentUser!.ceo && Session.shared.currentUser!.companyPlanId != 4 {
                 upgradePlanBtn.isHidden = false
             }
         }

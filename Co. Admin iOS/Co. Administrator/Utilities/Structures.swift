@@ -9,16 +9,17 @@
 import Foundation
 
 struct employeeInformation {
+    var id: Int
     var firstName: String
     var lastName: String
     var email: String
 }
 
 struct ProjectInformation {
+    var id: Int
     var name: String
     var deadline: String
     var completed: Bool
-    var id: Int
     
     var description: String
     var managerEmail: String
@@ -26,10 +27,10 @@ struct ProjectInformation {
 }
 
 struct TaskInformation {
+    var id: Int
     var taskDescription: String
     var taskDeadline: String
     var completed: Bool
-    var id: Int
 }
 
 struct ContributionInformation {
@@ -39,6 +40,23 @@ struct ContributionInformation {
     var createdAt: String
     var imagePath: String?
 }
+
+struct CompanyPlan {
+    var id: Int
+    var plan: String
+    var maxNumberOfProjects: Int
+    var maxNumberOfManagers: Int
+    var maxNumberofEmployees: Int
+    var price: Int
+}
+
+// CompanyPlan
+let startUp = CompanyPlan(id: 1, plan: "Start-Up", maxNumberOfProjects: 10, maxNumberOfManagers: 3, maxNumberofEmployees: 10, price: 0)
+let expanding = CompanyPlan(id: 2, plan: "Expanding", maxNumberOfProjects: 20, maxNumberOfManagers: 5, maxNumberofEmployees: 30, price: 99)
+let business = CompanyPlan(id: 3, plan: "Business", maxNumberOfProjects: 50, maxNumberOfManagers: 15, maxNumberofEmployees: 150, price: 199)
+let enterprise = CompanyPlan(id: 4, plan: "Enterprise", maxNumberOfProjects: -1, maxNumberOfManagers: -1, maxNumberofEmployees: -1, price: 399)
+
+let companyPlans: [Int: CompanyPlan] = [0: enterprise, 1: business, 2: expanding]
 
 // Home Page Table View Cell Elements
 
@@ -112,25 +130,25 @@ let empMenuElements : [Int: String] = [1: "Home",
 
 // Upgrade Plan
 
-let cellHeadings : [Int: String] = [1: "Expanding",
+let cellHeadings : [Int: String] = [1: "Enterprise",
                                     2: "Business",
-                                    3: "Enterprise"]
+                                    3: "Expanding"]
 
-let managers : [Int: String] = [1: "5",
+let managers : [Int: String] = [1: "Unlimited",
                                 2: "15",
-                                3: "Unlimited"]
+                                3: "5"]
 
-let employees : [Int: String] = [1: "30",
-                                2: "150",
-                                3: "Unlimited"]
+let employees : [Int: String] = [1: "Unlimited",
+                                 2: "150",
+                                 3: "30"]
 
-let projects : [Int: String] = [1: "20",
+let projects : [Int: String] = [1: "Unlimited",
                                 2: "50",
-                                3: "Unlimited"]
+                                3: "20"]
 
-let prices : [Int: String] = [1: "$99",
-                             2: "$199",
-                             3: "$399"]
+let prices : [Int: String] = [1: "$399",
+                              2: "$199",
+                              3: "$99"]
 
 
 

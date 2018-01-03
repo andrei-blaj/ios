@@ -53,7 +53,7 @@ class ProjectsNetworkManager {
                     let projectList = dict["projects"]! as! [[String: Any]]
                     
                     for project in projectList {
-                        let projectInfo = ProjectInformation(name: project["title"] as! String, deadline: project["deadline"] as! String, completed: project["completed"] as! Bool, id: project["id"] as! Int, description: "", managerEmail: "", companyName: "")
+                        let projectInfo = ProjectInformation(id: project["id"] as! Int, name: project["title"] as! String, deadline: project["deadline"] as! String, completed: project["completed"] as! Bool, description: "", managerEmail: "", companyName: "")
                         
                         result[k] = projectInfo
                         k += 1
@@ -84,7 +84,7 @@ class ProjectsNetworkManager {
                     
                     let project = json["project"]
                     
-                    let projectInfo = ProjectInformation(name: project["title"].stringValue, deadline: project["deadline"].stringValue, completed: project["completed"].boolValue, id: project["id"].intValue, description: project["description"].stringValue, managerEmail: project["manager_email"].stringValue, companyName: project["company_name"].stringValue)
+                    let projectInfo = ProjectInformation(id: project["id"].intValue, name: project["title"].stringValue, deadline: project["deadline"].stringValue, completed: project["completed"].boolValue, description: project["description"].stringValue, managerEmail: project["manager_email"].stringValue, companyName: project["company_name"].stringValue)
                     
                     successHandler(projectInfo)
                 case .failure(let error):

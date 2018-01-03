@@ -10,6 +10,15 @@ import UIKit
 
 class UpgradePlanVC: UIViewController {
 
+    // Variables
+    var id = Int()
+    var amount = Int()
+    var packageDescription = String()
+    
+    // Constants
+    let amounts = [0: "99", 1: "199", 2: "399"]
+    
+    // Outlets
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
@@ -19,15 +28,33 @@ class UpgradePlanVC: UIViewController {
         tableView.dataSource = self
         
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        tableView.reloadData()
+    }
 
     @IBAction func onCloseBtnPressed(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let PaymentViewController = segue.destination as! PaymentVC
+        
+        PaymentViewController.id = id
+        PaymentViewController.amount = amount
+        PaymentViewController.packageDescription = packageDescription
+    }
+    
 }
 
 extension UpgradePlanVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        id = companyPlans[indexPath.row]!.id
+        amount = companyPlans[indexPath.row]!.price
+        packageDescription = companyPlans[indexPath.row]!.plan
+        
         performSegue(withIdentifier: TO_PAYMENT, sender: nil)
     }
     
@@ -36,7 +63,17 @@ extension UpgradePlanVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        let companyPlanId = Session.shared.currentUser!.companyPlanId
+        switch companyPlanId {
+        case 1:
+            return 3
+        case 2:
+            return 2
+        case 3:
+            return 1
+        default:
+            return 0
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

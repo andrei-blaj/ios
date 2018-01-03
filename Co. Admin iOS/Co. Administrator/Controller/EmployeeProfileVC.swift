@@ -15,6 +15,7 @@ class EmployeeProfileVC: UIViewController {
     var employeeEmail = String()
     var employeeProjectCount = Int()
     var employeeStatus = String()
+    var employeeId = Int()
     
     @IBOutlet weak var employeeFontAwesomeLabel: UILabel!
     @IBOutlet weak var employeeNameLabel: UILabel!
@@ -36,12 +37,23 @@ class EmployeeProfileVC: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         
+        var notifType = String()
+        
+        if employeeStatus == "Manager" {
+            notifType = "new_man"
+        } else {
+            notifType = "new_emp"
+        }
+        
+        NotificationsNetworkManager.deleteEmployeeNotification(withSender: employeeId, notificationType: notifType)
+        
         if employeeStatus == "Manager" {
             populateEmployeeList()
         } else {
             tableView.isHidden = true
             setupView()
         }
+    
     }
     
     @IBAction func goBack(sender: Any) {

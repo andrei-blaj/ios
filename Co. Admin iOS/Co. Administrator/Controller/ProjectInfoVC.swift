@@ -68,6 +68,8 @@ class ProjectInfoVC: UIViewController {
         
         projectTitleLabel.text = projectTitle
         
+        NotificationsNetworkManager.deleteProjectNotification(withProject: projectId)
+        
         if firstTime == true {
             
             processCount = 0

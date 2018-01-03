@@ -10,14 +10,19 @@ import UIKit
 
 class ManagersVC: UIViewController {
 
+    // Variables
     var employeeBackgroundColor = UIColor()
     var employeeName = String()
     var employeeEmail = String()
     var employeeStatus = String()
+    var employeeId = Int()
     
+    // Outlets
     @IBOutlet weak var sideMenuBtn: UIButton!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    
+    @IBOutlet weak var notificationBubbleLabel: UILabel!
     
     var managerList: [Int: employeeInformation] = [:]
     
@@ -34,7 +39,6 @@ class ManagersVC: UIViewController {
         self.view.addGestureRecognizer(self.revealViewController().tapGestureRecognizer())
         
         refreshControl = UIRefreshControl()
-//        refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
         refreshControl.addTarget(self, action: #selector(refresh), for: .valueChanged)
         tableView.addSubview(refreshControl)
         
@@ -42,15 +46,37 @@ class ManagersVC: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
+        
         activityIndicator.startAnimating()
         activityIndicator.isHidden = false
+        
         tableView.isHidden = true
+        
         populateManagerList()
+        showNotifications()
+    }
+    
+    func showNotifications() {
+        // If there are any new project notification for the current user then the bubble will be displayed, otherwise .isHidden = true
+        
+        notificationBubbleLabel.isHidden = true
+        notificationBubbleLabel.font = UIFont.fontAwesome(ofSize: 17)
+        notificationBubbleLabel.text = String.fontAwesomeIcon(code: "fa-circle")
+        
+        NotificationsNetworkManager.getNotifications(notificationType: "new_man", successHandler: { (notifCount) in
+            if notifCount > 0 {
+                self.notificationBubbleLabel.isHidden = false
+            }
+        }) { (error) in
+            print(error)
+        }
+        
     }
     
     @objc func refresh(sender:AnyObject) {
         // Code to refresh table view
         populateManagerList()
+        showNotifications()
     }
     
     func populateManagerList() {
@@ -82,6 +108,7 @@ class ManagersVC: UIViewController {
         EmployeeProfileViewController.employeeEmail = employeeEmail
         EmployeeProfileViewController.employeeStatus = employeeStatus
         EmployeeProfileViewController.employeeBackgroundColor = employeeBackgroundColor
+        EmployeeProfileViewController.employeeId = employeeId
     }
 
 }
@@ -93,6 +120,7 @@ extension ManagersVC: UITableViewDataSource, UITableViewDelegate {
         employeeEmail = managerList[indexPath.row]!.email
         employeeStatus = "Manager"
         employeeBackgroundColor = #colorLiteral(red: 0.1605996788, green: 0.6530888677, blue: 0.2737731636, alpha: 1)
+        employeeId = managerList[indexPath.row]!.id
         
         performSegue(withIdentifier: TO_MAN_INFO, sender: nil)
     }
