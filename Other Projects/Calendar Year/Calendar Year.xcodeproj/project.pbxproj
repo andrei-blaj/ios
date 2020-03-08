@@ -13,13 +13,14 @@
 		E4269DB224146E940062DE74 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4269DB124146E940062DE74 /* Assets.xcassets */; };
 		E4269DB524146E940062DE74 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4269DB324146E940062DE74 /* LaunchScreen.storyboard */; };
 		E4269DC024146E950062DE74 /* Calendar_YearTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4269DBF24146E950062DE74 /* Calendar_YearTests.swift */; };
-		E4269DCB24147B060062DE74 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4269DCA24147B060062DE74 /* Constants.swift */; };
 		E4269DCE24147BED0062DE74 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4269DCD24147BED0062DE74 /* MainView.swift */; };
 		E4269DD024147CE80062DE74 /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4269DCF24147CE80062DE74 /* MainPresenter.swift */; };
 		E46DEAD624147D3B00D832E8 /* MainInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46DEAD524147D3B00D832E8 /* MainInteractor.swift */; };
 		E46DEAD824147D4B00D832E8 /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46DEAD724147D4B00D832E8 /* MainRouter.swift */; };
 		E46DEADA24147D5500D832E8 /* MainModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46DEAD924147D5500D832E8 /* MainModuleBuilder.swift */; };
 		E46DEADC24147D6200D832E8 /* MainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46DEADB24147D6200D832E8 /* MainService.swift */; };
+		E48FA0182415987D009BDF38 /* Holiday.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48FA0172415987D009BDF38 /* Holiday.swift */; };
+		E48FA01A24159B7C009BDF38 /* HolidayRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48FA01924159B7C009BDF38 /* HolidayRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,13 +44,14 @@
 		E4269DBB24146E950062DE74 /* Calendar YearTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Calendar YearTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4269DBF24146E950062DE74 /* Calendar_YearTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calendar_YearTests.swift; sourceTree = "<group>"; };
 		E4269DC124146E950062DE74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E4269DCA24147B060062DE74 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		E4269DCD24147BED0062DE74 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		E4269DCF24147CE80062DE74 /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
 		E46DEAD524147D3B00D832E8 /* MainInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainInteractor.swift; sourceTree = "<group>"; };
 		E46DEAD724147D4B00D832E8 /* MainRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRouter.swift; sourceTree = "<group>"; };
 		E46DEAD924147D5500D832E8 /* MainModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainModuleBuilder.swift; sourceTree = "<group>"; };
 		E46DEADB24147D6200D832E8 /* MainService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainService.swift; sourceTree = "<group>"; };
+		E48FA0172415987D009BDF38 /* Holiday.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Holiday.swift; sourceTree = "<group>"; };
+		E48FA01924159B7C009BDF38 /* HolidayRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HolidayRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,7 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				E4269DA524146E930062DE74 /* AppDelegate.swift */,
-				E4269DCA24147B060062DE74 /* Constants.swift */,
+				E48FA01624158DAE009BDF38 /* Model */,
 				E4269DCC24147B1B0062DE74 /* Modules */,
 				E4269DB124146E940062DE74 /* Assets.xcassets */,
 				E4269DB324146E940062DE74 /* LaunchScreen.storyboard */,
@@ -123,6 +125,15 @@
 				E4269DAB24146E930062DE74 /* Main.storyboard */,
 			);
 			path = Modules;
+			sourceTree = "<group>";
+		};
+		E48FA01624158DAE009BDF38 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E48FA0172415987D009BDF38 /* Holiday.swift */,
+				E48FA01924159B7C009BDF38 /* HolidayRequest.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -226,14 +237,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E48FA01A24159B7C009BDF38 /* HolidayRequest.swift in Sources */,
 				E4269DB024146E930062DE74 /* Calendar_Year.xcdatamodeld in Sources */,
 				E46DEAD824147D4B00D832E8 /* MainRouter.swift in Sources */,
 				E4269DD024147CE80062DE74 /* MainPresenter.swift in Sources */,
 				E4269DA624146E930062DE74 /* AppDelegate.swift in Sources */,
 				E46DEADA24147D5500D832E8 /* MainModuleBuilder.swift in Sources */,
 				E46DEADC24147D6200D832E8 /* MainService.swift in Sources */,
+				E48FA0182415987D009BDF38 /* Holiday.swift in Sources */,
 				E4269DCE24147BED0062DE74 /* MainView.swift in Sources */,
-				E4269DCB24147B060062DE74 /* Constants.swift in Sources */,
 				E46DEAD624147D3B00D832E8 /* MainInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
